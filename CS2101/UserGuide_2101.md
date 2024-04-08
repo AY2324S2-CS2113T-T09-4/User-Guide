@@ -174,7 +174,7 @@ The string `C:\Users\rouvi` is the current [*directory*](#glossary) that you are
 
 You can type different things into the CLI, and press <kbd>Enter</kbd> to make your computer read the input and process it as a command.
 
-For the example below,qw I typed a `hello` and hit <kbd>Enter</kbd> to make the compute read it.
+For the example below, I typed a `hello` and hit <kbd>Enter</kbd> to make the compute read it.
 
 ![Typing Commands](img_2101/windows/sample_windows_type.png)
 
@@ -271,30 +271,28 @@ list directory, change directory, invalid commands.
 
 ## Installation
 
-Now that you are familiar with the CLI, it is time to install Java and PulsePilot to your computer!
+Now that you are familiar with the CLI, it is time to install Java and PulsePilot!
+
+The installation for Java is different for Windows and macOS computers. However, the installation and launching of PulsePilot is the same for both operating systems!
+
+* [Installing Java](#installing-java)
+* [Installing and Launching PulsePilot](#installing-and-launching-pulsepilot)
+
+### Installing Java
+
+> 💡 If you already have Java 11 installed, feel free to skip to the [next section](#pulsepilot-commands) to learn about the commands for PulsePilot.
 
 A specific version of Java will be required for PulsePilot, thus this part of the guide will bring you through the installation of Java 11.
 
-> 💡 If you already have Java 11 installed, feel free to skip to [next section](#pulsepilot-commands) on the commands for PulsePilot.
+A guide to install Java can be found [here](https://nus-cs2030.github.io/1920-s2/contents/guides/settingUpJava.html), as many other NUS modules use a similar version of Java for their projects.
 
+>❗Although the website says it is for CS2030 from a previous semester, the steps are the same.
 
-* [Windows](#windows-installation)
-  * [Java](#java-for-windows)
-  * [PulsePilot](#pulsepilot-for-windows)
-* [macOS](#macos-installation)
-  * [Java](#java-for-macos)
-  * [PulsePilot](#pulsepilot-for-macos)
+To ensure that you have the correct version of Java installed, launch the CLI (either `cmd.exe` or `bash`) and run `java --version`.
 
-### Windows Installation
+The correct version should be `java 11.0.21` as shown in the image below:
 
-#### Java for Windows
-
-
-To install Java on your computer, you can follow these steps:
-
-Visit the official Java website (https://www.java.com/en/download/)
-Download the appropriate Java installer for your operating system (Windows or macOS)
-Run the installer and follow the on-screen instructions to complete the installation
+![Java Version](img_2101/java_version.png)
 
 ###### [Back to Installation](#installation)
 
@@ -303,37 +301,23 @@ Run the installer and follow the on-screen instructions to complete the installa
 ---
 
 
-### PulsePilot for Windows
+### Installing and Launching PulsePilot
 
-After installing Java, you can install PulsePilot by following these steps:
+> 💡 If you already have PulsePilot installed, feel free to skip to the [next section](#pulsepilot-commands) to learn about the commands for PulsePilot.
 
-Download the latest version of the PulsePilot application from the provided source
-Extract the downloaded files to a directory on your computer
-Open the Command Prompt (Windows) or Terminal (macOS) and navigate to the directory where you extracted the PulsePilot files
-Run the PulsePilot application by typing the appropriate command (e.g., java -jar pulsepilot.jar)
+PulsePilot can be installed from our team's [*Github*](#glossary) repository [here](https://github.com/AY2324S2-CS2113T-T09-4/tp/releases/tag/v2.1).
 
-###### [Back to Installation](#installation)
+The screen should have the following hyperlinks as shown below, and clicking on `pulsepilot.jar` will download the application to your Downloads folder.
 
-###### [Back to table of contents](#table-of-contents)
+![Downloading PulsePilot](img_2101/download_pulsepilot.png)
 
----
+Afterwards, launch the CLI, `cd` to your Downloads folder, and run `java -jar pulsepilot.jar`. If Java has been installed correctly, and you are in the correct directory, PulsePilot will launch successfully.
 
-### macOS Installation
+Your terminal should look like this below:
 
-###### [Back to Installation](#installation)
+![Launching PulsePilot](img_2101/launch_pulsepilot.png)
 
-###### [Back to table of contents](#table-of-contents)
-
----
-
-#### Java for macOS
-
-After installing Java, you can install PulsePilot by following these steps:
-
-Download the latest version of the PulsePilot application from the provided source
-Extract the downloaded files to a directory on your computer
-Open the Command Prompt (Windows) or Terminal (macOS) and navigate to the directory where you extracted the PulsePilot files
-Run the PulsePilot application by typing the appropriate command (e.g., java -jar pulsepilot.jar)
+> ❗ The output from PulsePilot is the same for macOS!
 
 ###### [Back to Installation](#installation)
 
@@ -341,7 +325,25 @@ Run the PulsePilot application by typing the appropriate command (e.g., java -ja
 
 ---
 
-#### PulsePilot for macOS
+### Common Problems
+
+> 💡 If you do not face any issues with launching PulsePilot, feel free to skip to the [next section](#pulsepilot-commands) to learn about the commands for PulsePilot.
+
+This section will address all common problems with launching PulsePilot **for the first time**.
+
+#### Wrong Directory
+
+When attempting to launch `pulsepilot.jar` from the wrong directory, this error will appear:
+
+![Wrong Directory](img_2101/wrong_dir.png)
+
+This means that `pulsepilot.jar` is **not within your current directory**. To remediate this, use `dir` to check for the files present within your current directory.
+
+If you are in the right directory, `pulsepilot.jar` should appear like so:
+
+![Correct Directory](img_2101/correct_dir.png)
+
+If it is not there, you need to `cd` to the right folder where `pulsepilot.jar` is within. By default, PulsePilot would be installed to your `Downloads` folder.
 
 ###### [Back to Installation](#installation)
 
@@ -897,7 +899,8 @@ This merely a visual difference, and it does not mean the bot is not working. **
 | Hyperlinks                  | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[*Go Back*](#glossary-usage) </br> |
 | Java                        | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[*Go Back*](#glossary-usage) </br> |
 | Command Line Interface      | A **text-based** interface where users can input commands that interact with a computer. <br>[*Go Back*](#command-line-interface) </br> |
-| Directory / Directories                 |  A folder within your computer that contains other files and files.[*Go Back*](#launching-cmdexe) </br>                                                                                                                                       |
+| Directory / Directories                 |  A folder within your computer that contains other files and files.<br>[*Go Back*](#launching-cmdexe) </br>                                                                                                                                       |
+| Github                 |  A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot) </br>                                                                                                                                       |
 
 
 ###### [Back to table of contents](#table-of-contents)
