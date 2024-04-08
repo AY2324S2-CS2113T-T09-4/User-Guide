@@ -293,7 +293,7 @@ A specific version of Java will be required for PulsePilot, thus this part of th
 To install Java on your computer, you can follow these steps:
 
 Visit the official Java website (https://www.java.com/en/download/)
-Download the appropriate Java installer for your operating system (Windows or macOS)
+Download the appropriate Java installer for your operating system (Windows)
 Run the installer and follow the on-screen instructions to complete the installation
 
 ###### [Back to Installation](#installation)
@@ -310,7 +310,7 @@ After installing Java, you can install PulsePilot by following these steps:
 Download the latest version of the PulsePilot application from the provided source
 Extract the downloaded files to a directory on your computer
 Open the Command Prompt (Windows) or Terminal (macOS) and navigate to the directory where you extracted the PulsePilot files
-Run the PulsePilot application by typing the appropriate command (e.g., java -jar pulsepilot.jar)
+Run the PulsePilot application by typing the appropriate command (e.g., `java -jar pulsepilot.jar`)
 
 ###### [Back to Installation](#installation)
 
@@ -320,20 +320,13 @@ Run the PulsePilot application by typing the appropriate command (e.g., java -ja
 
 ### macOS Installation
 
-###### [Back to Installation](#installation)
-
-###### [Back to table of contents](#table-of-contents)
-
----
-
 #### Java for macOS
 
-After installing Java, you can install PulsePilot by following these steps:
+To install Java on your computer, you can follow these steps:
 
-Download the latest version of the PulsePilot application from the provided source
-Extract the downloaded files to a directory on your computer
-Open the Command Prompt (Windows) or Terminal (macOS) and navigate to the directory where you extracted the PulsePilot files
-Run the PulsePilot application by typing the appropriate command (e.g., java -jar pulsepilot.jar)
+Visit the official Java website (https://www.java.com/en/download/)
+Download the appropriate Java installer for your operating system (MacOS)
+Run the installer and follow the on-screen instructions to complete the installation
 
 ###### [Back to Installation](#installation)
 
@@ -342,6 +335,13 @@ Run the PulsePilot application by typing the appropriate command (e.g., java -ja
 ---
 
 #### PulsePilot for macOS
+
+After installing Java, you can install PulsePilot by following these steps:
+
+Download the latest version of the PulsePilot application from the provided source
+Extract the downloaded files to a directory on your computer
+Open the Command Prompt (Windows) or Terminal (macOS) and navigate to the directory where you extracted the PulsePilot files
+Run the PulsePilot application by typing the appropriate command (e.g., `java -jar pulsepilot.jar`)
 
 ###### [Back to Installation](#installation)
 
