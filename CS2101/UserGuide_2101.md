@@ -355,7 +355,7 @@ If it is not there, you need to `cd` to the right folder where `pulsepilot.jar` 
 
 ## PulsePilot Commands
 
-Now that Java and PulsePilot is up and running on your computer, it is time to learn how to use PulsePilot via its implemented commands!
+Now that Java and PulsePilot is up and running on your computer, it is time to learn how to use PulsePilot via its implemented commands and [*flags*](#glossary).
 
 > ⚠️ For **experienced** users, if this is not your first time using a CLI application or PulsePilot, feel free to skip ahead to the [experienced user manual](#experienced-user-manual)! If not, please continue reading!
 
@@ -377,14 +377,14 @@ Now that Java and PulsePilot is up and running on your computer, it is time to l
 
 ### PulsePilot Text Style
 
-Our team has colour coded the texts in this guide to help you better understand the commands, as it can get a bit confusing!
+The text in the step-by-step guide have been colour coded to help you better understand the commands, as it can get a bit confusing!
 
-There are 3 colours used in the guide.
+There are 3 colours used in the guide: <u>White</u>, <span style="color:red;">red</span> and <span style="color:green;">green</span>, each used for a different kind of text:
 
 ![Colour Coded Text](img_2101/colour_code.png)
 
 - A response is merely a message from the bot.
-- An error indicates that the bot has detected an error when running or in your input, so do read the error messages!
+- An error indicates that the bot has detected some invalid input from you. Read the error messages to find out what's wrong!
 - Your input represents the command **you** type and press 'Enter' for PulsePilot to use!
 
 > ❗If you are not seeing colours on your screen, and instead see **odd characters** like `[` or `<-`, please read our [*troubleshooting guide*](#odd-characters-on-screen) for this issue!
@@ -418,19 +418,21 @@ After setting your name, you are ready to use PulsePilot!
 >
 > ![Re-enter name](img_2101/enternameagain.png)
 
-### Workout
-
-
-
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
 ###### [Back to table of contents](#table-of-contents)
 
 ---
 
+### Workout
+
+Being a health-tracking application, PulsePilot can record Run and Gym sessions. This is implemented via the `workout` command.
+
+---
+
 #### Add Run
 
-idiot guide here
+To add a run
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -529,9 +531,9 @@ idiot guide here.
 
 ### Experienced User Manual
 
-> ❗This guide is for **experienced** users, made to be briefer without much step-by-step demonstrations. There is **colour texting here** to guide you!
+> ❗This guide is for **experienced** users, made to be briefer without much step-by-step demonstrations. There is **NO colour-coded text here** to guide you!
 >
-> Only proceed if you know what you are doing!
+> **Only proceed if you know what you are doing!**
 
 > ❗If you are **not** experienced, please head to our step-by-step guide for PulsePilot [here](#pulsepilot-commands).
 
@@ -577,7 +579,7 @@ This profile will be used to store all your health and workout data.
 
 Adds a new run session to track.
 
-Format: <code style="color: #D85D43;">workout /e:run /d:DISTANCE /t:TIME [/date:DATE]</code>
+Format: `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]`
 
 * `DISTANCE` is a **2 decimal point positive number** (i.e. `15.24`) representing the distance ran in **kilometers**.
 * `TIME` is in `[HH]:MM:SS` format (i.e. `25:30`). The `HH` representing hours is **optional**.
@@ -588,8 +590,8 @@ Format: <code style="color: #D85D43;">workout /e:run /d:DISTANCE /t:TIME [/date:
 > ⚠️ Date specified cannot be later than the current date!
 
 Examples:
-- <code style="color: #D85D43;">workout /e:run /d:5.15 /t:25:03 /date:25-03-2023 </code>
-- <code style="color: #D85D43;">workout /e:run /d:5.15 /t:25:03</code>
+- `workout /e:run /d:5.15 /t:25:03 /date:25-03-2023`
+- `workout /e:run /d:5.15 /t:25:03`
 
 Expected Output:
 
@@ -612,7 +614,7 @@ Expected Output:
 
 Adds a new gym session to track.
 
-Format: <code style="color: #D85D43;">workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]</code>
+Format: `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]`
 
 * `NUMBER_OF_STATIONS` is a **positive integer of at least 1** representing the number of stations for one Gym session.
 * `DATE` is in `DD-MM-YYYY` format (i.e. `19-03-2024`). The date is **optional**, and if not specified, defaults to `NA`.
@@ -622,16 +624,16 @@ Format: <code style="color: #D85D43;">workout /e:gym /n:NUMBER_OF_STATIONS [/dat
 > ⚠️ Please input positive integers for `NUMBER_OF_STATIONS` without leading zeros. Entering a number with a leading zero, such as `01`, will trigger an error.
 
 Examples: 
-- <code style="color: #D85D43;">workout /e:gym /n:2 /date:25-03-2023</code>
-- <code style="color: #D85D43;">workout /e:gym /n:4</code>
+- `workout /e:gym /n:2 /date:25-03-2023`
+- `workout /e:gym /n:4`
 
 ###### [Back to table of contents](#table-of-contents)
 
 #### Adding Gym Stations
 
-Upon entry of the <code style="color: #D85D43;">workout /e:gym</code> command, the bot will prompt for further details for each station done:
+Upon entry of the `workout /e:gym` command, the bot will prompt for further details for each station done:
 
-Format: <code style="color: #D85D43;">STATION_NAME /s:SET /r:REPS /w:WEIGHT</code>
+Format: `STATION_NAME /s:SET /r:REPS /w:WEIGHT`
 
 * `STATION_NAME` is a **string**  representing the name of the gym station.
 * `SET` is a **positive integer**  representing the number of sets done for one station.
@@ -648,8 +650,8 @@ Format: <code style="color: #D85D43;">STATION_NAME /s:SET /r:REPS /w:WEIGHT</cod
 
 
 Examples:
-- <code style="color: #D85D43;">bench press /s:2 /r:4 /w:10,20</code>
-- <code style="color: #D85D43;">squat /r:2 /s:2 /w:10.5,20.5</code>
+- `bench press /s:2 /r:4 /w:10,20`
+- `squat /r:2 /s:2 /w:10.5,20.5`
 
 Expected Output:
 
@@ -671,7 +673,7 @@ Expected Output:
 
 Calculates user's Body Mass Index (BMI) based on height and weight from user's input, and tracks it.
 
-Format: <code style="color: #D85D43;">health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE</code>
+Format: `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE`
 
 * `HEIGHT` is a **2 decimal point number in metres** (i.e. `1.71`) representing the user's height.
 * `WEIGHT` is a **2 decimal point number in kilograms** (i.e. `60.50`) representing the user’s weight.
@@ -680,8 +682,8 @@ Format: <code style="color: #D85D43;">health /h:bmi /height:HEIGHT /weight:WEIGH
 > ⚠️ Date specified cannot be later than the current date!
 
 Examples:
-* <code style="color: #D85D43;">health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024</code>
-* <code style="color: #D85D43;">health /h:bmi /date:19-03-2024 /height:1.70 /weight:75.42</code>
+* `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`
+* `health /h:bmi /date:19-03-2024 /height:1.70 /weight:75.42`
 
 PulsePilot will categorize your BMI as follows:
 
@@ -713,7 +715,7 @@ Expected Output:
 
 Tracks the start and end of user's menstrual cycle.
 
-Format: <code style="color: #D85D43;">health /h:period /start:START_DATE [/end:END_DATE]</code>
+Format: `health /h:period /start:START_DATE [/end:END_DATE]`
 
 
 * `START_DATE` is `DD-MM-YYYY` format (i.e. `19-03-2024`) representing the first day of period flow which is also the first day of the cycle. 
@@ -724,9 +726,9 @@ Format: <code style="color: #D85D43;">health /h:period /start:START_DATE [/end:E
 
 Examples:
 
-* <code style="color: #D85D43;">health /h:period /start:09-03-2022 /end:16-03-2022</code>
-* <code style="color: #D85D43;">health /start:09-03-2022 /end:16-03-2022 /h:period</code>
-* <code style="color: #D85D43;">health /h:period /start:09-03-2022</code>
+* `health /h:period /start:09-03-2022 /end:16-03-2022`
+* `health /start:09-03-2022 /end:16-03-2022 /h:period`
+* `health /h:period /start:09-03-2022`
 
 
 Expected Output:
@@ -743,7 +745,7 @@ Expected Output:
 
 Predicts user's next period start date.
 
-Format: <code style="color: #D85D43;">health /h:prediction</code>
+Format: `health /h:prediction`
 
 * There must be at least **4 periods** added before a prediction can be made.
 
@@ -765,7 +767,7 @@ Expected Output:
 
 Tracks both **previous and upcoming** medical appointments.
 
-Format: <code style="color: #D85D43;">health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION</code>
+Format: `health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION`
 
 * `DATE` is a `DD-MM-YYYY` format (i.e. `03-04-2024`) representing the date of the appointment.
 
@@ -775,9 +777,9 @@ Format: <code style="color: #D85D43;">health /h:appointment /date:DATE /time:TIM
 
 Examples:
 
-* <code style="color: #D85D43;">health /h:appointment /date:03-04-2024 /time:14:15 /description:review checkup with surgeon</code>
+* `health /h:appointment /date:03-04-2024 /time:14:15 /description:review checkup with surgeon`
 
-* <code style="color: #D85D43;">health /date:03-04-2024 /description:review checkup with surgeon /time:14:15 /h:appointment</code>
+* `health /date:03-04-2024 /description:review checkup with surgeon /time:14:15 /h:appointment`
 
 Expected Output:
 
@@ -795,7 +797,7 @@ Expected Output:
 
 Prints all tracked instances of `run`, `gym`, `workouts`,  `bmi`, `period`, `appointment`.
 
-Format: <code style="color: #D85D43;">history /item:TYPE</code>
+Format: `history /item:TYPE`
 
 * `TYPE` is either `run`, `gym`, `workouts`, `bmi`, `period`, `appointment`.
   - `run` shows all entries of runs.
@@ -808,8 +810,8 @@ Format: <code style="color: #D85D43;">history /item:TYPE</code>
 > 💡 `workouts` prints a summary of the `run` and `gym` objects. Full details can be viewed using `history /item:run/gym` respectively.
 
 Examples:
-* <code style="color: #D85D43;">history /item:workouts</code>
-* <code style="color: #D85D43;">history /item:appointment</code>
+* `history /item:workouts`
+* `history /item:appointment`
 
 Expected Output:
 
@@ -825,7 +827,7 @@ Expected Output:
 
 Prints the **most recently added** instance of `run`, `gym`, `bmi`, `period`, `appointment`.
 
-Format: <code style="color: #D85D43;">latest /item:TYPE</code>
+Format: `latest /item:TYPE`
 
 * `TYPE` is either `run`, `gym`, `bmi`, `period` or `appointment`.
   - `run` shows the latest run
@@ -835,7 +837,7 @@ Format: <code style="color: #D85D43;">latest /item:TYPE</code>
   - `appointment` show the earliest upcoming Appointment
 
 Examples:
-* <code style="color: #D85D43;">latest /item:appointment</code>
+* `latest /item:appointment`
 
 Expected Output:
 
@@ -851,7 +853,7 @@ Expected Output:
 
 Delete a tracked item.
 
-Format: <code style="color: #D85D43;">delete /item:TYPE /index:INDEX</code>
+Format: `delete /item:TYPE /index:INDEX`
 
 * `TYPE` is either `run`, `gym`, `bmi`, `period` or `appointment`.
 * `INDEX` represents the index of the item to delete.
@@ -862,7 +864,7 @@ Format: <code style="color: #D85D43;">delete /item:TYPE /index:INDEX</code>
 
 Examples:
 
-* <code style="color: #D85D43;">delete /item:run /index:2</code>
+* `delete /item:run /index:2`
 
 Expected output:
 
@@ -878,7 +880,7 @@ Expected output:
 
 Prints the help message.
 
-Format: <code style="color: #D85D43;">help</code>
+Format: `help`
 
 Expected output:
 
@@ -894,7 +896,7 @@ Expected output:
 
 Exits the bot **and writes to data file**.
 
-Format: <code style="color: #D85D43;">exit</code>
+Format: `exit`
 
 Expected Output:
 
@@ -970,6 +972,7 @@ This merely a visual difference, and it does not mean the bot is not working. **
 | Directory / Directories                 |  A folder within your computer that contains other files and files.<br>[*Go Back*](#launching-cmdexe) </br>                                                                                                                                       |
 | Github                 |  A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot) </br>                                                                                                                                       |
 | Alphanumeric                 |  Input that is made up of only **letters and numbers**. <br>[*Go Back*](#creating-your-profile) </br>                                                                                                                                       |
+| Flags                 |  Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[*Go Back*](#pulsepilot-commands) </br>                                                                                                                                       |
 
 
 ###### [Back to table of contents](#table-of-contents)
