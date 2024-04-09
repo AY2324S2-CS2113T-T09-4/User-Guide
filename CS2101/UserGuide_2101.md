@@ -6,7 +6,7 @@
 
 Hello! Thank you for choosing to use PulsePilot!
 
-Our team appreciates that you are giving our health application a try, and we hope that it helps you document your recovery journey better and bounce back from whatever injury you are facing.
+Our team appreciates that you are giving our space-themed health application a try, and we hope that it helps you document your recovery journey better and bounce back from whatever injury you are facing.
 
 This document serves as the **User Guide** of PulsePilot, designed to help you (an injured athlete) learn what PulsePilot is about, our motives, how to install it and how to use it.
 
@@ -313,11 +313,13 @@ The screen should have the following hyperlinks as shown below, and clicking on 
 
 Afterwards, launch the CLI, `cd` to your Downloads folder, and run `java -jar pulsepilot.jar`. If Java has been installed correctly, and you are in the correct directory, PulsePilot will launch successfully.
 
-Your terminal should look like this below:
+Your terminal should look like this below, with PulsePilot asking for your name.
 
 ![Launching PulsePilot](img_2101/launch_pulsepilot.png)
 
-> ❗ The output from PulsePilot is the same for macOS!
+> 💡 PulsePilot is spaced themed, thus the space terms in the introduction it displays on screen! 🚀🚀
+
+> ❗ This process is the exact same for **both Windows and macOS!**
 
 ###### [Back to Installation](#installation)
 
@@ -358,6 +360,7 @@ Now that Java and PulsePilot is up and running on your computer, it is time to l
 > ⚠️ For **experienced** users, if this is not your first time using a CLI application or PulsePilot, feel free to skip ahead to the [experienced user manual](#experienced-user-manual)! If not, please continue reading!
 
 * [PulsePilot Text Style](#pulsepilot-text-style)
+* [Creating Your Profile](#creating-your-profile)
 * [Workout](#workout)
   * [Add Run](#add-run)
   * [Add Gym](#add-gym)
@@ -384,7 +387,6 @@ There are 3 colours used in the guide.
 - An error indicates that the bot has detected an error when running or in your input, so do read the error messages!
 - Your input represents the command **you** type and press 'Enter' for PulsePilot to use!
 
-
 > ❗If you are not seeing colours on your screen, and instead see **odd characters** like `[` or `<-`, please read our [*troubleshooting guide*](#odd-characters-on-screen) for this issue!
 
 > ❗The colours on your own screen may be different, or it may not even be colour-coded at all. The colours are just visual cues for **this guide**!
@@ -396,7 +398,29 @@ There are 3 colours used in the guide.
 
 ---
 
+### Creating Your Profile
+
+When you first run PulsePilot, it will prompt you for your name as follows:
+
+![PulsePilot Intro](img_2101/pulseintro.png)
+
+You can enter your real name or an alias. PulsePilot only checks that you enter **[*alphanumeric*](#glossary) characters and spaces**. For example, `Justin Soh` is a valid name!
+
+![Valid Name](img_2101/valid_name.png)
+
+After setting your name, you are ready to use PulsePilot!
+
+> ❗Entering usernames that have non-alphanumeric characters, such as `;` or `|` will trigger an error!
+> 
+>  ![Invalid Name](img_2101/invalid_name.png)
+> 
+> If this happens, not to worry! You can simply **re-enter a valid name** and PulsePilot will continue to work normally.
+>
+> ![Re-enter name](img_2101/enternameagain.png)
+
 ### Workout
+
+
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -511,7 +535,7 @@ idiot guide here.
 
 > ❗If you are **not** experienced, please head to our step-by-step guide for PulsePilot [here](#pulsepilot-commands).
 
-
+* [User Induction](#user-induction)
 * [Workout: Run](#workout-run)
 * [Workout: Gym](#workout-gym)
   * [Adding Gym Stations](#adding-gym-stations)
@@ -945,6 +969,7 @@ This merely a visual difference, and it does not mean the bot is not working. **
 | Command Line Interface      | A **text-based** interface where users can input commands that interact with a computer. <br>[*Go Back*](#command-line-interface) </br> |
 | Directory / Directories                 |  A folder within your computer that contains other files and files.<br>[*Go Back*](#launching-cmdexe) </br>                                                                                                                                       |
 | Github                 |  A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot) </br>                                                                                                                                       |
+| Alphanumeric                 |  Input that is made up of only **letters and numbers**. <br>[*Go Back*](#creating-your-profile) </br>                                                                                                                                       |
 
 
 ###### [Back to table of contents](#table-of-contents)
