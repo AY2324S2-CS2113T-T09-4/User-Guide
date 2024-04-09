@@ -290,7 +290,7 @@ A guide to install Java can be found [here](https://nus-cs2030.github.io/1920-s2
 
 To ensure that you have the correct version of Java installed, launch the CLI (either `cmd.exe` or `bash`) and run `java --version`.
 
-The correct version should be `java 11.0.21` as shown in the image below:
+As long as the output shows `java 11` is installed, it is correct. The specific version 
 
 ![Java Version](img_2101/java_version.png)
 
@@ -505,7 +505,9 @@ idiot guide here.
 
 ### Experienced User Manual
 
-> ❗This guide is for **experienced** users, made to be briefer without much step-by-step demonstrations. Only proceed if you know what you are doing!
+> ❗This guide is for **experienced** users, made to be briefer without much step-by-step demonstrations. There is **colour texting here** to guide you!
+>
+> Only proceed if you know what you are doing!
 
 > ❗If you are **not** experienced, please head to our step-by-step guide for PulsePilot [here](#pulsepilot-commands).
 
@@ -522,11 +524,34 @@ idiot guide here.
 * [Help](#help)
 * [Exit](#exit)
 
+## User Induction
+
+1. When you first run the PulsePilot application, the bot will prompt you to enter your `name` to create a new user profile.
+   - Your `name` can only contain **alphanumeric characters (letters and numbers) and spaces**.
+   > ❗ **WARNING:** If you enter a name that does not follow this convention, the bot will display an error message and prompt you to try again.
+
+    ![Non-compliance of naming convention](../img/output/wrong_username.png)
+
+2. After entering a valid `name`, the bot will create a new user profile associated with your `name`. 
+This profile will be used to store all your health and workout data. 
+3. Once your user profile is created, you can start using the various commands in PulsePilot to track your progress and health.
+   - You may enter commands after receiving this message prompt:
+     
+      ![Accepting commands](../img/output/accepting_commands.png)
+4. All your data will be saved and associated with your user profile
+   - You can continue tracking your information across multiple devices. Find out more [here](#faq).
+
+###### [Back to experienced user manual](#experienced-user-manual)
+
+###### [Back to table of contents](#table-of-contents)
+
+---
+
 ## Commands
 
 ### Workout: Run
 
-Adds a new run workout to track.
+Adds a new run session to track.
 
 Format: <code style="color: #D85D43;">workout /e:run /d:DISTANCE /t:TIME [/date:DATE]</code>
 
@@ -536,6 +561,7 @@ Format: <code style="color: #D85D43;">workout /e:run /d:DISTANCE /t:TIME [/date:
 
 > ⚠️ If `HH` is set to `00`, the bot will throw an error. Please use `MM:SS` if the `HH` field is not needed!
 
+> ⚠️ Date specified cannot be later than the current date!
 
 Examples:
 - <code style="color: #D85D43;">workout /e:run /d:5.15 /t:25:03 /date:25-03-2023 </code>
@@ -546,14 +572,17 @@ Expected Output:
 ![Adding Runs](../img/output/adding_runs.png)
 
 > ⚠️ **Minimum and Maximum inputs:**
-> Maximum Pace: 30:00/km, Minimum Pace: 1:00/km
+> Maximum Pace Value: 30:00/km, Minimum Pace Value: 1:00/km
 > Maximum Run Time: 99:59:59, Minimum Run Time: 00:01
-> Maximum Distance: 5000.00, Minimum Distance: 0.01
+> Maximum Distance: 5000.00km, Minimum Distance: 0.01km
+> 
 > **Note that exceeding these bounds will trigger an error!**
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
+
+---
 
 ### Workout: Gym
 
@@ -564,18 +593,19 @@ Format: <code style="color: #D85D43;">workout /e:gym /n:NUMBER_OF_STATIONS [/dat
 * `NUMBER_OF_STATIONS` is a **positive integer of at least 1** representing the number of stations for one Gym session.
 * `DATE` is in `DD-MM-YYYY` format (i.e. `19-03-2024`). The date is **optional**, and if not specified, defaults to `NA`.
 
-Examples:
+> ⚠️ Date specified cannot be later than the current date!
 
+> ⚠️ Please input positive integers for `NUMBER_OF_STATIONS` without leading zeros. Entering a number with a leading zero, such as `01`, will trigger an error.
+
+Examples: 
 - <code style="color: #D85D43;">workout /e:gym /n:2 /date:25-03-2023</code>
 - <code style="color: #D85D43;">workout /e:gym /n:4</code>
-
-###### [Back to Experienced User Guide](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
 #### Adding Gym Stations
 
-Upon entry of the `workout /e:gym` command, the bot will prompt for further details for each station done:
+Upon entry of the <code style="color: #D85D43;">workout /e:gym</code> command, the bot will prompt for further details for each station done:
 
 Format: <code style="color: #D85D43;">STATION_NAME /s:SET /r:REPS /w:WEIGHT</code>
 
@@ -584,11 +614,13 @@ Format: <code style="color: #D85D43;">STATION_NAME /s:SET /r:REPS /w:WEIGHT</cod
 * `REPS` is a **positive integer**  representing the number of repetitions done for one station.
 * `WEIGHT` is a **list of positive numbers** separated by commas. It represents the weights used for all the sets in the station.
 
-> ⚠️ `STATION_NAME` must always be the first parameter. The order of the other parameters can be in any order.
+> ⚠️ `STATION_NAME` must always be the first parameter. The order of the other parameters can be in any order. `STATION_NAME` can **only contain letters and spaces**, and can be up to **25 characters long**.
 
-> ⚠️ `WEIGHT` must be in **multiples of 0.125 KG**. This is because the minimum weight increment in a gym is 0.125kg. Example `bench press /s:2 /r:10 /w:10.333,12.5` is not valid as 10.333 is not a multiple of 0.125kg.
+> ⚠️ `WEIGHT` must be in **multiples of 0.125 KG**! This is because the minimum weight increment in a gym is 0.125kg. Example `bench press /s:2 /r:10 /w:10.333,12.5` is not valid as 10.333 is not a multiple of 0.125kg.
 
 > ⚠️ Note that the **number of weights must equal to the number of sets**! For example, if you have done 2 sets at 10 kg, PulsePilot still expects 2 weights to be specified like this `squats /s:2 /r:5 /w:10.25,10.5`.
+
+> ⚠️ Please input positive integers for `SETS` and `REPS` without leading zeros. Entering a number with a leading zero, such as `01`, will trigger an error.
 
 
 Examples:
@@ -599,38 +631,35 @@ Expected Output:
 
 ![Adding Gyms](../img/output/adding_gym.png)
 
-> ⚠️ **Minimum inputs:**
-Minimum weight: 0.00
-Minimum number of sets: 1
-Minimum number of repetitions: 1
+> ⚠️ **Minimum and Maximum inputs:**
+> Minimum Weight: 0kg, Maximum Weight: 2850kg
+> 
+> 0kg is meant for **bodyweight exercises!**
 > **Note that exceeding these bounds will trigger an error!**
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
-___
+---
 
 ### Health: BMI
 
-Calculates user's Body Mass Index (BMI) based on height and weight from user's input.
+Calculates user's Body Mass Index (BMI) based on height and weight from user's input, and tracks it.
 
 Format: <code style="color: #D85D43;">health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE</code>
 
-* Parameters after `health` can be in any order.
 * `HEIGHT` is a **2 decimal point number in metres** (i.e. `1.71`) representing the user's height.
 * `WEIGHT` is a **2 decimal point number in kilograms** (i.e. `60.50`) representing the user’s weight.
 * `DATE` is in `DD-MM-YYYY` format (i.e. `19-03-2024`).
+
+> ⚠️ Date specified cannot be later than the current date!
 
 Examples:
 * <code style="color: #D85D43;">health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024</code>
 * <code style="color: #D85D43;">health /h:bmi /date:19-03-2024 /height:1.70 /weight:75.42</code>
 
-Expected Output:
-
-![Adding BMI](../img/output/adding_bmi.png)
-
-The ranges for BMI are as follows:
+PulsePilot will categorize your BMI as follows:
 
 - BMI < 18.5 (less than 18.5): **Underweight**
 - 18.5 <= BMI < 25.0 (more than or equal to 18.5 and less than 25.0): **Normal**
@@ -638,42 +667,53 @@ The ranges for BMI are as follows:
 - 30.0 <= BMI < 40.0 (more than or equal to 30.0 and less than 40.0): **Obese**
 - BMI >= 40.0 (more than 40.0): **Severely Obese**
 
+Expected Output:
+
+![Adding BMI](../img/output/adding_bmi.png)
+
+
+
 > ⚠️ **Minimum and Maximum inputs:**
-> Maximum Height: 2.75, Minimum Height: 0.01
-> Maximum Weight: 640.00, Minimum Weight: 0:01
+> Maximum Height: 2.75m, Minimum Height: 0.01m
+> Maximum Weight: 640.00kg, Minimum Weight: 0.01kg
+> 
 > **Note that exceeding these bounds will trigger an error!**
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
-___
+---
 
 ### Health: Period
 
 Tracks the start and end of user's menstrual cycle.
 
-
 Format: <code style="color: #D85D43;">health /h:period /start:START_DATE [/end:END_DATE]</code>
 
-* Parameters after `health` can be in any order.
 
-* `START_DATE` is `DD-MM-YYYY` format (i.e. `19-03-2024`) representing the first day of period flow which is also the first day of the cycle. This parameter needs to be present at all times (i.e. inputting a new period input or adding in end date).
+* `START_DATE` is `DD-MM-YYYY` format (i.e. `19-03-2024`) representing the first day of period flow which is also the first day of the cycle. 
 
-* `END_DATE` is `DD-MM-YYYY` format (i.e. `19-03-2024`) representing the last day of period flow. This parameter is optional and can be input once the period flow ends. To add an end date, you need to input the correct corresponding start date of the period.
+* `END_DATE` is `DD-MM-YYYY` format (i.e. `19-03-2024`) representing the last day of period flow. This parameter is **optional** and can be added once the period flow ends. To add an end date for a specific period, you need to input the correct corresponding start date.
 
-**Warning:** Every period input needs to include a start date and end date before adding a new period input.
-
+> ⚠️ An outstanding period entry must have an end date specified before a new entry can be added.
 
 Examples:
+
 * <code style="color: #D85D43;">health /h:period /start:09-03-2022 /end:16-03-2022</code>
 * <code style="color: #D85D43;">health /start:09-03-2022 /end:16-03-2022 /h:period</code>
-* * <code style="color: #D85D43;">health /h:period /start:09-03-2022</code>
+* <code style="color: #D85D43;">health /h:period /start:09-03-2022</code>
 
 
 Expected Output:
 
 ![Adding Periods](../img/output/adding_period.png)
+
+###### [Back to experienced user manual](#experienced-user-manual)
+
+###### [Back to table of contents](#table-of-contents)
+
+---
 
 ### Health: Prediction
 
@@ -681,37 +721,33 @@ Predicts user's next period start date.
 
 Format: <code style="color: #D85D43;">health /h:prediction</code>
 
-* All parameters must be provided in the correct order.
 * There must be at least **4 periods** added before a prediction can be made.
 
 Expected Output:
 
 ![Viewing Prediction](../img/output/viewing_prediction.png)
 
-> ⚠️ **There is no minimum and maximum cycle lengths** for a period and hence cycle, since underlying medical conditions can cause varying cycle lengths.
-> PulsePilot will only **notify** you if your cycle length is outside the healthy range of **2 - 7 days**.
+> ⚠️ PulsePilot **does not** impose minimum or maximum length requirements for menstrual cycles, as underlying medical conditions can cause variations in cycle lengths.
+> 
+> PulsePilot will only **notify** you if your cycle length is beyond the healthy range of **2 - 7 days**.
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
-___
+---
 
 ### Health: Appointment
 
-Tracks the user's medical appointments.
+Tracks both **previous and upcoming** medical appointments.
 
 Format: <code style="color: #D85D43;">health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION</code>
-
-* Parameters after `health` do not need to be in order.
 
 * `DATE` is a `DD-MM-YYYY` format (i.e. `03-04-2024`) representing the date of the appointment.
 
 * `TIME` is a `HH:mm` format (i.e. `14:15`) representing the time of the appointment.
 
-* `DESCRIPTION` is a string (i.e. `review checkup with surgeon`) representing the details of the appointment. The string can **only contain alphanumeric characters and spaces**.
-
-> ⚠️ Other **non-alphanumeric characters** entered the appointment description will trigger an error!
+* `DESCRIPTION` is a string (i.e. `review checkup with surgeon`) representing the details of the appointment. The description can **only contain alphanumeric characters, spaces, inverted commas and quotes**.
 
 Examples:
 
@@ -723,13 +759,13 @@ Expected Output:
 
 ![Adding Appointment](../img/output/adding_appointment.png)
 
+> ⚠️ Any characters that are **NOT** mentioned above used in the description will trigger an error! Please only use the characters allowed.
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
-___
-
+---
 
 ### History
 
@@ -745,6 +781,8 @@ Format: <code style="color: #D85D43;">history /item:TYPE</code>
   - `period` shows all Period entries.
   - `appointment` show all Appointment entries.
 
+> 💡 `workouts` prints a summary of the `run` and `gym` objects. Full details can be viewed using `history /item:run/gym` respectively.
+
 Examples:
 * <code style="color: #D85D43;">history /item:workouts</code>
 * <code style="color: #D85D43;">history /item:appointment</code>
@@ -753,24 +791,24 @@ Expected Output:
 
 ![Viewing History](../img/output/viewing_history.png)
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
---- 
+---
 
 ### Latest
 
-Prints the latest instance of `run`, `gym`, `bmi`, `period`, `appointment`.
+Prints the **most recently added** instance of `run`, `gym`, `bmi`, `period`, `appointment`.
 
 Format: <code style="color: #D85D43;">latest /item:TYPE</code>
 
 * `TYPE` is either `run`, `gym`, `bmi`, `period` or `appointment`.
   - `run` shows the latest run
   - `gym` shows the latest gym
-  - `bmi` shows the latest BMI
+  - `bmi` shows the latest BMI by date
   - `period` shows the latest Period
-  - `appointment` show the latest Appointment
+  - `appointment` show the earliest upcoming Appointment
 
 Examples:
 * <code style="color: #D85D43;">latest /item:appointment</code>
@@ -779,29 +817,34 @@ Expected Output:
 
 ![Viewing Latest](../img/output/viewing_latest.png)
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
---- 
+---
 
 ### Delete
 
-Deletes an item tracked within PulsePilot.
+Delete a tracked item.
 
 Format: <code style="color: #D85D43;">delete /item:TYPE /index:INDEX</code>
 
 * `TYPE` is either `run`, `gym`, `bmi`, `period` or `appointment`.
 * `INDEX` represents the index of the item to delete.
 
+> ⚠️ Please input positive integers for `INDEX` without leading zeros. Entering a number with a leading zero, such as `01`, will trigger an error.
+
+> ⚠️ The `INDEX` is based on the respective item lists. Use `history` to view the lists.
+
 Examples:
+
 * <code style="color: #D85D43;">delete /item:run /index:2</code>
 
 Expected output:
 
-![Deleting](../img/output/deleting.png)
+![Deleting Object](../img/output/deleting.png)
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -817,7 +860,7 @@ Expected output:
 
 ![img.png](../img/output/viewing_help.png)
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -835,7 +878,7 @@ Expected Output:
 
 > ⚠️ Exiting the bot by closing the terminal or with <kbd>Ctrl</kbd> + <kbd>C</kbd>  **will result in data being lost!**
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -845,17 +888,18 @@ Expected Output:
 
 Here is a summary of all the commands and its functions. The table contains examples as well for you to try out!
 
-| Action       | Format, Examples                                                                                                                       |
-|--------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| Print help   | `help`                                                                                                                                 |
-| Add new run  | `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]`<br> Example: `workout /e:run /d:5.24 /t:25:23 /date:19-03-2024`   </br>              |
-| Add gym      | `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]`<br> Example: `workout /e:gym /n:4`</br>                                            |
-| Track BMI    | `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE`<br> Example: `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`</br> |
-| Track Period | `health /h:period /start:START_DATE /end:END_DATE`<br> Example: `health /h:period /start:09-03-2022 /end:16-03-2022` </br>             |
-| View history | `history /item:TYPE`<br> Example: `history /item:run` </br>                                                                            |
-| View latest  | `latest /item:TYPE`<br>  Example: `latest /item:bmi`  </br>                                                                            |
-| Exit bot     | `exit`                                                                                                                                 |
-
+| Action        | Format, Examples                                                                                                              |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Print help    | `help`                                                                                                                        |
+| Add new run   | `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]` <br> Example: `workout /e:run /d:5.24 /t:25:23 /date:19-03-2024`</br>                 |
+| Add gym       | `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]` <br> Example: `workout /e:gym /n:4`</br>                                           |
+| Track BMI     | `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE` <br> Example: `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`</br> |
+| Track Period  | `health /h:period /start:START_DATE [/end:END_DATE]` <br> Example: `health /h:period /start:09-03-2022 /end:16-03-2022`</br>            |
+| Track Appointment  | `health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION` <br> Example: `health /h:appointment /date:29-04-2025 /time:12:00 /description:knee surgery` </br>           |
+| View history  | `history /item:TYPE` <br> Example: `history /item:run` </br>                                                                            |
+| View latest   | `latest /item:TYPE` <br> Example: `latest /item:bmi` </br>                                                                               |
+| Deleting item | `delete /item:TYPE /index:INDEX` <br> Example: `delete /item:run /index:1`  </br>                                                       |
+| Exit bot      | `exit`                                                                                                                        |
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -867,7 +911,7 @@ Here is a summary of all the commands and its functions. The table contains exam
 
 In some instances, the output from an error will result in odd characters being printed on screen:
 
-![Colour not rendering](../img/output/colour_render.png)
+![Colour not rendering](../img/output/colour_not_rendered.png)
 
 This issue affects Windows machines. The odd characters are actually special characters used to **display colour** in the terminal. **Windows 10 users** do not have this enabled by default. For Windows 11, these are automatically enabled and hence this problem does not occur.
 
