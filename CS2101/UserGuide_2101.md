@@ -1080,7 +1080,7 @@ This merely a visual difference, and it does not mean the bot is not working. **
 | Github                      | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot) </br>                                                                                          |
 | Alphanumeric                | Input that is made up of only **letters and numbers**. <br>[*Go Back*](#creating-your-profile) </br>                                                                                                                                                                 |
 | Flags                       | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[*Go Back*](#pulsepilot-commands) </br> |
-| File Explorer               | An application used to view the files and directories in a Windows computer.<br> Uses this logo: <img src=img_2101/file_explorer.png alt="File Explorer" width="40"/> </br> <br> [*Go Back*](#windows-fix) </br>                                                     |
+| File Explorer               | An application used to view the files and directories in a Windows computer.<br> The program uses this: <img src=img_2101/windows/file_explorer.png alt="File Explorer" width="40"/> </br> <br> [*Go Back*](#windows-fix) </br>                                                     |
 
 ###### [Back to table of contents](#table-of-contents)
 
