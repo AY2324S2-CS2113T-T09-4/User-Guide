@@ -154,7 +154,7 @@ Here is a sub table of contents, so you can navigate through this section easily
 
 Let us first begin with launching the command line for Windows. The name of this program is `cmd.exe`!
 
-To do so, firstly, hit the <kbd>Windows</kbd> key on your keyboard to bring up the start menu:
+To do so, firstly, hit the <kbd>![winlogo.png](img_2101%2Fwindows%2Fwinlogo.png) Windows</kbd> key on your keyboard to bring up the start menu:
 
 ![Windows Start](img_2101/windows/windows_start.png)
 
@@ -162,19 +162,19 @@ Afterward, type `cmd` or `Command Prompt` into the search bar above, and there s
 
 ![Finding cmd.exe](img_2101/windows/finding_cmd_exe.png)
 
-Go ahead and click on that, and a black screen should pop up on your screen looking like this:
+Go ahead and click on that, and a _black_ window should pop up on your screen looking similar to this:
 
 ![Launching cmd.exe](img_2101/windows/windows_cmd_exe.png)
 
 Congratulations, you have successfully launched the CLI for Windows!
 
-The string `C:\Users\rouvi` is the current [*directory*](#glossary) that you are in! This means that currently, the CLI is within the `C:\Users\rouvi` folder of the computer.
+The string `C:\Users\rouvi` is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `C:\Users\rouvi` folder of the computer.
 
 > ❗ The directory and CLI for you may look different from the one shown in the guide! This is **normal** as the guide was created using a different computer. As long as the top of the window shows '**Command Prompt**', you are good to go!
 
 You can type different things into the CLI, and press <kbd>Enter</kbd> to make your computer read the input and process it as a command.
 
-For the example below,qw I typed a `hello` and hit <kbd>Enter</kbd> to make the compute read it.
+For the example below, I typed a `hello` and hit <kbd>Enter</kbd> to make the compute read it.
 
 ![Typing Commands](img_2101/windows/sample_windows_type.png)
 
@@ -212,7 +212,7 @@ If you want to go 'back' one directory, use `cd ..`.
 
 ![cd ..](img_2101/windows/cd_back.png)
 
-##### Listing Directories
+##### List Directory Contents
 
 Now, suppose you want to view files a directory has within it. You can use `dir` to do so. 
 
@@ -237,21 +237,56 @@ That is all the commands you need to know to navigate through the Windows CLI an
 
 ### MacOS
 
-#### Launching `bash`
+#### Launching `Terminal`
 
-On macOS, the default command line interface is called the Terminal, which uses the Bash shell. To launch the Terminal:
+On macOS, the default command line interface is called the **Terminal**, which uses the `Bash shell`. 
+To launch the **Terminal**:
 
-Open the Launchpad
-Search for "Terminal" and click on the application to open it
-The macOS Terminal allows you to enter and execute Bash commands.
+1. To begin searching for **Terminal**:
+   - Open the Launchpad: The Launchpad is the grid of app icons on your Mac's Dock. You can usually find it in the bottom of your screen.
+   
+   ![Launchpad](img_2101/macos/launchpad.png)
 
-MacOS Commands
-Here are some common Bash commands you can use in the macOS Terminal:
+   - Open the Spotlight Search Bar: Hit <kbd>⌘ command</kbd> + <kbd>Spacebar</kbd> on your keyboard at the same time to bring up the Spotlight Search Bar.
 
-ls - Lists the files and directories in the current directory
-cd <directory> - Changes the current directory to the specified one
-clear - Clears the screen of the Terminal
-exit - Closes the Terminal window
+   ![Spotlight Search Bar](img_2101/macos/spotlight_search.png)
+
+
+2. Search for `Terminal`: 
+   - In the Launchpad: In the Launchpad search bar, type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
+   
+   ![Terminal in Launchpad](img_2101/macos/launchpad_terminal.png)
+
+   - In the Spotlight Search Bar: type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
+   
+   ![Terminal in Spotlight Search Bar](img_2101/macos/spotlight_terminal.png)
+
+
+3. Open the **Terminal** App: After clicking on the **Terminal** app icon to launch the **Terminal** application, you should now see a _white_, _grey_ or _black_ window pop up on your screen looking similar to this:
+
+![Terminal](img_2101/macos/terminal.png)
+
+Congratulations, you have successfully launched the CLI for MacOS!
+
+The [string](#string) `~` in `l5z@L5Z-MacBook-Air ~ %`is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `~` directory (or folder) of the computer.
+This string will be **updated** to always reflect the directory you are currently in while navigating. 
+
+In the example below, I am currently in the `Desktop` directory.
+
+![Terminal Directory String](img_2101/macos/cd_desktop.png)
+
+
+> ❗ The directory and CLI for you may look different from the one shown in the guide! This is **normal** as the guide was created using a different computer. As long as the top of the window shows '**zsh**', you are good to go!
+
+You can type different things into the CLI, and press <kbd>Enter</kbd> to make your computer read the input and process it as a command.
+
+For the example below, I typed a `hello` and hit <kbd>Enter</kbd> to make the compute read it.
+
+![Typing Commands](img_2101/macos/sample_mac_type.png)
+
+`hello` is not a valid command to use with `Terminal`, and your computer will let you know it is not a recognised command as shown in the image above.
+
+Read the next section to learn some basic commands!
 
 ###### [Back to Command Line Interface](#command-line-interface)
 
@@ -261,7 +296,32 @@ exit - Closes the Terminal window
 
 #### MacOS Commands
 
-list directory, change directory, invalid commands.
+##### Changing Directories
+
+List Directory Contents (ls): The ls command lists the files and folders in your current directory.
+To use it, simply type ls and press Enter.
+This will display all the items in your current directory.
+Show Image
+Change Directory (cd): The cd command allows you to change your current directory.
+To change to a different directory, type cd <directory-name>, where <directory-name> is the name of the directory you want to navigate to.
+For example, to change to the "Documents" folder, you would type cd Documents.
+To go back to the previous directory, you can use cd ...
+Show Image
+Clear the Screen (clear): If the Terminal screen becomes cluttered, you can use the clear command to clear the screen.
+Simply type clear and press Enter to clear the Terminal window.
+
+The macOS Terminal allows you to enter and execute Bash commands.
+
+##### List Directory Contents
+
+**List Directory Contents (`ls`)**: The ls command lists the files and folders in your current directory.
+
+Here are some common Bash commands you can use in the macOS Terminal:
+
+* `ls` - Lists the files and directories in the current directory
+* `cd <DIRECTORY>` - Changes the current directory to the specified one
+* `clear` - Clears the screen of the Terminal
+
 
 ###### [Back to Command Line Interface](#command-line-interface)
 
@@ -891,13 +951,14 @@ This merely a visual difference, and it does not mean the bot is not working. **
 
 ## Glossary
 
-| Term                        | Definition                                                                                                                                                            |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Object-Oriented Programming | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [*Go Back*](#glossary-usage) </br>     |
-| Hyperlinks                  | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[*Go Back*](#glossary-usage) </br> |
+| Term                        | Definition                                                                                                                                                                                  |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Object-Oriented Programming | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [*Go Back*](#glossary-usage) </br>                           |
+| Hyperlinks                  | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[*Go Back*](#glossary-usage) </br>                       |
 | Java                        | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[*Go Back*](#glossary-usage) </br> |
-| Command Line Interface      | A **text-based** interface where users can input commands that interact with a computer. <br>[*Go Back*](#command-line-interface) </br> |
-| Directory / Directories                 |  A folder within your computer that contains other files and files.[*Go Back*](#launching-cmdexe) </br>                                                                                                                                       |
+| Command Line Interface      | A **text-based** interface where users can input commands that interact with a computer. <br>[*Go Back*](#command-line-interface) </br>                                                     |
+| Directory / Directories     | A folder within your computer that contains other files and files.[*Go Back*](#launching-cmdexe) </br>                                                                                      |
+| String                      | A sequence of characters that can be used to represent text data.                                                                                                                           |
 
 
 ###### [Back to table of contents](#table-of-contents)
