@@ -481,11 +481,11 @@ There are details and flags required from you, which will be covered below.
 
 Here are the details required from you, and the required flag for PulsePilot to know which detail is being specified in your input.
 
-| Detail     | Description                         | Flag Used | Limitations                                                                                                                                                                  |
-|------------|-------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `distance` | The distance ran in **kilometres**. | `/d:`     | Must be a **2 decimal point positive number** such as `5.15`. <br> Must be **at least** `0.01`, and is **capped at** `5000.00`. </br>                                        |
-| `time`     | The time taken for the run.         | `/t:`     | Must be in either `MM:SS` or `HH:MM:SS` format. <br> Must be **at least** `00:01`, and is capped at `99:59:59`. </br>                                                        |
-| `date`     | The date of the run. <br>This is an **OPTIONAL** parameter. </br>                | `/date:`  | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
+| Detail     | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
+|------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `distance` | The distance ran in **kilometres**.                               | `/d:`     | Must be a **2 decimal point positive number** such as `5.15`. <br> Must be **at least** `0.01`, and is **capped at** `5000.00`. </br>                                        |
+| `time`     | The time taken for the run.                                       | `/t:`     | Must be in either `MM:SS` or `HH:MM:SS` format. <br> Must be **at least** `00:01`, and is capped at `99:59:59`. </br>                                                        |
+| `date`     | The date of the run. <br>This is an **OPTIONAL** parameter. </br> | `/date:`  | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
 
 > ❗ The `date` parameter is **OPTIONAL**. Not specifying one results in it being recorded as `NA` within the bot, and it is okay!
 
@@ -494,6 +494,7 @@ Here are the details required from you, and the required flag for PulsePilot to 
 The following example will cover how to add a run step-by-step.
 
 1. Suppose a user wants to add **two** runs:
+
    - The first is a  **5.50km** run completed in **25 minutes and 12 seconds** on **7 March 2024**.
    - The second is a **20km** run completed in **2 hours, 13 minutes and 37 seconds** without a date.
 
@@ -502,7 +503,6 @@ The following example will cover how to add a run step-by-step.
   - A **5.50km** run is specified using the `distance` flag via `/d:5.50`.
   - **25 minutes and 12 seconds** is specified using the `time` flag via `/t:25:12`.
   - **7 March 2024** is specified using the `date` flag via `/date:07-03-2024`.
-
 3. Putting it together, the full command is:
 
    <code style="color: #D85D43;">workout /e:run /d:5.50 /t:25:12 /date:07-03-2024</code>
@@ -523,7 +523,7 @@ The following example will cover how to add a run step-by-step.
 
 7. Entering it into the bot shows the following:
 
-  ![Add second run](img_2101/pulsepilot_commands/run/add_run2.png)
+    ![Add second run](img_2101/pulsepilot_commands/run/add_run2.png)
 
 8. Congratulations, you have added your first 2 runs to PulsePilot!
 
@@ -1080,7 +1080,7 @@ This merely a visual difference, and it does not mean the bot is not working. **
 | Github                      | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot) </br>                                                                                          |
 | Alphanumeric                | Input that is made up of only **letters and numbers**. <br>[*Go Back*](#creating-your-profile) </br>                                                                                                                                                                 |
 | Flags                       | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[*Go Back*](#pulsepilot-commands) </br> |
-| File Explorer               | An application used to view the files and directories in a Windows computer.<br> The program uses this: <img src=img_2101/windows/file_explorer.png alt="File Explorer" width="40"/> </br> <br> [*Go Back*](#windows-fix) </br>                                                     |
+| File Explorer               | An application used to view the files and directories in a Windows computer.<br> The program uses this: <img src=img_2101/windows/file_explorer.png alt="File Explorer" width="40"/> </br> <br> [*Go Back*](#windows-fix) </br>                                      |
 
 ###### [Back to table of contents](#table-of-contents)
 
