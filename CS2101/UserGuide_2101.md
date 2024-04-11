@@ -1185,6 +1185,78 @@ This merely a visual difference, and it does not mean the bot is not working. **
 
 ## Frequently Asked Questions
 
+**1.** How do I transfer my data to another computer?
+
+To transfer your data to another computer, make sure that `pulsepilot.jar` is placed in the **same folder** as `pulsepilot_data.txt` **and** `pulsepilot_hash.txt`. If done correctly, PulsePilot will recognize and synchronize your data.
+
+> ⚠️ Create a _backup copy_ of both `pulsepilot_data.txt` and `pulsepilot_hash.txt` prior to file transfer to avoid data corruption.
+>
+> The _backup copies_ should be stored in a **separate** folder location from where the original `pulsepilot.jar` is saved.
+
+
+**2.** What happens if my data is corrupted or tampered with?
+
+> ❗ **_WARNING_: DO NOT** tamper with either `pulsepilot_data.txt` or `pulsepilot_hash.txt` to prevent **permanent** and **unrecoverable** loss of data.
+
+
+
+You may experience 2 scenarios:
+
+- A data file content corruption:
+
+![Data Corruption](img/output/data_corruption.png)
+
+Corruption of the `pulsepilot_data.txt` or `pulsepilot_hash.txt` files will result in **permanent and complete data loss**.
+
+- A missing file error:
+
+![Missing Files](img/output/missing_files.png)
+
+A missing file error occurs when either `pulsepilot_data.txt` or `pulsepilot_hash.txt` is missing when PulsePilot is run. For safety and security reasons, PulsePilot will automatically delete any remaining data files before exiting the application.
+
+**Both cases will inevitably result in permanent and complete data loss.**
+
+> ❗ **DATA RECOVERY:** In both cases, you may want to recover data by utilising **both** your _backup_ copies of  `pulsepilot_data.txt` and `pulsepilot_hash.txt` to restore your data.
+
+Otherwise, if you have lost your data, you can reinitialize a new save file by running the command `java -jar pulsepilot.jar` again.
+
+**3.** Is my tracking data private and confidential?
+
+Yes, your data is secure and stored locally on your machine. PulsePilot does not have any features that would allow it to send your data elsewhere.
+
+**4.** What happens if I specify extra flags on accident?
+
+Note that if you add duplicate or extra flags, the bot **will read the first instance only**.
+
+**All other parameters will be ignored.**
+
+For example:
+
+```
+workout /e:run /d:5.25 /t:59:50 /d:10.55
+```
+
+In the above output, the bot will read `5.25` as the distance. The second `/d:10.55` is ignored.
+
+**5.** What if I keep receiving an error message even though my input seems to follow the instructions given in the user guide?
+
+Please ensure that you follow the command syntax given **exactly** in the user guide. Some examples of mistakes that could be easily overlooked:
+
+Example of the correct command:
+
+![correct_command.png](img/correct_command.png)
+
+- Error of adding extra space(s) in fixed parameters:
+    - In this case, the altered fixed parameter is `/date:`, which was written as `/ date:` instead.
+
+![extra_space_error_command.png](img/extra_space_error_command.png)
+
+- Error of adding extra newline(s) after command:
+
+![extra_newline_error_command.png](img/extra_newline_error_command.png)
+
+Avoid using extra characters in the commands, such as blank space, newline, etc.
+
 ###### [Back to table of contents](#table-of-contents)
 
 ---
