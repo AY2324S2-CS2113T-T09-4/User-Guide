@@ -268,7 +268,7 @@ To launch the **Terminal**:
 
 Congratulations, you have successfully launched the CLI for MacOS!
 
-The [string](#string) `~` in `l5z@L5Z-MacBook-Air ~ %`is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `~` directory (or folder) of the computer.
+The [string](#string) `~` in `l5z@L5Z-MacBook-Air ~ %` is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `~` directory (or folder) of the computer.
 This string will be **updated** to always reflect the directory you are currently in while navigating. 
 
 In the example below, I am currently in the `Desktop` directory.
@@ -296,31 +296,64 @@ Read the next section to learn some basic commands!
 
 #### MacOS Commands
 
-##### Changing Directories
+The macOS **Terminal** allows you to enter and execute **Bash** commands.
 
-List Directory Contents (ls): The ls command lists the files and folders in your current directory.
-To use it, simply type ls and press Enter.
-This will display all the items in your current directory.
-Show Image
-Change Directory (cd): The cd command allows you to change your current directory.
-To change to a different directory, type cd <directory-name>, where <directory-name> is the name of the directory you want to navigate to.
-For example, to change to the "Documents" folder, you would type cd Documents.
-To go back to the previous directory, you can use cd ...
-Show Image
-Clear the Screen (clear): If the Terminal screen becomes cluttered, you can use the clear command to clear the screen.
-Simply type clear and press Enter to clear the Terminal window.
+##### Changing Directories (`cd`)
 
-The macOS Terminal allows you to enter and execute Bash commands.
+There are many commands in MacOS, but this guide will cover the basic few you need to use PulsePilot.
 
-##### List Directory Contents
+The first command is `cd`, short for **change directory**. It changes the **current** directory to the specified one. 
+The format to use it is `cd <DIRECTORY>`, where `<DIRECTORY>` is the directory you would like to navigate to **within your current directory**!
 
-**List Directory Contents (`ls`)**: The ls command lists the files and folders in your current directory.
+For example, suppose I want to go to the `cli_demo` folder from my current directory, `Desktop`. 
 
-Here are some common Bash commands you can use in the macOS Terminal:
+Since `cli_demo` is a directory within `Desktop` (as seen below), we can use `cd <DIRECTORY>`.
 
-* `ls` - Lists the files and directories in the current directory
-* `cd <DIRECTORY>` - Changes the current directory to the specified one
-* `clear` - Clears the screen of the Terminal
+![cd_desktop](img_2101/macos/cd_desktop.png)
+
+I would type the following:
+
+![cd](img_2101/macos/cd.png)
+
+Note how `l5z@L5Z-MacBook-Air Desktop %` now has `cli_demo` replacing `Desktop`. This means that the directory has been changed successfully.
+
+If you `cd` to a directory that does not exist, your **Terminal** will let you know it cannot find such a directory:
+
+![cd error](img_2101/macos/cd_error.png)
+
+If you want to go 'back' one directory, use `cd ..`.
+
+> 💡 `..` means the previous immediate directory.
+
+![cd ..](img_2101/macos/cd_back.png)
+
+##### List Directory Contents (`ls`)
+
+Now, suppose you want to view files contained within a directory.
+
+The `ls` command lists the files and folders in your current directory.
+To use it, simply type `ls` and press <kbd>Enter</kbd>.
+
+For example, I want to view what files are within the `cli_demo` folder. I would first `cd` to the `cli_demo` folder, and then use `ls` to view the contained files:
+
+![cd then ls](img_2101/macos/cd_ls.png)
+
+This would print out all the files and folders within the directory.
+
+In the `cli_demo` directory, we can see a `hello.txt` and a `pulsepilot.txt` file contained within the `cli_demo` directory.
+We also have another folder within `cli_demo` called `another_directory`.
+
+> 💡 **Generally**, you can differentiate between files and directories by the name. If it has a period('.') in the name, it is likely to be a file. 
+> Should you encounter any issues, you may refer [here](#macos-fix) for additional details. 
+
+That is all the commands you need to know to navigate through the Windows CLI and use PulsePilot! To summarise:
+
+
+- **List Directory Contents (`ls`)**: The `ls` command lists the files and folders in your current directory.
+  - Simply type `ls` and press <kbd>Enter</kbd>.
+- **Change Directory (`cd <DIRECTORY>`)**: The `cd` command changes the current directory to the specified one in `<DIRECTORY>`
+  - Type `cd`, followed by <kbd>Spacebar</kbd> and enter the name of the directory you would like to navigate to. Finally press <kbd>Enter</kbd>.
+  - _Example_: `cd Desktop`
 
 
 ###### [Back to Command Line Interface](#command-line-interface)
@@ -350,19 +383,7 @@ A guide to install Java can be found [here](https://nus-cs2030.github.io/1920-s2
 
 To ensure that you have the correct version of Java installed, launch the CLI (either `cmd.exe` or `bash`) and run `java --version`.
 
-As long as the output shows `java 11` is installed, it is correct. The specific version 
-
-
-#### Java for Windows
-
-
-To install Java on your computer, you can follow these steps:
-
-Visit the official Java website (https://www.java.com/en/download/)
-Download the appropriate Java installer for your operating system (Windows)
-Run the installer and follow the on-screen instructions to complete the installation
-
-![Java Version](img_2101/installation/java_version.png)
+As long as the output shows `java 11` is installed, it is correct. The specific version
 
 
 ###### [Back to Installation](#installation)
@@ -408,13 +429,25 @@ This section will address some common problems users will face.
 
 When attempting to launch `pulsepilot.jar` from the wrong directory, this error will appear:
 
-![Wrong Directory](img_2101/windows/wrong_dir.png)
+Windows:
 
-This means that `pulsepilot.jar` is **not within your current directory**. To remediate this, use `dir` to check for the files present within your current directory.
+![Wrong Directory Windows](img_2101/windows/wrong_dir.png)
+
+MacOS:
+
+![Wrong Directory MacOS](img_2101/macos/wrong_dir.png)
+
+This means that `pulsepilot.jar` is **not within your current directory**. To remediate this, use `dir` for Windows or `ls` for MacOS to check for the files present within your current directory.
 
 If you are in the right directory, `pulsepilot.jar` should appear like so:
 
-![Correct Directory](img_2101/windows/correct_dir.png)
+Windows:
+
+![Correct Directory Windows](img_2101/windows/correct_dir.png)
+
+MacOS:
+
+![Correct Directory MacOS](img_2101/macos/correct_dir.png)
 
 ##### Windows Fix
 
@@ -435,12 +468,22 @@ To fix this, do the following:
 
 ##### macOS Fix
 
-After installing Java, you can install PulsePilot by following these steps:
+To fix this, do the following:
 
-Download the latest version of the PulsePilot application from the provided source
-Extract the downloaded files to a directory on your computer
-Open the Command Prompt (Windows) or Terminal (macOS) and navigate to the directory where you extracted the PulsePilot files
-Run the PulsePilot application by typing the appropriate command (e.g., `java -jar pulsepilot.jar`)
+1. Locate where `pulsepilot.jar` is within your computer with [*Finder*](#glossary).
+   - You may use the [Dock]() at the bottom of your screen or search for `pulsepilot.jar` with [Spotlight Search]().
+
+2. Right click on it and click on **Properties**.
+   ![File Properties](img_2101/macos/file_properties.png)
+
+3. A separate window will appear with additional data for `pulsepilot.jar`. Copy the value of the **Location** part of the Properties window using <kbd>Ctrl + C</kbd> or highlighting the text, right-clicking it and selecting **Copy**.
+   ![Finding Windows Path](img_2101/macos/property_path.png)
+
+4. Once copied, open the CLI for your device, and type `cd` and hit the <kbd>Spacebar</kbd> **once**, then paste the **Location** value you just copied using <kbd>Ctrl + V</kbd>. Then, hit <kbd>Enter</kbd>. You should see that you are now in the right directory, and use `dir` to verify that `pulsepilot.jar` is within this current directory.
+   ![Right Directory](img_2101/macos/right_directory.png)
+
+5. Continue to launch PulsePilot using `java -jar pulsepilot.jar`.
+
 
 ###### [Back to Installation](#installation)
 
@@ -1158,7 +1201,8 @@ This merely a visual difference, and it does not mean the bot is not working. **
 | Github                      | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot) </br>                                                                                          |
 | Alphanumeric                | Input that is made up of only **letters and numbers**. <br>[*Go Back*](#creating-your-profile) </br>                                                                                                                                                                 |
 | Flags                       | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[*Go Back*](#pulsepilot-commands) </br> |
-| File Explorer               | An application used to view the files and directories in a Windows computer.<br> The program uses this: <img src=img_2101/windows/file_explorer.png alt="File Explorer" width="40"/> </br> <br> [*Go Back*](#windows-fix) </br>                                      |
+| File Explorer               | An application used to view the files and directories in a Windows computer.<br> The program has this icon: <img src=img_2101/windows/file_explorer.png alt="File Explorer" width="40"/> </br> <br> [*Go Back*](#windows-fix) </br>                                  |
+| Finder                      | An application used to view the files and directories in a MacOS computer.<br> The program has this icon: <img src=img_2101/macos/finder.png alt="Finder" width="40"/> </br> <br> [*Go Back*](#macos-fix) </br>                                                      |
 | String                      | A sequence of characters that can be used to represent text data.                                                                                                                                                                                                    |
 
 ###### [Back to table of contents](#table-of-contents)
