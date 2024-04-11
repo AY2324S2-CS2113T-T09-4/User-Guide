@@ -580,9 +580,9 @@ The following example will cover how to add a gym session step-by-step.
 
 1. Suppose you want to add a **gym session**, where you did **3 stations on 10 March 2024**. Here is the breakdown of your workout:
 
-    - Station 1: 4 sets of 4 repetitions of Bench Press using 100kg, 105kg, 110kg and 112.5kg respectively.
-    - Station 2: 5 sets of 5 repetitions of Deadlift using 150kg, 150kg, 160kg, 160kg and 170kg respectively.
-    - Station 3: 3 sets of 10 repetitons of Squats using 100.5kg, 115kg and 110kg respectively.
+    - Station 1: **4 sets** of **4 repetitions** of **Bench Press** using **100kg, 105kg, 110kg and 112.5kg** respectively.
+    - Station 2: **5 sets** of **5 repetitions** of **Deadlift** using **150kg, 150kg, 160kg, 160kg and 170kg** respectively.
+    - Station 3: **3 sets** of **10 repetitions** of Squats using **100.5kg, 115kg and 110kg** respectively.
 
 2. Let's put the gym details into the flags required:
 
@@ -599,9 +599,9 @@ The following example will cover how to add a gym session step-by-step.
 
 5. Now, we can put the 3 gym stations into the flags required:
 
-    - Station 1: `Bench Press /s:4 /r:4 /w:100,105,110,112.5`
-    - Station 2: `Deadlift /s:5 /r:5 /w:150,150,160,160,170`
-    - Station 3: `Squat /s:3 /r:10 /w:100.5,115,110`
+    - Station 1: <code style="color: #D85D43;">Bench Press /s:4 /r:4 /w:100,105,110,112.5</code>
+    - Station 2: <code style="color: #D85D43;">Deadlift /s:5 /r:5 /w:150,150,160,160,170</code>
+    - Station 3: <code style="color: #D85D43;">Squat /s:3 /r:10 /w:100.5,115,110</code>
 
 6. Enter the inputs into PulsePilot. New prompts are printed for each station, and a success message is printed once added. If done correctly, the output should look like this:
 
