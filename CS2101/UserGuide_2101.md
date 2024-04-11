@@ -154,7 +154,7 @@ Here is a sub table of contents, so you can navigate through this section easily
 
 Let us first begin with launching the command line for Windows. The name of this program is `cmd.exe`!
 
-To do so, firstly, hit the <kbd>Windows</kbd> key on your keyboard to bring up the start menu:
+To do so, firstly, hit the <kbd>![winlogo.png](img_2101%2Fwindows%2Fwinlogo.png) Windows</kbd> key on your keyboard to bring up the start menu:
 
 ![Windows Start](img_2101/windows/windows_start.png)
 
@@ -162,13 +162,13 @@ Afterward, type `cmd` or `Command Prompt` into the search bar above, and there s
 
 ![Finding cmd.exe](img_2101/windows/finding_cmd_exe.png)
 
-Go ahead and click on that, and a black screen should pop up on your screen looking like this:
+Go ahead and click on that, and a _black_ window should pop up on your screen looking similar to this:
 
 ![Launching cmd.exe](img_2101/windows/windows_cmd_exe.png)
 
 Congratulations, you have successfully launched the CLI for Windows!
 
-The string `C:\Users\rouvi` is the current [*directory*](#glossary) that you are in! This means that currently, the CLI is within the `C:\Users\rouvi` folder of the computer.
+The string `C:\Users\rouvi` is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `C:\Users\rouvi` folder of the computer.
 
 > ❗ The directory and CLI for you may look different from the one shown in the guide! This is **normal** as the guide was created using a different computer. As long as the top of the window shows '**Command Prompt**', you are good to go!
 
@@ -212,7 +212,7 @@ If you want to go 'back' one directory, use `cd ..`.
 
 ![cd ..](img_2101/windows/cd_back.png)
 
-##### Listing Directories
+##### List Directory Contents
 
 Now, suppose you want to view files a directory has within it. You can use `dir` to do so. 
 
@@ -237,21 +237,56 @@ That is all the commands you need to know to navigate through the Windows CLI an
 
 ### MacOS
 
-#### Launching `bash`
+#### Launching `Terminal`
 
-On macOS, the default command line interface is called the Terminal, which uses the Bash shell. To launch the Terminal:
+On macOS, the default command line interface is called the **Terminal**, which uses the `Bash shell`. 
+To launch the **Terminal**:
 
-Open the Launchpad
-Search for "Terminal" and click on the application to open it
-The macOS Terminal allows you to enter and execute Bash commands.
+1. To begin searching for **Terminal**:
+   - Open the Launchpad: The Launchpad is the grid of app icons on your Mac's Dock. You can usually find it in the bottom of your screen.
+   
+   ![Launchpad](img_2101/macos/launchpad.png)
 
-MacOS Commands
-Here are some common Bash commands you can use in the macOS Terminal:
+   - Open the Spotlight Search Bar: Hit <kbd>⌘ command</kbd> + <kbd>Spacebar</kbd> on your keyboard at the same time to bring up the Spotlight Search Bar.
 
-ls - Lists the files and directories in the current directory
-cd <directory> - Changes the current directory to the specified one
-clear - Clears the screen of the Terminal
-exit - Closes the Terminal window
+   ![Spotlight Search Bar](img_2101/macos/spotlight_search.png)
+
+
+2. Search for `Terminal`: 
+   - In the Launchpad: In the Launchpad search bar, type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
+   
+   ![Terminal in Launchpad](img_2101/macos/launchpad_terminal.png)
+
+   - In the Spotlight Search Bar: type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
+   
+   ![Terminal in Spotlight Search Bar](img_2101/macos/spotlight_terminal.png)
+
+
+3. Open the **Terminal** App: After clicking on the **Terminal** app icon to launch the **Terminal** application, you should now see a _white_, _grey_ or _black_ window pop up on your screen looking similar to this:
+
+![Terminal](img_2101/macos/terminal.png)
+
+Congratulations, you have successfully launched the CLI for MacOS!
+
+The [string](#string) `~` in `l5z@L5Z-MacBook-Air ~ %` is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `~` directory (or folder) of the computer.
+This string will be **updated** to always reflect the directory you are currently in while navigating. 
+
+In the example below, I am currently in the `Desktop` directory.
+
+![Terminal Directory String](img_2101/macos/cd_desktop.png)
+
+
+> ❗ The directory and CLI for you may look different from the one shown in the guide! This is **normal** as the guide was created using a different computer. As long as the top of the window shows '**zsh**', you are good to go!
+
+You can type different things into the CLI, and press <kbd>Enter</kbd> to make your computer read the input and process it as a command.
+
+For the example below, I typed a `hello` and hit <kbd>Enter</kbd> to make the compute read it.
+
+![Typing Commands](img_2101/macos/sample_mac_type.png)
+
+`hello` is not a valid command to use with `Terminal`, and your computer will let you know it is not a recognised command as shown in the image above.
+
+Read the next section to learn some basic commands!
 
 ###### [Back to Command Line Interface](#command-line-interface)
 
@@ -261,7 +296,65 @@ exit - Closes the Terminal window
 
 #### MacOS Commands
 
-list directory, change directory, invalid commands.
+The macOS **Terminal** allows you to enter and execute **Bash** commands.
+
+##### Changing Directories (`cd`)
+
+There are many commands in MacOS, but this guide will cover the basic few you need to use PulsePilot.
+
+The first command is `cd`, short for **change directory**. It changes the **current** directory to the specified one. 
+The format to use it is `cd <DIRECTORY>`, where `<DIRECTORY>` is the directory you would like to navigate to **within your current directory**!
+
+For example, suppose I want to go to the `cli_demo` folder from my current directory, `Desktop`. 
+
+Since `cli_demo` is a directory within `Desktop` (as seen below), we can use `cd <DIRECTORY>`.
+
+![cd_desktop](img_2101/macos/cd_desktop.png)
+
+I would type the following:
+
+![cd](img_2101/macos/cd.png)
+
+Note how `l5z@L5Z-MacBook-Air Desktop %` now has `cli_demo` replacing `Desktop`. This means that the directory has been changed successfully.
+
+If you `cd` to a directory that does not exist, your **Terminal** will let you know it cannot find such a directory:
+
+![cd error](img_2101/macos/cd_error.png)
+
+If you want to go 'back' one directory, use `cd ..`.
+
+> 💡 `..` means the previous immediate directory.
+
+![cd ..](img_2101/macos/cd_back.png)
+
+##### List Directory Contents (`ls`)
+
+Now, suppose you want to view files contained within a directory.
+
+The `ls` command lists the files and folders in your current directory.
+To use it, simply type `ls` and press <kbd>Enter</kbd>.
+
+For example, I want to view what files are within the `cli_demo` folder. I would first `cd` to the `cli_demo` folder, and then use `ls` to view the contained files:
+
+![cd then ls](img_2101/macos/cd_ls.png)
+
+This would print out all the files and folders within the directory.
+
+In the `cli_demo` directory, we can see a `hello.txt` and a `pulsepilot.txt` file contained within the `cli_demo` directory.
+We also have another folder within `cli_demo` called `another_directory`.
+
+> 💡 **Generally**, you can differentiate between files and directories by the name. If it has a period('.') in the name, it is likely to be a file. 
+> Should you encounter any issues, you may refer [here](#macos-fix) for additional details. 
+
+That is all the commands you need to know to navigate through the Windows CLI and use PulsePilot! To summarise:
+
+
+- **List Directory Contents (`ls`)**: The `ls` command lists the files and folders in your current directory.
+  - Simply type `ls` and press <kbd>Enter</kbd>.
+- **Change Directory (`cd <DIRECTORY>`)**: The `cd` command changes the current directory to the specified one in `<DIRECTORY>`
+  - Type `cd`, followed by <kbd>Spacebar</kbd> and enter the name of the directory you would like to navigate to. Finally press <kbd>Enter</kbd>.
+  - _Example_: `cd Desktop`
+
 
 ###### [Back to Command Line Interface](#command-line-interface)
 
@@ -290,9 +383,8 @@ A guide to install Java can be found [here](https://nus-cs2030.github.io/1920-s2
 
 To ensure that you have the correct version of Java installed, launch the CLI (either `cmd.exe` or `bash`) and run `java --version`.
 
-As long as the output shows `java 11` is installed, it is correct. The specific version 
+As long as the output shows `java 11` is installed, it is correct. The specific version
 
-![Java Version](img_2101/installation/java_version.png)
 
 ###### [Back to Installation](#installation)
 
@@ -337,13 +429,25 @@ This section will address some common problems users will face.
 
 When attempting to launch `pulsepilot.jar` from the wrong directory, this error will appear:
 
-![Wrong Directory](img_2101/windows/wrong_dir.png)
+Windows:
 
-This means that `pulsepilot.jar` is **not within your current directory**. To remediate this, use `dir` to check for the files present within your current directory.
+![Wrong Directory Windows](img_2101/windows/wrong_dir.png)
+
+MacOS:
+
+![Wrong Directory MacOS](img_2101/macos/wrong_dir.png)
+
+This means that `pulsepilot.jar` is **not within your current directory**. To remediate this, use `dir` for Windows or `ls` for MacOS to check for the files present within your current directory.
 
 If you are in the right directory, `pulsepilot.jar` should appear like so:
 
-![Correct Directory](img_2101/windows/correct_dir.png)
+Windows:
+
+![Correct Directory Windows](img_2101/windows/correct_dir.png)
+
+MacOS:
+
+![Correct Directory MacOS](img_2101/macos/correct_dir.png)
 
 ##### Windows Fix
 
@@ -363,6 +467,23 @@ To fix this, do the following:
 5. Continue to launch PulsePilot using `java -jar pulsepilot.jar`.
 
 ##### macOS Fix
+
+To fix this, do the following:
+
+1. Locate where `pulsepilot.jar` is within your computer with [*Finder*](#glossary).
+   - You may use the [Dock]() at the bottom of your screen or search for `pulsepilot.jar` with [Spotlight Search]().
+
+2. Right click on it and click on **Properties**.
+   ![File Properties](img_2101/macos/file_properties.png)
+
+3. A separate window will appear with additional data for `pulsepilot.jar`. Copy the value of the **Location** part of the Properties window using <kbd>Ctrl + C</kbd> or highlighting the text, right-clicking it and selecting **Copy**.
+   ![Finding Windows Path](img_2101/macos/property_path.png)
+
+4. Once copied, open the CLI for your device, and type `cd` and hit the <kbd>Spacebar</kbd> **once**, then paste the **Location** value you just copied using <kbd>Ctrl + V</kbd>. Then, hit <kbd>Enter</kbd>. You should see that you are now in the right directory, and use `dir` to verify that `pulsepilot.jar` is within this current directory.
+   ![Right Directory](img_2101/macos/right_directory.png)
+
+5. Continue to launch PulsePilot using `java -jar pulsepilot.jar`.
+
 
 ###### [Back to Installation](#installation)
 
@@ -1064,6 +1185,78 @@ This merely a visual difference, and it does not mean the bot is not working. **
 
 ## Frequently Asked Questions
 
+**1.** How do I transfer my data to another computer?
+
+To transfer your data to another computer, make sure that `pulsepilot.jar` is placed in the **same folder** as `pulsepilot_data.txt` **and** `pulsepilot_hash.txt`. If done correctly, PulsePilot will recognize and synchronize your data.
+
+> ⚠️ Create a _backup copy_ of both `pulsepilot_data.txt` and `pulsepilot_hash.txt` prior to file transfer to avoid data corruption.
+>
+> The _backup copies_ should be stored in a **separate** folder location from where the original `pulsepilot.jar` is saved.
+
+
+**2.** What happens if my data is corrupted or tampered with?
+
+> ❗ **_WARNING_: DO NOT** tamper with either `pulsepilot_data.txt` or `pulsepilot_hash.txt` to prevent **permanent** and **unrecoverable** loss of data.
+
+
+
+You may experience 2 scenarios:
+
+- A data file content corruption:
+
+![Data Corruption](img/output/data_corruption.png)
+
+Corruption of the `pulsepilot_data.txt` or `pulsepilot_hash.txt` files will result in **permanent and complete data loss**.
+
+- A missing file error:
+
+![Missing Files](img/output/missing_files.png)
+
+A missing file error occurs when either `pulsepilot_data.txt` or `pulsepilot_hash.txt` is missing when PulsePilot is run. For safety and security reasons, PulsePilot will automatically delete any remaining data files before exiting the application.
+
+**Both cases will inevitably result in permanent and complete data loss.**
+
+> ❗ **DATA RECOVERY:** In both cases, you may want to recover data by utilising **both** your _backup_ copies of  `pulsepilot_data.txt` and `pulsepilot_hash.txt` to restore your data.
+
+Otherwise, if you have lost your data, you can reinitialize a new save file by running the command `java -jar pulsepilot.jar` again.
+
+**3.** Is my tracking data private and confidential?
+
+Yes, your data is secure and stored locally on your machine. PulsePilot does not have any features that would allow it to send your data elsewhere.
+
+**4.** What happens if I specify extra flags on accident?
+
+Note that if you add duplicate or extra flags, the bot **will read the first instance only**.
+
+**All other parameters will be ignored.**
+
+For example:
+
+```
+workout /e:run /d:5.25 /t:59:50 /d:10.55
+```
+
+In the above output, the bot will read `5.25` as the distance. The second `/d:10.55` is ignored.
+
+**5.** What if I keep receiving an error message even though my input seems to follow the instructions given in the user guide?
+
+Please ensure that you follow the command syntax given **exactly** in the user guide. Some examples of mistakes that could be easily overlooked:
+
+Example of the correct command:
+
+![correct_command.png](img/correct_command.png)
+
+- Error of adding extra space(s) in fixed parameters:
+    - In this case, the altered fixed parameter is `/date:`, which was written as `/ date:` instead.
+
+![extra_space_error_command.png](img/extra_space_error_command.png)
+
+- Error of adding extra newline(s) after command:
+
+![extra_newline_error_command.png](img/extra_newline_error_command.png)
+
+Avoid using extra characters in the commands, such as blank space, newline, etc.
+
 ###### [Back to table of contents](#table-of-contents)
 
 ---
@@ -1080,7 +1273,9 @@ This merely a visual difference, and it does not mean the bot is not working. **
 | Github                      | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot) </br>                                                                                          |
 | Alphanumeric                | Input that is made up of only **letters and numbers**. <br>[*Go Back*](#creating-your-profile) </br>                                                                                                                                                                 |
 | Flags                       | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[*Go Back*](#pulsepilot-commands) </br> |
-| File Explorer               | An application used to view the files and directories in a Windows computer.<br> The program uses this: <img src=img_2101/windows/file_explorer.png alt="File Explorer" width="40"/> </br> <br> [*Go Back*](#windows-fix) </br>                                      |
+| File Explorer               | An application used to view the files and directories in a Windows computer.<br> The program has this icon: <img src=img_2101/windows/file_explorer.png alt="File Explorer" width="40"/> </br> <br> [*Go Back*](#windows-fix) </br>                                  |
+| Finder                      | An application used to view the files and directories in a MacOS computer.<br> The program has this icon: <img src=img_2101/macos/finder.png alt="Finder" width="40"/> </br> <br> [*Go Back*](#macos-fix) </br>                                                      |
+| String                      | A sequence of characters that can be used to represent text data.                                                                                                                                                                                                    |
 
 ###### [Back to table of contents](#table-of-contents)
 
