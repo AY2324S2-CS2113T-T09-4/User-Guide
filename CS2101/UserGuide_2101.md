@@ -6,11 +6,11 @@
 
 Hello! Thank you for choosing to use PulsePilot!
 
-Our team appreciates that you are giving our health application a try, and we hope that it helps you document your recovery journey better and bounce back from whatever injury you are facing.
+Our team appreciates that you are giving our space-themed health application a try, and we hope that it helps you document your recovery journey better and bounce back from whatever injury you are facing.
 
 This document serves as the **User Guide** of PulsePilot, designed to help you (an injured athlete) learn what PulsePilot is about, our motives, how to install it and how to use it.
 
-Learning to use software can be daunting. Thus, this guide was created for **non-technical users**, helping you unleash PulsePilot to its fullest potential!
+Learning to use software can be daunting. Thus, this guide was created for **non-technical users**, helping you unleash PulsePilot to its fullest potential! That being said, we assume that you know how to use the basic features on your computer, such as **downloading files or copying and pasting text from one program to another**. 
 
 Once again, we hope our application helps you, and thank you for choosing PulsePilot, and we hope you recover as fast as possible!
 
@@ -331,21 +331,27 @@ Here are some common Bash commands you can use in the macOS Terminal:
 
 ## Installation
 
-Now that you are familiar with the CLI, it is time to install Java and PulsePilot to your computer!
+Now that you are familiar with the CLI, it is time to install Java and PulsePilot!
+
+The installation for Java is different for Windows and macOS computers. However, the installation and launching of PulsePilot is the same for both operating systems!
+
+* [Installing Java](#installing-java)
+* [Installing and Launching PulsePilot](#installing-and-launching-pulsepilot)
+
+### Installing Java
+
+> 💡 If you already have Java 11 installed, feel free to skip to the [next section](#pulsepilot-commands) to learn about the commands for PulsePilot.
 
 A specific version of Java will be required for PulsePilot, thus this part of the guide will bring you through the installation of Java 11.
 
-> 💡 If you already have Java 11 installed, feel free to skip to [next section](#pulsepilot-commands) on the commands for PulsePilot.
+A guide to install Java can be found [here](https://nus-cs2030.github.io/1920-s2/contents/guides/settingUpJava.html), as many other NUS modules use a similar version of Java for their projects.
 
+>❗Although the website says it is for CS2030 from a previous semester, the steps are the same.
 
-* [Windows](#windows-installation)
-  * [Java](#java-for-windows)
-  * [PulsePilot](#pulsepilot-for-windows)
-* [macOS](#macos-installation)
-  * [Java](#java-for-macos)
-  * [PulsePilot](#pulsepilot-for-macos)
+To ensure that you have the correct version of Java installed, launch the CLI (either `cmd.exe` or `bash`) and run `java --version`.
 
-### Windows Installation
+As long as the output shows `java 11` is installed, it is correct. The specific version 
+
 
 #### Java for Windows
 
@@ -356,6 +362,9 @@ Visit the official Java website (https://www.java.com/en/download/)
 Download the appropriate Java installer for your operating system (Windows)
 Run the installer and follow the on-screen instructions to complete the installation
 
+![Java Version](img_2101/installation/java_version.png)
+
+
 ###### [Back to Installation](#installation)
 
 ###### [Back to table of contents](#table-of-contents)
@@ -363,30 +372,25 @@ Run the installer and follow the on-screen instructions to complete the installa
 ---
 
 
-### PulsePilot for Windows
+### Installing and Launching PulsePilot
 
-After installing Java, you can install PulsePilot by following these steps:
+> 💡 If you already have PulsePilot installed, feel free to skip to the [next section](#pulsepilot-commands) to learn about the commands for PulsePilot.
 
-Download the latest version of the PulsePilot application from the provided source
-Extract the downloaded files to a directory on your computer
-Open the Command Prompt (Windows) or Terminal (macOS) and navigate to the directory where you extracted the PulsePilot files
-Run the PulsePilot application by typing the appropriate command (e.g., `java -jar pulsepilot.jar`)
+PulsePilot can be installed from our team's [*GitHub*](#glossary) repository [here](https://github.com/AY2324S2-CS2113T-T09-4/tp/releases/tag/v2.1).
 
-###### [Back to Installation](#installation)
+The screen should have the following hyperlinks as shown below, and clicking on `pulsepilot.jar` will download the application to your Downloads folder.
 
-###### [Back to table of contents](#table-of-contents)
+![Downloading PulsePilot](img_2101/installation/download_pulsepilot.png)
 
----
+Afterwards, launch the CLI, `cd` to your Downloads folder, and run `java -jar pulsepilot.jar`. If Java has been installed correctly, and you are in the correct directory, PulsePilot will launch successfully.
 
-### macOS Installation
+Your terminal should look like this below, with PulsePilot asking for your name.
 
-#### Java for macOS
+![Launching PulsePilot](img_2101/installation/launch_pulsepilot.png)
 
-To install Java on your computer, you can follow these steps:
+> 💡 PulsePilot is spaced themed, thus the space terms in the introduction it displays on screen! 🚀🚀
 
-Visit the official Java website (https://www.java.com/en/download/)
-Download the appropriate Java installer for your operating system (MacOS)
-Run the installer and follow the on-screen instructions to complete the installation
+> ❗ This process is the exact same for **both Windows and macOS!**
 
 ###### [Back to Installation](#installation)
 
@@ -394,7 +398,42 @@ Run the installer and follow the on-screen instructions to complete the installa
 
 ---
 
-#### PulsePilot for macOS
+### Common Problems
+
+> 💡 If you do not face any issues with launching PulsePilot, feel free to skip to the [next section](#pulsepilot-commands) to learn about the commands for PulsePilot.
+
+This section will address some common problems users will face.
+
+#### Wrong Directory
+
+When attempting to launch `pulsepilot.jar` from the wrong directory, this error will appear:
+
+![Wrong Directory](img_2101/windows/wrong_dir.png)
+
+This means that `pulsepilot.jar` is **not within your current directory**. To remediate this, use `dir` to check for the files present within your current directory.
+
+If you are in the right directory, `pulsepilot.jar` should appear like so:
+
+![Correct Directory](img_2101/windows/correct_dir.png)
+
+##### Windows Fix
+
+To fix this, do the following:
+
+1. Find where `pulsepilot.jar` is within your machine using the [*File Explorer*](#glossary).
+
+2. Right click on it and click on **Properties**.
+  ![Windows Properties](img_2101/windows/properties_windows.png)
+
+3. A separate window will appear with additional data for `pulsepilot.jar`. Copy the value of the **Location** part of the Properties window using <kbd>Ctrl + C</kbd> or highlighting the text, right-clicking it and selecting **Copy**.
+  ![Finding Windows Path](img_2101/windows/windows_property_path.png)
+
+4. Once copied, open the CLI for your device, and type `cd` and hit the <kbd>Spacebar</kbd> **once**, then paste the **Location** value you just copied using <kbd>Ctrl + V</kbd>. Then, hit <kbd>Enter</kbd>. You should see that you are now in the right directory, and use `dir` to verify that `pulsepilot.jar` is within this current directory.
+  ![Right Directory](img_2101/windows/right_directory.png)
+
+5. Continue to launch PulsePilot using `java -jar pulsepilot.jar`.
+
+##### macOS Fix
 
 After installing Java, you can install PulsePilot by following these steps:
 
@@ -411,11 +450,13 @@ Run the PulsePilot application by typing the appropriate command (e.g., `java -j
 
 ## PulsePilot Commands
 
-Now that Java and PulsePilot is up and running on your computer, it is time to learn how to use PulsePilot via its implemented commands!
+Now that Java and PulsePilot is up and running on your computer, it is time to learn how to use PulsePilot via its implemented commands and [*flags*](#glossary).
 
 > ⚠️ For **experienced** users, if this is not your first time using a CLI application or PulsePilot, feel free to skip ahead to the [experienced user manual](#experienced-user-manual)! If not, please continue reading!
 
 * [PulsePilot Text Style](#pulsepilot-text-style)
+* [Creating Your Profile](#creating-your-profile)
+* [Viewing Help](#viewing-help)
 * [Workout](#workout)
   * [Add Run](#add-run)
   * [Add Gym](#add-gym)
@@ -432,16 +473,15 @@ Now that Java and PulsePilot is up and running on your computer, it is time to l
 
 ### PulsePilot Text Style
 
-Our team has colour coded the texts in this guide to help you better understand the commands, as it can get a bit confusing!
+The text in the step-by-step guide have been colour coded to help you better understand the commands, as it can get a bit confusing!
 
-There are 3 colours used in the guide.
+There are 3 colours used in the guide: <u>White</u>, <span style="color:red;">red</span> and <span style="color:green;">green</span>, each used for a different kind of text:
 
-![Colour Coded Text](img_2101/colour_code.png)
+![Colour Coded Text](img_2101/pulsepilot_commands/colour_code.png)
 
 - A response is merely a message from the bot.
-- An error indicates that the bot has detected an error when running or in your input, so do read the error messages!
+- An error indicates that the bot has detected some invalid input from you. Read the error messages to find out what's wrong!
 - Your input represents the command **you** type and press 'Enter' for PulsePilot to use!
-
 
 > ❗If you are not seeing colours on your screen, and instead see **odd characters** like `[` or `<-`, please read our [*troubleshooting guide*](#odd-characters-on-screen) for this issue!
 
@@ -454,7 +494,25 @@ There are 3 colours used in the guide.
 
 ---
 
-### Workout
+### Creating Your Profile
+
+When you first run PulsePilot, it will prompt you for your name as follows:
+
+![PulsePilot Intro](img_2101/pulsepilot_commands/induction/pulseintro.png)
+
+You can enter your real name or an alias. PulsePilot only checks that you enter **[*alphanumeric*](#glossary) characters and spaces**. For example, `Justin Soh` is a valid name!
+
+![Valid Name](img_2101/pulsepilot_commands/induction/valid_name.png)
+
+After setting your name, **you are ready to use PulsePilot**!
+
+> ❗Entering usernames that have non-alphanumeric characters, such as `;` or `|` will trigger an error!
+> 
+>  ![Invalid Name](img_2101/pulsepilot_commands/induction/invalid_name.png)
+> 
+> If this happens, not to worry! You can simply **re-enter a valid name** and PulsePilot will continue to work normally.
+>
+> ![Re-enter name](img_2101/pulsepilot_commands/induction/enternameagain.png)
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -462,9 +520,102 @@ There are 3 colours used in the guide.
 
 ---
 
+### Viewing Help
+
+This command displays the help message, which has information about all the other commands in PulsePilot.
+
+
+
+1. When you enter `help`, PulsePilot prints out the help message.
+
+![Help Command](img_2101/pulsepilot_commands/help/help_cmd.png)
+
+> 💡 You can use this **as many times as you need** to get a quick summary for all the commands!
+
+> ❗ Having extra characters after the first `help` word will be ignored! `help me` and `help` both print the same output with no issues.
+
+###### [Back to PulsePilot Commands](#pulsepilot-commands)
+
+###### [Back to table of contents](#table-of-contents)
+
+---
+
+### Workout
+
+Being a health-tracking application, PulsePilot can record Run and Gym sessions. This is implemented via the `workout` command.
+
+There are 2 types of exercises that can be recorded, denoted using the `/e:` flag.
+
+- To add a run session, use `workout /e:run`.
+- To add a gym session, use `workout /e:gym`.
+
+There are details and flags required from you, which will be covered below.
+
+---
+
 #### Add Run
 
-idiot guide here
+> 💡PulsePilot automatically calculates the pace of your run for you in minutes/km (i.e. `5.00/km`). This helps you track your progress better!
+
+Here are the details required from you, and the required flag for PulsePilot to know which detail is being specified in your input.
+
+| Detail     | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
+|------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `distance` | The distance ran in **kilometres**.                               | `/d:`     | Must be a **2 decimal point positive number** such as `5.15`. <br> Must be **at least** `0.01`, and is **capped at** `5000.00`. </br>                                        |
+| `time`     | The time taken for the run.                                       | `/t:`     | Must be in either `MM:SS` or `HH:MM:SS` format. <br> Must be **at least** `00:01`, and is capped at `99:59:59`. </br>                                                        |
+| `date`     | The date of the run. <br>This is an **OPTIONAL** parameter. </br> | `/date:`  | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
+
+> ❗ The `date` parameter is **OPTIONAL**. Not specifying one results in it being recorded as `NA` within the bot, and it is okay!
+
+> ❗ If the `HH` field in `time` is not needed and set to `00`, **an error message will be printed!**
+
+The following example will cover how to add a run step-by-step.
+
+1. Suppose a user wants to add **two** runs:
+
+   - The first is a  **5.50km** run completed in **25 minutes and 12 seconds** on **7 March 2024**.
+   - The second is a **20km** run completed in **2 hours, 13 minutes and 37 seconds** without a date.
+
+2. Let's put the **first** run into the correct format with flags:
+
+  - A **5.50km** run is specified using the `distance` flag via `/d:5.50`.
+  - **25 minutes and 12 seconds** is specified using the `time` flag via `/t:25:12`.
+  - **7 March 2024** is specified using the `date` flag via `/date:07-03-2024`.
+3. Putting it together, the full command is:
+
+   <code style="color: #D85D43;">workout /e:run /d:5.50 /t:25:12 /date:07-03-2024</code>
+  
+4. Entering it into the bot results in this output:
+
+    ![Add first run](img_2101/pulsepilot_commands/run/add_run1.png)
+
+5. Now, let's add  the **second** run:
+
+  - A **20km** run is specified using the `distance` flag via `/d:20.00`.
+  - **2 hours, 13 minutes and 37 seconds** is specified using the `time` flag via `/t:02:13:37`
+  - **No date** is given, so we can leave the `date` blank.
+
+6. The full command for the second run is:
+
+    <code style="color: #D85D43;">workout /e:run /d:20.00 /t:02:13:37</code>
+
+7. Entering it into the bot shows the following:
+
+    ![Add second run](img_2101/pulsepilot_commands/run/add_run2.png)
+
+8. Congratulations, you have added your first 2 runs to PulsePilot!
+
+##### Error Messages
+
+> ❗ This is just one example of invalid input. We will not cover the full list of errors here.
+
+Adding an incorrect flag will cause the command for adding a run to be **invalid** and PulsePilot will not add anything. 
+
+For example, if you used `/time:` instead of `/t:`
+
+![Error in Flag](img_2101/pulsepilot_commands/run/run_error.png)
+
+
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -480,6 +631,7 @@ idiot guide here.
 
 ###### [Back to table of contents](#table-of-contents)
 
+---
 
 ### Health
 
@@ -563,11 +715,13 @@ idiot guide here.
 
 ### Experienced User Manual
 
-> ❗This guide is for **experienced** users, made to be briefer without much step-by-step demonstrations. Only proceed if you know what you are doing!
+> ❗This guide is for **experienced** users, made to be briefer without much step-by-step demonstrations. There is **NO colour-coded text here** to guide you!
+>
+> **Only proceed if you know what you are doing!**
 
 > ❗If you are **not** experienced, please head to our step-by-step guide for PulsePilot [here](#pulsepilot-commands).
 
-
+* [User Induction](#user-induction)
 * [Workout: Run](#workout-run)
 * [Workout: Gym](#workout-gym)
   * [Adding Gym Stations](#adding-gym-stations)
@@ -580,13 +734,37 @@ idiot guide here.
 * [Help](#help)
 * [Exit](#exit)
 
+## User Induction
+
+1. When you first run the PulsePilot application, the bot will prompt you to enter your `name` to create a new user profile.
+   - Your `name` can only contain **alphanumeric characters (letters and numbers) and spaces**.
+   
+   > ❗ **WARNING:** If you enter a name that does not follow this convention, the bot will display an error message and prompt you to try again.
+
+    ![Non-compliance of naming convention](../img/output/wrong_username.png)
+
+2. After entering a valid `name`, the bot will create a new user profile associated with your `name`. 
+This profile will be used to store all your health and workout data. 
+3. Once your user profile is created, you can start using the various commands in PulsePilot to track your progress and health.
+   - You may enter commands after receiving this message prompt:
+     
+      ![Accepting commands](../img/output/accepting_commands.png)
+4. All your data will be saved and associated with your user profile
+   - You can continue tracking your information across multiple devices. Find out more [here](#frequently-asked-questions).
+
+###### [Back to experienced user manual](#experienced-user-manual)
+
+###### [Back to table of contents](#table-of-contents)
+
+---
+
 ## Commands
 
 ### Workout: Run
 
-Adds a new run workout to track.
+Adds a new run session to track.
 
-Format: <code style="color: #D85D43;">workout /e:run /d:DISTANCE /t:TIME [/date:DATE]</code>
+Format: `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]`
 
 * `DISTANCE` is a **2 decimal point positive number** (i.e. `15.24`) representing the distance ran in **kilometers**.
 * `TIME` is in `[HH]:MM:SS` format (i.e. `25:30`). The `HH` representing hours is **optional**.
@@ -594,40 +772,45 @@ Format: <code style="color: #D85D43;">workout /e:run /d:DISTANCE /t:TIME [/date:
 
 > ⚠️ If `HH` is set to `00`, the bot will throw an error. Please use `MM:SS` if the `HH` field is not needed!
 
+> ⚠️ Date specified cannot be later than the current date!
 
 Examples:
-- <code style="color: #D85D43;">workout /e:run /d:5.15 /t:25:03 /date:25-03-2023 </code>
-- <code style="color: #D85D43;">workout /e:run /d:5.15 /t:25:03</code>
+- `workout /e:run /d:5.15 /t:25:03 /date:25-03-2023`
+- `workout /e:run /d:5.15 /t:25:03`
 
 Expected Output:
 
 ![Adding Runs](../img/output/adding_runs.png)
 
 > ⚠️ **Minimum and Maximum inputs:**
-> Maximum Pace: 30:00/km, Minimum Pace: 1:00/km
+> Maximum Pace Value: 30:00/km, Minimum Pace Value: 1:00/km
 > Maximum Run Time: 99:59:59, Minimum Run Time: 00:01
-> Maximum Distance: 5000.00, Minimum Distance: 0.01
+> Maximum Distance: 5000.00km, Minimum Distance: 0.01km
+> 
 > **Note that exceeding these bounds will trigger an error!**
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
+
+---
 
 ### Workout: Gym
 
 Adds a new gym session to track.
 
-Format: <code style="color: #D85D43;">workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]</code>
+Format: `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]`
 
 * `NUMBER_OF_STATIONS` is a **positive integer of at least 1** representing the number of stations for one Gym session.
 * `DATE` is in `DD-MM-YYYY` format (i.e. `19-03-2024`). The date is **optional**, and if not specified, defaults to `NA`.
 
-Examples:
+> ⚠️ Date specified cannot be later than the current date!
 
-- <code style="color: #D85D43;">workout /e:gym /n:2 /date:25-03-2023</code>
-- <code style="color: #D85D43;">workout /e:gym /n:4</code>
+> ⚠️ Please input positive integers for `NUMBER_OF_STATIONS` without leading zeros. Entering a number with a leading zero, such as `01`, will trigger an error.
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+Examples: 
+- `workout /e:gym /n:2 /date:25-03-2023`
+- `workout /e:gym /n:4`
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -635,60 +818,59 @@ Examples:
 
 Upon entry of the `workout /e:gym` command, the bot will prompt for further details for each station done:
 
-Format: <code style="color: #D85D43;">STATION_NAME /s:SET /r:REPS /w:WEIGHT</code>
+Format: `STATION_NAME /s:SET /r:REPS /w:WEIGHT`
 
 * `STATION_NAME` is a **string**  representing the name of the gym station.
 * `SET` is a **positive integer**  representing the number of sets done for one station.
 * `REPS` is a **positive integer**  representing the number of repetitions done for one station.
 * `WEIGHT` is a **list of positive numbers** separated by commas. It represents the weights used for all the sets in the station.
 
-> ⚠️ `STATION_NAME` must always be the first parameter. The order of the other parameters can be in any order.
+> ⚠️ `STATION_NAME` must always be the first parameter. The order of the other parameters can be in any order. `STATION_NAME` can **only contain letters and spaces**, and can be up to **25 characters long**.
 
-> ⚠️ `WEIGHT` must be in **multiples of 0.125 KG**. This is because the minimum weight increment in a gym is 0.125kg. Example `bench press /s:2 /r:10 /w:10.333,12.5` is not valid as 10.333 is not a multiple of 0.125kg.
+> ⚠️ `WEIGHT` must be in **multiples of 0.125 KG**! This is because the minimum weight increment in a gym is 0.125kg. Example `bench press /s:2 /r:10 /w:10.333,12.5` is not valid as 10.333 is not a multiple of 0.125kg.
 
 > ⚠️ Note that the **number of weights must equal to the number of sets**! For example, if you have done 2 sets at 10 kg, PulsePilot still expects 2 weights to be specified like this `squats /s:2 /r:5 /w:10.25,10.5`.
 
+> ⚠️ Please input positive integers for `SETS` and `REPS` without leading zeros. Entering a number with a leading zero, such as `01`, will trigger an error.
+
 
 Examples:
-- <code style="color: #D85D43;">bench press /s:2 /r:4 /w:10,20</code>
-- <code style="color: #D85D43;">squat /r:2 /s:2 /w:10.5,20.5</code>
+- `bench press /s:2 /r:4 /w:10,20`
+- `squat /r:2 /s:2 /w:10.5,20.5`
 
 Expected Output:
 
 ![Adding Gyms](../img/output/adding_gym.png)
 
-> ⚠️ **Minimum inputs:**
-Minimum weight: 0.00
-Minimum number of sets: 1
-Minimum number of repetitions: 1
+> ⚠️ **Minimum and Maximum inputs:**
+> Minimum Weight: 0kg, Maximum Weight: 2850kg
+> 
+> 0kg is meant for **body weight exercises!**
 > **Note that exceeding these bounds will trigger an error!**
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
-___
+---
 
 ### Health: BMI
 
-Calculates user's Body Mass Index (BMI) based on height and weight from user's input.
+Calculates user's Body Mass Index (BMI) based on height and weight from user's input, and tracks it.
 
-Format: <code style="color: #D85D43;">health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE</code>
+Format: `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE`
 
-* Parameters after `health` can be in any order.
 * `HEIGHT` is a **2 decimal point number in metres** (i.e. `1.71`) representing the user's height.
 * `WEIGHT` is a **2 decimal point number in kilograms** (i.e. `60.50`) representing the user’s weight.
 * `DATE` is in `DD-MM-YYYY` format (i.e. `19-03-2024`).
 
+> ⚠️ Date specified cannot be later than the current date!
+
 Examples:
-* <code style="color: #D85D43;">health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024</code>
-* <code style="color: #D85D43;">health /h:bmi /date:19-03-2024 /height:1.70 /weight:75.42</code>
+* `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`
+* `health /h:bmi /date:19-03-2024 /height:1.70 /weight:75.42`
 
-Expected Output:
-
-![Adding BMI](../img/output/adding_bmi.png)
-
-The ranges for BMI are as follows:
+PulsePilot will categorize your BMI as follows:
 
 - BMI < 18.5 (less than 18.5): **Underweight**
 - 18.5 <= BMI < 25.0 (more than or equal to 18.5 and less than 25.0): **Normal**
@@ -696,104 +878,111 @@ The ranges for BMI are as follows:
 - 30.0 <= BMI < 40.0 (more than or equal to 30.0 and less than 40.0): **Obese**
 - BMI >= 40.0 (more than 40.0): **Severely Obese**
 
+Expected Output:
+
+![Adding BMI](../img/output/adding_bmi.png)
+
+
+
 > ⚠️ **Minimum and Maximum inputs:**
-> Maximum Height: 2.75, Minimum Height: 0.01
-> Maximum Weight: 640.00, Minimum Weight: 0:01
+> Maximum Height: 2.75m, Minimum Height: 0.01m
+> Maximum Weight: 640.00kg, Minimum Weight: 0.01kg
+> 
 > **Note that exceeding these bounds will trigger an error!**
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
-___
+---
 
 ### Health: Period
 
 Tracks the start and end of user's menstrual cycle.
 
+Format: `health /h:period /start:START_DATE [/end:END_DATE]`
 
-Format: <code style="color: #D85D43;">health /h:period /start:START_DATE [/end:END_DATE]</code>
 
-* Parameters after `health` can be in any order.
+* `START_DATE` is `DD-MM-YYYY` format (i.e. `19-03-2024`) representing the first day of period flow which is also the first day of the cycle. 
 
-* `START_DATE` is `DD-MM-YYYY` format (i.e. `19-03-2024`) representing the first day of period flow which is also the first day of the cycle. This parameter needs to be present at all times (i.e. inputting a new period input or adding in end date).
+* `END_DATE` is `DD-MM-YYYY` format (i.e. `19-03-2024`) representing the last day of period flow. This parameter is **optional** and can be added once the period flow ends. To add an end date for a specific period, you need to input the correct corresponding start date.
 
-* `END_DATE` is `DD-MM-YYYY` format (i.e. `19-03-2024`) representing the last day of period flow. This parameter is optional and can be input once the period flow ends. To add an end date, you need to input the correct corresponding start date of the period.
-
-**Warning:** Every period input needs to include a start date and end date before adding a new period input.
-
+> ⚠️ An outstanding period entry must have an end date specified before a new entry can be added.
 
 Examples:
-* <code style="color: #D85D43;">health /h:period /start:09-03-2022 /end:16-03-2022</code>
-* <code style="color: #D85D43;">health /start:09-03-2022 /end:16-03-2022 /h:period</code>
-* * <code style="color: #D85D43;">health /h:period /start:09-03-2022</code>
+
+* `health /h:period /start:09-03-2022 /end:16-03-2022`
+* `health /start:09-03-2022 /end:16-03-2022 /h:period`
+* `health /h:period /start:09-03-2022`
 
 
 Expected Output:
 
 ![Adding Periods](../img/output/adding_period.png)
 
+###### [Back to experienced user manual](#experienced-user-manual)
+
+###### [Back to table of contents](#table-of-contents)
+
+---
+
 ### Health: Prediction
 
 Predicts user's next period start date.
 
-Format: <code style="color: #D85D43;">health /h:prediction</code>
+Format: `health /h:prediction`
 
-* All parameters must be provided in the correct order.
 * There must be at least **4 periods** added before a prediction can be made.
 
 Expected Output:
 
 ![Viewing Prediction](../img/output/viewing_prediction.png)
 
-> ⚠️ **There is no minimum and maximum cycle lengths** for a period and hence cycle, since underlying medical conditions can cause varying cycle lengths.
-> PulsePilot will only **notify** you if your cycle length is outside the healthy range of **2 - 7 days**.
+> ⚠️ PulsePilot **does not** impose minimum or maximum length requirements for menstrual cycles, as underlying medical conditions can cause variations in cycle lengths.
+> 
+> PulsePilot will only **notify** you if your cycle length is beyond the healthy range of **2 - 7 days**.
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
-___
+---
 
 ### Health: Appointment
 
-Tracks the user's medical appointments.
+Tracks both **previous and upcoming** medical appointments.
 
-Format: <code style="color: #D85D43;">health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION</code>
-
-* Parameters after `health` do not need to be in order.
+Format: `health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION`
 
 * `DATE` is a `DD-MM-YYYY` format (i.e. `03-04-2024`) representing the date of the appointment.
 
 * `TIME` is a `HH:mm` format (i.e. `14:15`) representing the time of the appointment.
 
-* `DESCRIPTION` is a string (i.e. `review checkup with surgeon`) representing the details of the appointment. The string can **only contain alphanumeric characters and spaces**.
-
-> ⚠️ Other **non-alphanumeric characters** entered the appointment description will trigger an error!
+* `DESCRIPTION` is a string (i.e. `review checkup with surgeon`) representing the details of the appointment. The description can **only contain alphanumeric characters, spaces, inverted commas and quotes**.
 
 Examples:
 
-* <code style="color: #D85D43;">health /h:appointment /date:03-04-2024 /time:14:15 /description:review checkup with surgeon</code>
+* `health /h:appointment /date:03-04-2024 /time:14:15 /description:review checkup with surgeon`
 
-* <code style="color: #D85D43;">health /date:03-04-2024 /description:review checkup with surgeon /time:14:15 /h:appointment</code>
+* `health /date:03-04-2024 /description:review checkup with surgeon /time:14:15 /h:appointment`
 
 Expected Output:
 
 ![Adding Appointment](../img/output/adding_appointment.png)
 
+> ⚠️ Any characters that are **NOT** mentioned above used in the description will trigger an error! Please only use the characters allowed.
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
-___
-
+---
 
 ### History
 
 Prints all tracked instances of `run`, `gym`, `workouts`,  `bmi`, `period`, `appointment`.
 
-Format: <code style="color: #D85D43;">history /item:TYPE</code>
+Format: `history /item:TYPE`
 
 * `TYPE` is either `run`, `gym`, `workouts`, `bmi`, `period`, `appointment`.
   - `run` shows all entries of runs.
@@ -803,63 +992,70 @@ Format: <code style="color: #D85D43;">history /item:TYPE</code>
   - `period` shows all Period entries.
   - `appointment` show all Appointment entries.
 
+> 💡 `workouts` prints a summary of the `run` and `gym` objects. Full details can be viewed using `history /item:run/gym` respectively.
+
 Examples:
-* <code style="color: #D85D43;">history /item:workouts</code>
-* <code style="color: #D85D43;">history /item:appointment</code>
+* `history /item:workouts`
+* `history /item:appointment`
 
 Expected Output:
 
 ![Viewing History](../img/output/viewing_history.png)
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
---- 
+---
 
 ### Latest
 
-Prints the latest instance of `run`, `gym`, `bmi`, `period`, `appointment`.
+Prints the **most recently added** instance of `run`, `gym`, `bmi`, `period`, `appointment`.
 
-Format: <code style="color: #D85D43;">latest /item:TYPE</code>
+Format: `latest /item:TYPE`
 
 * `TYPE` is either `run`, `gym`, `bmi`, `period` or `appointment`.
   - `run` shows the latest run
   - `gym` shows the latest gym
-  - `bmi` shows the latest BMI
+  - `bmi` shows the latest BMI by date
   - `period` shows the latest Period
-  - `appointment` show the latest Appointment
+  - `appointment` show the earliest upcoming Appointment
 
 Examples:
-* <code style="color: #D85D43;">latest /item:appointment</code>
+* `latest /item:appointment`
 
 Expected Output:
 
 ![Viewing Latest](../img/output/viewing_latest.png)
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
---- 
+---
 
 ### Delete
 
-Deletes an item tracked within PulsePilot.
+Delete a tracked item.
 
-Format: <code style="color: #D85D43;">delete /item:TYPE /index:INDEX</code>
+Format: `delete /item:TYPE /index:INDEX`
 
 * `TYPE` is either `run`, `gym`, `bmi`, `period` or `appointment`.
 * `INDEX` represents the index of the item to delete.
 
+> ⚠️ Please input positive integers for `INDEX` without leading zeros. Entering a number with a leading zero, such as `01`, will trigger an error.
+
+> ⚠️ The `INDEX` is based on the respective item lists. Use `history` to view the lists.
+
 Examples:
-* <code style="color: #D85D43;">delete /item:run /index:2</code>
+
+* `delete /item:run /index:2`
 
 Expected output:
 
-![Deleting](../img/output/deleting.png)
+![Deleting Object](../img/output/deleting.png)
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -869,13 +1065,13 @@ Expected output:
 
 Prints the help message.
 
-Format: <code style="color: #D85D43;">help</code>
+Format: `help`
 
 Expected output:
 
 ![img.png](../img/output/viewing_help.png)
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -885,7 +1081,7 @@ Expected output:
 
 Exits the bot **and writes to data file**.
 
-Format: <code style="color: #D85D43;">exit</code>
+Format: `exit`
 
 Expected Output:
 
@@ -893,7 +1089,7 @@ Expected Output:
 
 > ⚠️ Exiting the bot by closing the terminal or with <kbd>Ctrl</kbd> + <kbd>C</kbd>  **will result in data being lost!**
 
-###### [Back to Experienced User Guide](#experienced-user-manual)
+###### [Back to experienced user manual](#experienced-user-manual)
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -903,17 +1099,18 @@ Expected Output:
 
 Here is a summary of all the commands and its functions. The table contains examples as well for you to try out!
 
-| Action       | Format, Examples                                                                                                                       |
-|--------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| Print help   | `help`                                                                                                                                 |
-| Add new run  | `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]`<br> Example: `workout /e:run /d:5.24 /t:25:23 /date:19-03-2024`   </br>              |
-| Add gym      | `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]`<br> Example: `workout /e:gym /n:4`</br>                                            |
-| Track BMI    | `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE`<br> Example: `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`</br> |
-| Track Period | `health /h:period /start:START_DATE /end:END_DATE`<br> Example: `health /h:period /start:09-03-2022 /end:16-03-2022` </br>             |
-| View history | `history /item:TYPE`<br> Example: `history /item:run` </br>                                                                            |
-| View latest  | `latest /item:TYPE`<br>  Example: `latest /item:bmi`  </br>                                                                            |
-| Exit bot     | `exit`                                                                                                                                 |
-
+| Action            | Format, Examples                                                                                                                                                          |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Print help        | `help`                                                                                                                                                                    |
+| Add new run       | `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]` <br> Example: `workout /e:run /d:5.24 /t:25:23 /date:19-03-2024`</br>                                                   |
+| Add gym           | `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]` <br> Example: `workout /e:gym /n:4`</br>                                                                              |
+| Track BMI         | `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE` <br> Example: `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`</br>                                   |
+| Track Period      | `health /h:period /start:START_DATE [/end:END_DATE]` <br> Example: `health /h:period /start:09-03-2022 /end:16-03-2022`</br>                                              |
+| Track Appointment | `health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION` <br> Example: `health /h:appointment /date:29-04-2025 /time:12:00 /description:knee surgery` </br> |
+| View history      | `history /item:TYPE` <br> Example: `history /item:run` </br>                                                                                                              |
+| View latest       | `latest /item:TYPE` <br> Example: `latest /item:bmi` </br>                                                                                                                |
+| Deleting item     | `delete /item:TYPE /index:INDEX` <br> Example: `delete /item:run /index:1`  </br>                                                                                         |
+| Exit bot          | `exit`                                                                                                                                                                    |
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -925,7 +1122,7 @@ Here is a summary of all the commands and its functions. The table contains exam
 
 In some instances, the output from an error will result in odd characters being printed on screen:
 
-![Colour not rendering](../img/output/colour_render.png)
+![Colour not rendering](../img/output/colour_not_rendered.png)
 
 This issue affects Windows machines. The odd characters are actually special characters used to **display colour** in the terminal. **Windows 10 users** do not have this enabled by default. For Windows 11, these are automatically enabled and hence this problem does not occur.
 
@@ -951,15 +1148,18 @@ This merely a visual difference, and it does not mean the bot is not working. **
 
 ## Glossary
 
-| Term                        | Definition                                                                                                                                                                                  |
-|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Object-Oriented Programming | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [*Go Back*](#glossary-usage) </br>                           |
-| Hyperlinks                  | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[*Go Back*](#glossary-usage) </br>                       |
-| Java                        | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[*Go Back*](#glossary-usage) </br> |
-| Command Line Interface      | A **text-based** interface where users can input commands that interact with a computer. <br>[*Go Back*](#command-line-interface) </br>                                                     |
-| Directory / Directories     | A folder within your computer that contains other files and files.[*Go Back*](#launching-cmdexe) </br>                                                                                      |
-| String                      | A sequence of characters that can be used to represent text data.                                                                                                                           |
-
+| Term                        | Definition                                                                                                                                                                                                                                                           |
+|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Object-Oriented Programming | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [*Go Back*](#glossary-usage) </br>                                                                                                    |
+| Hyperlinks                  | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[*Go Back*](#glossary-usage) </br>                                                                                                |
+| Java                        | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[*Go Back*](#glossary-usage) </br>                                                                          |
+| Command Line Interface      | A **text-based** interface where users can input commands that interact with a computer. <br>[*Go Back*](#command-line-interface) </br>                                                                                                                              |
+| Directory / Directories     | A folder within your computer that contains other files and files.<br>[*Go Back*](#launching-cmdexe) </br>                                                                                                                                                           |
+| Github                      | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot) </br>                                                                                          |
+| Alphanumeric                | Input that is made up of only **letters and numbers**. <br>[*Go Back*](#creating-your-profile) </br>                                                                                                                                                                 |
+| Flags                       | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[*Go Back*](#pulsepilot-commands) </br> |
+| File Explorer               | An application used to view the files and directories in a Windows computer.<br> The program uses this: <img src=img_2101/windows/file_explorer.png alt="File Explorer" width="40"/> </br> <br> [*Go Back*](#windows-fix) </br>                                      |
+| String                      | A sequence of characters that can be used to represent text data.                                                                                                                                                                                                    |
 
 ###### [Back to table of contents](#table-of-contents)
 
