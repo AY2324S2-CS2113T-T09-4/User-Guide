@@ -738,6 +738,18 @@ The following example will cover how to add a gym session step-by-step.
 
 ### Health
 
+Besides tracking your workout sessions, PulsePilot can also record Period, Bmi and Appointment inputs, as well as making period prediction. This is implemented via the `health` command. 
+
+There are 4 types of health features, denoted using the `/h:` flag.
+
+- To add a Period input, use `health /h:period`.
+
+- To add a Bmi input, use `health /h:bmi`.
+
+- To add an Appointment input, use `health /h:appointment`.
+
+- To make period prediction, use `health /h:prediction`.
+
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
 ###### [Back to table of contents](#table-of-contents)
@@ -746,6 +758,50 @@ The following example will cover how to add a gym session step-by-step.
 
 #### Add Period
 
+To add a period, the following details and flags are required in your input:
+
+| Detail       | Description                                                               | Flag Used | Limitations                                                                                                                                                                  |
+|--------------|---------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `start date` | The first day of period flow which is also the first day of the cycle.    | `/start:` | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
+| `end date`   | The last day of period flow. <br>This is an **OPTIONAL** parameter. </br> | `/end:`   | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
+
+> 💡 You may first record the start date and add in the end date later on! Not specifying the end date results in it being recorded as `NA` within PulsePilot. 
+
+> ❗ Every period input needs to contain both start and end dates eventually. An error message will be printed if you attempt to record a new period input without specifying the end date of the outstanding period entry. Fret not! Simply complete the outstanding period before proceeding with the new period input.
+
+The following examples will cover how to add a period step-by-step, with the latter example showcasing how to add start and end dates at different times. 
+
+1. Suppose you want to add **both start and end dates** at once. 
+   - The `start date` is `01-01-2024` and `end date` is `08-01-2024`.
+
+2. Let's put the necessary Period's details together with their respective flags into a complete command.
+    - <code style="color: green;">health /h:period /start:01-01-2024 /end:08-01-2024</code>
+
+3. Entering it into PulsePilot results in this output:
+
+    ![Full Period Output](img_2101/pulsepilot_commands/health/full period.png)
+
+4. Congratulations! You have successfully added a period input to PulsePilot. 
+
+> ⚠️ PulsePilot automatically calculates your period length. You will see an error message printed to the screen if your period length is beyond the healthy range of **2-7 days**. Don't worry too much as menstrual cycles can vary greatly from person to person! Deviations from the healthy range set by PulsePilot are not uncommon and may be perfectly normal for you. However, if you are experiencing any unusual symptoms, it may be a good seek professional help.
+
+
+1. Suppose you want to add the **start date only**.
+   - The `start date` is `01-01-2024`.
+
+2. Let's put the necessary Period's detail together with its respective flag into a command.
+    - <code style="color: green;">health /h:period /start:01-01-2024</code>
+
+3. Entering it into PulsePilot results in this output:
+
+    ![Add start date only](img_2101/pulsepilot_commands/health/add start date.png)
+
+4. To add in the `end date`, simply enter the command <code style="color: green;">health /h:period /start:01-01-2024 /end:08-01-2024</code>.  
+
+    ![After adding end date](img_2101/pulsepilot_commands/health/add end date.png)
+
+5. Congratulations! The end date of the period input has been successfully added. 
+
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
 ###### [Back to table of contents](#table-of-contents)
@@ -753,6 +809,40 @@ The following example will cover how to add a gym session step-by-step.
 ---
 
 #### Add BMI
+
+To add a Bmi, the following details and flags are required in your input:
+
+| Detail   | Description                               | Flag Used  | Limitations                                                                                                                                                                  |
+|----------|-------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `height` | Your height in **meters**.                | `/height:` | Must be a `2 decimal point positive number` such as `1.75`. <br> Acceptable height range is from **0.01m to 2.75m**. </br>                                                   |
+| `weight` | Your weight in **kilograms**.             | `/weight:` | Must be a `2 decimal point positive number` such as `60.00`. <br> Acceptable weight range is from **0.01kg to 640.00kg**.</br>                                               |
+| `date`   | The date of taking your height and weight | `/date:`   | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
+
+> ❗ The `date` parameter must be **unique** for each Bmi input in PulsePilot. An error message is printed if you attempt to add a new Bmi input with a date that matches an existing entry. 
+
+The following example will cover how to add a bmi step-by-step.
+
+1. Suppose you have just taken your height and weight and want to add a new Bmi.
+   - Your `height` is 1.75m, `weight` is 60.00kg and the `date` of measurement is `01-01-2024`. 
+
+2. Let's put the necessary Bmi's details together with their respective flags into a complete command. 
+   - <code style="color: green;">health /h:bmi /height:1.75 /weight:60.00 /date:01-01-2024</code>
+
+3. Entering it into PulsePilot results in this output:
+
+    ![Bmi Output](img_2101/pulsepilot_commands/health/bmi.png)
+
+4. Congratulations! You have successfully added a Bmi input to PulsePilot.
+
+> 💡 The table below illustrates how PulsePilot categorizes BMI values. This may help you to better understand where your BMI falls within these categories, providing greater insights into your overall health status!
+
+| BMI Range                                               | Limitations    |
+|---------------------------------------------------------|----------------|
+| `BMI` is less than 18.5.                                | Underweight    |
+| `BMI` is more than or equal to 18.5 and less than 25.0. | Normal         |
+| `BMI` is more than or equal to 25.0 and less than 30.0. | Overweight     |
+| `BMI` is more than or equal to 30.0 and less than 40.0. | Obese          |
+| `BMI` is more than 40.0.                                | Severely Obese |
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -769,6 +859,21 @@ The following example will cover how to add a gym session step-by-step.
 ---
 
 #### Make Period Prediction
+
+PulsePilot offers a predictive feature for you to predict your next period's start date, 
+
+> ❗Please ensure that PulsePilot contains a minimum of **4** period inputs before using this feature.
+
+The following example will illustrate how to make a prediction.
+
+1. Simply enter the command <code style="color: green;">health /h:prediction`</code>. 
+
+2. Entering it into PulsePilot prints the following:
+
+    ![Period Prediction Output](img_2101/pulsepilot_commands/health/prediction.png)
+
+
+> 💡 Do remember to regularly update PulsePilot with your period inputs for more accurate and recent prediction. 
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
