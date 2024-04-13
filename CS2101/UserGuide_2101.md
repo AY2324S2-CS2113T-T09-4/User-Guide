@@ -142,7 +142,7 @@ Here is a sub table of contents, so you can navigate through this section easily
   * [Launching `cmd.exe`](#launching-cmdexe)
   * [Windows Commands](#windows-commands)
 * [MacOS](#macos)
-  * [Launching Terminal](#launching-terminal)
+  * [Launching `Terminal`](#launching-terminal)
   * [MacOS Commands](#macos-commands)
 
 ###### [Back to table of contents](#table-of-contents)
@@ -235,7 +235,7 @@ That is all the commands you need to know to navigate through the Windows CLI an
 ###### [Back to table of contents](#table-of-contents)
 
 ---
-__
+
 ### MacOS
 
 #### Launching `Terminal`
@@ -269,7 +269,7 @@ To launch the **Terminal**:
 
 Congratulations, you have successfully launched the CLI for macOS!
 
-The [string](#glossary) `~` in `l5z@L5Z-MacBook-Air ~ %` is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `~` directory (or folder) of the computer.
+The [*string*](#glossary) `~` in `l5z@L5Z-MacBook-Air ~ %` is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `~` directory (or folder) of the computer.
 This string will be **updated** to always reflect the directory you are currently in while navigating. 
 
 In the example below, I am currently in the `Desktop` directory.
@@ -344,7 +344,7 @@ This would print out all the files and folders within the directory.
 In the `cli_demo` directory, we can see a `hello.txt` and a `pulsepilot.txt` file contained within the `cli_demo` directory.
 We also have another folder within `cli_demo` called `another_directory`.
 
-> 💡 **Generally**, you can differentiate between files and directories by the name. If it has a period('.') in the name, it is likely to be a file. 
+> 💡 **Generally**, you can differentiate between files and directories by the name. If it has a period('.') in the name, it is likely to be a file.
 > Should you encounter any issues, you may refer [here](#macos-fix) for additional details. 
 
 That is all the commands you need to know to navigate through the Windows CLI and use PulsePilot! To summarise:
@@ -1154,19 +1154,18 @@ Avoid using extra characters in the commands, such as blank space, newline, etc.
 
 | Term                        | Definition                                                                                                                                                                                                                                                     |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Object-Oriented Programming | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [*Go Back*](#glossary-usage)                                                                                                    |
-| Hyperlinks                  | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[*Go Back*](#glossary-usage)                                                                                                |
-| Java                        | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[*Go Back*](#glossary-usage)                                                                          |
-| Command Line Interface      | A **text-based** interface where users can input commands that interact with a computer. <br>[*Go Back*](#command-line-interface)                                                                                                                              |
-| Directory / Directories     | A folder within your computer that contains other files and files.<br>[*Go Back*](#launching-cmdexe)                                                                                                                                                           |
-| Github                      | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot)                                                                                          |
-| Alphanumeric                | Input that is made up of only **letters and numbers**. <br>[*Go Back*](#creating-your-profile)                                                                                                                                                                 |
-| Flags                       | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[*Go Back*](#pulsepilot-commands) |
-| File Explorer               | An application used to view the files and directories in a Windows computer. <br> [*Go Back*](#windows-fix)                                                                                                                                                    |
-| Finder                      | An application used to view the files and directories in a macOS computer. <br> [*Go Back*](#macos-fix)                                                                                                                                                        |
-| String                      | A sequence of characters that can be used to represent text data.                                                                                                                                                                                              |
+| Object-Oriented Programming | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [Go Back](#glossary-usage)                                                                                                    |
+| Hyperlinks                  | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[Go Back](#glossary-usage)                                                                                                |
+| Java                        | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[Go Back](#glossary-usage)                                                                          |
+| Command Line Interface      | A **text-based** interface where users can input commands that interact with a computer. <br>[Go Back](#command-line-interface)                                                                                                                              |
+| Directory / Directories     | A folder within your computer that contains other files and files.<br>[Go Back](#launching-cmdexe)                                                                                                                                                           |
+| Github                      | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[Go Back](#installing-and-launching-pulsepilot)                                                                                          |
+| Alphanumeric                | Input that is made up of only **letters and numbers**. <br>[Go Back](#creating-your-profile)                                                                                                                                                                 |
+| Flags                       | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[Go Back](#pulsepilot-commands) |
+| File Explorer               | An application used to view the files and directories in a Windows computer. <br> [Go Back](#windows-fix)                                                                                                                                                    |
+| Finder                      | An application used to view the files and directories in a macOS computer. <br> [Go Back](#macos-fix)                                                                                                                                                        |
+| String                      | A sequence of characters that can be used to represent text data.<br>[Go Back](#launching-terminal)                                                                                                                                                                                              |
 
 ###### [Back to table of contents](#table-of-contents)
 
 ---
-w
