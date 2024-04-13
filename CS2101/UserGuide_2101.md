@@ -805,7 +805,7 @@ The following examples will cover how to add a period step-by-step, with the lat
 
 5. Congratulations! The end date of the period input has been successfully added. 
 
-> ❗ Remember: You **must** add an end date for the current period entry before you can add your next period entry! Once again, you can use `history` command [here](#view-history) or `latest` command [here](#view-latest) to see whether you have added the end date.
+> ⚠️ Remember: You **must** add an end date for the current period entry before you can add your next period entry! Once again, you can use `history` command [here](#view-history) or `latest` command [here](#view-latest) to see whether you have added the end date.
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -862,7 +862,7 @@ To add an appointment, the following details and flags are required in your inpu
 | Detail        | Description                                                | Flag Used       | Limitations                                                                                                                                                                   |
 |---------------|------------------------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `date`        | The date of the appointment.                               | `/date:`        | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be before today's date**. (i.e. If today is `10-04-2024`, specifying `09-04-2024` will trigger an error!)  </br> |
-| `time`        | The time of the appointment.                               | `/time:`        | Must be in `HH:MM` format. <br> Time ranges from **00:00 to 23:59**. </br>                                                                                                    |
+| `time`        | The time of the appointment in 24-hour format.             | `/time:`        | Must be in `HH:MM` format. <br> Time ranges from **00:00 to 23:59**. </br>                                                                                                    |
 | `description` | The description represents the details of the appointment. | `/description:` | The description can only contain **alphanumeric characters, spaces, inverted commas and quotes**.                                                                             |
 
 The following example will cover how to add an Appointment step-by-step.
@@ -917,7 +917,6 @@ To do so, the following details flags are required in your input:
 | Detail         | Description                                            | Flag Used | Limitations                                                                               |
 |----------------|--------------------------------------------------------|-----------|-------------------------------------------------------------------------------------------|
 | `history item` | The name of the item you want to view the history for. | `/item:`  | Can **only** be set to either `workouts`, `gym`, `run`, `period`, `bmi` or `appointment`. |
-
 
 The `history item` detail will print out the different histories of objects you have added. If specified to `workouts`, it prints **all runs and gyms** recorded.
 
@@ -1159,22 +1158,27 @@ In the above output, the bot will read `5.25` as the distance. The second `/d:10
 
 **5.** What if I keep receiving an error message even though my input seems to follow the instructions given in the user guide?
 
-Please ensure that you follow the command syntax given **exactly** in the user guide. Some examples of mistakes that could be easily overlooked:
+>❗ Please ensure that you follow the command syntax given **exactly** in the user guide. 
+ 
+Here are some mistakes that could be easily overlooked:
 
-Example of the correct command:
+Example of the correct command to input:
 
 ![correct_command.png](../img/correct_command.png)
 
-- Error of adding extra space(s) in fixed parameters:
+- Error of **adding extra space(s)** in fixed parameters:
     - In this case, the altered fixed parameter is `/date:`, which was written as `/ date:` instead.
 
 ![extra_space_error_command.png](../img/extra_space_error_command.png)
 
-- Error of adding extra newline(s) after command:
+- Error of **adding extra newline(s)** after command:
 
 ![extra_newline_error_command.png](../img/extra_newline_error_command.png)
 
 Avoid using extra characters in the commands, such as blank space, newline, etc.
+
+> ⚠️ Try not to copy the code from somewhere else and paste directly into the command, as there could be unnoticeable extra characters that you are not aware of.
+
 
 ###### [Back to table of contents](#table-of-contents)
 
