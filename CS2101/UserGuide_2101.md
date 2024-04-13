@@ -155,7 +155,7 @@ Here is a sub table of contents, so you can navigate through this section easily
 
 Let us first begin with launching the command line for Windows. The name of this program is `cmd.exe`!
 
-To do so, firstly, hit the <kbd>![winlogo.png](img_2101/windows/winlogo.png) Windows</kbd> key on your keyboard to bring up the start menu:
+To do so, firstly, hit the <kbd>_**⊞**_ Windows</kbd> key on your keyboard to bring up the start menu:
 
 ![Windows Start](img_2101/windows/windows_start.png)
 
@@ -235,7 +235,7 @@ That is all the commands you need to know to navigate through the Windows CLI an
 ###### [Back to table of contents](#table-of-contents)
 
 ---
-
+__
 ### MacOS
 
 #### Launching `Terminal`
@@ -600,11 +600,12 @@ There are details and flags required from you, which will be covered below.
 > 💡PulsePilot automatically calculates the pace of your run for you in minutes/km (i.e. `5.00/km`). This helps you track your progress better!
 
 To add a run, the following details and flags must be specified in your input:
-| Detail     | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
-|------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `distance` | The distance ran in **kilometres**.                               | `/d:`     | Must be a **2 decimal point positive number** such as `5.15`. <br> Must be **at least** `0.01`, and is **capped at** `5000.00`.                                        |
-| `time`     | The time taken for the run.                                       | `/t:`     | Must be in either `MM:SS` or `HH:MM:SS` format. <br> Must be **at least** `00:01`, and is capped at `99:59:59`.                                                       |
-| `date`     | The date of the run. <br>This is an **OPTIONAL** parameter.  | `/date:`  | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)   |
+
+| Detail     | Description                                                 | Flag Used | Limitations                                                                                                                                                           |
+|------------|-------------------------------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `distance` | The distance ran in **kilometres**.                         | `/d:`     | Must be a **2 decimal point positive number** such as `5.15`. <br> Must be **at least** `0.01`, and is **capped at** `5000.00`.                                       |
+| `time`     | The time taken for the run.                                 | `/t:`     | Must be in either `MM:SS` or `HH:MM:SS` format. <br> Must be **at least** `00:01`, and is capped at `99:59:59`.                                                       |
+| `date`     | The date of the run. <br>This is an **OPTIONAL** parameter. | `/date:`  | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!) |
 
 > ❗ The `date` parameter is **OPTIONAL**. Not specifying one results in it being recorded as `NA` within PulsePilot, and it is okay!
 
@@ -756,10 +757,10 @@ There are 4 types of health features, denoted using the `/h:` flag.
 
 To add a period, the following details and flags are required in your input:
 
-| Detail       | Description                                                               | Flag Used | Limitations                                                                                                                                                                  |
-|--------------|---------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `start date` | The first day of period flow which is also the first day of the cycle.    | `/start:` | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
-| `end date`   | The last day of period flow. <br>This is an **OPTIONAL** parameter. </br> | `/end:`   | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
+| Detail       | Description                                                            | Flag Used | Limitations                                                                                                                                                           |
+|--------------|------------------------------------------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `start date` | The first day of period flow which is also the first day of the cycle. | `/start:` | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!) |
+| `end date`   | The last day of period flow. <br>This is an **OPTIONAL** parameter.    | `/end:`   | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!) |
 
 > 💡 You may first record the start date and add in the end date later on! Not specifying the end date results in it being recorded as `NA` within PulsePilot. 
 
@@ -808,11 +809,11 @@ The following examples will cover how to add a period step-by-step, with the lat
 
 To add a Bmi, the following details and flags are required in your input:
 
-| Detail   | Description                               | Flag Used  | Limitations                                                                                                                                                                  |
-|----------|-------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `height` | Your height in **meters**.                | `/height:` | Must be a `2 decimal point positive number` such as `1.75`. <br> Acceptable height range is from **0.01m to 2.75m**. </br>                                                   |
-| `weight` | Your weight in **kilograms**.             | `/weight:` | Must be a `2 decimal point positive number` such as `60.00`. <br> Acceptable weight range is from **0.01kg to 640.00kg**.</br>                                               |
-| `date`   | The date of taking your height and weight | `/date:`   | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
+| Detail   | Description                               | Flag Used  | Limitations                                                                                                                                                           |
+|----------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `height` | Your height in **meters**.                | `/height:` | Must be a `2 decimal point positive number` such as `1.75`. <br> Acceptable height range is from **0.01m to 2.75m**.                                                  |
+| `weight` | Your weight in **kilograms**.             | `/weight:` | Must be a `2 decimal point positive number` such as `60.00`. <br> Acceptable weight range is from **0.01kg to 640.00kg**.                                             |
+| `date`   | The date of taking your height and weight | `/date:`   | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!) |
 
 > ❗ The `date` parameter must be **unique** for each Bmi input in PulsePilot. An error message is printed if you attempt to add a new Bmi input with a date that matches an existing entry. 
 
@@ -1030,19 +1031,18 @@ When a data file is read properly, PulsePilot will start accepting commands imme
 
 Here is a summary of all the commands and its functions. The table contains examples as well for you to try out!
 
-| Action              | Format, Examples                                                                                                                                                    |
-|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Print help          | `help`                                                                                                                                                              |
-| Add new run         | `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]` <br> Example: `workout /e:run /d:5.24 /t:25:23 /date:19-03-2024`                                                  |
-| Add gym             | `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]` <br> Example: `workout /e:gym /n:4`                                                                             |
-| Track BMI           | `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE` <br> Example: `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`                                  |
-| Track Period        | `health /h:period /start:START_DATE [/end:END_DATE]` <br> Example: `health /h:period /start:09-03-2022 /end:16-03-2022`                                             |
-| Track Appointment   | `health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION` <br> Example: `health /h:appointment /date:29-04-2025 /time:12:00 /description:knee surgery` 
- |
-| View history        | `history /item:TYPE` <br> Example: `history /item:run`                                                                                                              |
-| View latest         | `latest /item:TYPE` <br> Example: `latest /item:bmi`                                                                                                                |
-| Deleting item       | `delete /item:TYPE /index:INDEX` <br> Example: `delete /item:run /index:1`                                                                                          |
-| Exit and write data | `exit`                                                                                                                                                              |
+| Action              | Format, Examples                                                                                                                                                     |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Print help          | `help`                                                                                                                                                               |
+| Add new run         | `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]` <br> Example: `workout /e:run /d:5.24 /t:25:23 /date:19-03-2024`                                                   |
+| Add gym             | `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]` <br> Example: `workout /e:gym /n:4`                                                                              |
+| Track BMI           | `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE` <br> Example: `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`                                   |
+| Track Period        | `health /h:period /start:START_DATE [/end:END_DATE]` <br> Example: `health /h:period /start:09-03-2022 /end:16-03-2022`                                              |
+| Track Appointment   | `health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION` <br> Example: `health /h:appointment /date:29-04-2025 /time:12:00 /description:knee surgery`  |
+| View history        | `history /item:TYPE` <br> Example: `history /item:run`                                                                                                               |
+| View latest         | `latest /item:TYPE` <br> Example: `latest /item:bmi`                                                                                                                 |
+| Deleting item       | `delete /item:TYPE /index:INDEX` <br> Example: `delete /item:run /index:1`                                                                                           |
+| Exit and write data | `exit`                                                                                                                                                               |
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -1162,11 +1162,11 @@ Avoid using extra characters in the commands, such as blank space, newline, etc.
 | Github                      | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot)                                                                                          |
 | Alphanumeric                | Input that is made up of only **letters and numbers**. <br>[*Go Back*](#creating-your-profile)                                                                                                                                                                 |
 | Flags                       | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[*Go Back*](#pulsepilot-commands) |
-| File Explorer               | An application used to view the files and directories in a Windows computer.<br> The program has this icon: <img src=img_2101/windows/file_explorer.png alt="File Explorer" width="40"/>  <br> [*Go Back*](#windows-fix)                                       |
-| Finder                      | An application used to view the files and directories in a MacOS computer.<br> The program has this icon: <img src=img_2101/macos/finder.png alt="Finder" width="40"/>  <br> [*Go Back*](#macos-fix)                                                           |
+| File Explorer               | An application used to view the files and directories in a Windows computer. <br> [*Go Back*](#windows-fix)                                                                                                                                                    |
+| Finder                      | An application used to view the files and directories in a macOS computer. <br> [*Go Back*](#macos-fix)                                                                                                                                                        |
 | String                      | A sequence of characters that can be used to represent text data.                                                                                                                                                                                              |
-
 
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+w
