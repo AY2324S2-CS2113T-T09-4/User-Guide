@@ -18,7 +18,7 @@ Once again, we hope our application helps you, and thank you for choosing PulseP
 
 ## Contact Us
 
-If you have any queries with the guide, our application, or even life in general,  please feel free to reach out to our project director **Justin Soh** at [+65 91234567](https://www.youtube.com/watch?v=eBGIQ7ZuuiU)!
+If you have any queries with the guide, our application, or even **life in general**, please feel free to reach out to our project director **Justin Soh** at [+65 91234567](https://www.youtube.com/watch?v=eBGIQ7ZuuiU)!
 
 ---
 
@@ -142,7 +142,7 @@ Here is a sub table of contents, so you can navigate through this section easily
   * [Launching `cmd.exe`](#launching-cmdexe)
   * [Windows Commands](#windows-commands)
 * [MacOS](#macos)
-  * [Launching `bash`](#launching-bash)
+  * [Launching Terminal](#launching-terminal)
   * [MacOS Commands](#macos-commands)
 
 ###### [Back to table of contents](#table-of-contents)
@@ -155,7 +155,7 @@ Here is a sub table of contents, so you can navigate through this section easily
 
 Let us first begin with launching the command line for Windows. The name of this program is `cmd.exe`!
 
-To do so, firstly, hit the <kbd>![winlogo.png](img_2101%2Fwindows%2Fwinlogo.png) Windows</kbd> key on your keyboard to bring up the start menu:
+To do so, firstly, hit the <kbd>![winlogo.png](img_2101/windows/winlogo.png) Windows</kbd> key on your keyboard to bring up the start menu:
 
 ![Windows Start](img_2101/windows/windows_start.png)
 
@@ -267,9 +267,9 @@ To launch the **Terminal**:
 
 ![Terminal](img_2101/macos/terminal.png)
 
-Congratulations, you have successfully launched the CLI for MacOS!
+Congratulations, you have successfully launched the CLI for macOS!
 
-The [string](#string) `~` in `l5z@L5Z-MacBook-Air ~ %` is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `~` directory (or folder) of the computer.
+The [string](#glossary) `~` in `l5z@L5Z-MacBook-Air ~ %` is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `~` directory (or folder) of the computer.
 This string will be **updated** to always reflect the directory you are currently in while navigating. 
 
 In the example below, I am currently in the `Desktop` directory.
@@ -277,7 +277,7 @@ In the example below, I am currently in the `Desktop` directory.
 ![Terminal Directory String](img_2101/macos/cd_desktop.png)
 
 
-> ❗ The directory and CLI for you may look different from the one shown in the guide! This is **normal** as the guide was created using a different computer. As long as the top of the window shows '**zsh**', you are good to go!
+> ❗ The directory and CLI for you may look different from the one shown in the guide! This is **normal** as the guide was created using a different computer. As long as the top of the window shows `zsh`, you are good to go!
 
 You can type different things into the CLI, and press <kbd>Enter</kbd> to make your computer read the input and process it as a command.
 
@@ -301,7 +301,7 @@ The macOS **Terminal** allows you to enter and execute **Bash** commands.
 
 ##### Changing Directories (`cd`)
 
-There are many commands in MacOS, but this guide will cover the basic few you need to use PulsePilot.
+There are many commands in macOS, but this guide will cover the basic few you need to use PulsePilot.
 
 The first command is `cd`, short for **change directory**. It changes the **current** directory to the specified one. 
 The format to use it is `cd <DIRECTORY>`, where `<DIRECTORY>` is the directory you would like to navigate to **within your current directory**!
@@ -353,7 +353,7 @@ That is all the commands you need to know to navigate through the Windows CLI an
 - **List Directory Contents (`ls`)**: The `ls` command lists the files and folders in your current directory.
   - Simply type `ls` and press <kbd>Enter</kbd>.
 - **Change Directory (`cd <DIRECTORY>`)**: The `cd` command changes the current directory to the specified one in `<DIRECTORY>`
-  - Type `cd`, followed by <kbd>Spacebar</kbd> and enter the name of the directory you would like to navigate to. Finally press <kbd>Enter</kbd>.
+  - Type `cd`, followed by <kbd>Spacebar</kbd> and enter the name of the directory you would like to navigate to. Finally, press <kbd>Enter</kbd>.
   - _Example_: `cd Desktop`
 
 
@@ -438,7 +438,7 @@ MacOS:
 
 ![Wrong Directory MacOS](img_2101/macos/wrong_dir.png)
 
-This means that `pulsepilot.jar` is **not within your current directory**. To remediate this, use `dir` for Windows or `ls` for MacOS to check for the files present within your current directory.
+This means that `pulsepilot.jar` is **not within your current directory**. To remediate this, use `dir` for Windows or `ls` for macOS to check for the files present within your current directory.
 
 If you are in the right directory, `pulsepilot.jar` should appear like so:
 
@@ -496,8 +496,6 @@ To fix this, do the following:
 
 Now that Java and PulsePilot is up and running on your computer, it is time to learn how to use PulsePilot via its implemented commands and [*flags*](#glossary).
 
-> ⚠️ For **experienced** users, if this is not your first time using a CLI application or PulsePilot, feel free to skip ahead to the [experienced user manual](#experienced-user-manual)! If not, please continue reading!
-
 * [PulsePilot Text Style](#pulsepilot-text-style)
 * [Creating Your Profile](#creating-your-profile)
 * [Viewing Help](#viewing-help)
@@ -512,8 +510,8 @@ Now that Java and PulsePilot is up and running on your computer, it is time to l
 * [View History](#view-history)
 * [View Latest](#view-latest)
 * [Delete Item](#delete-item)
-* [Storage of Data](#storage-of-data)
 * [Exit](#exit)
+* [Storage of Data](#storage-of-data)
 
 ### PulsePilot Text Style
 
@@ -604,9 +602,9 @@ There are details and flags required from you, which will be covered below.
 To add a run, the following details and flags must be specified in your input:
 | Detail     | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
 |------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `distance` | The distance ran in **kilometres**.                               | `/d:`     | Must be a **2 decimal point positive number** such as `5.15`. <br> Must be **at least** `0.01`, and is **capped at** `5000.00`. </br>                                        |
-| `time`     | The time taken for the run.                                       | `/t:`     | Must be in either `MM:SS` or `HH:MM:SS` format. <br> Must be **at least** `00:01`, and is capped at `99:59:59`. </br>                                                        |
-| `date`     | The date of the run. <br>This is an **OPTIONAL** parameter. </br> | `/date:`  | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
+| `distance` | The distance ran in **kilometres**.                               | `/d:`     | Must be a **2 decimal point positive number** such as `5.15`. <br> Must be **at least** `0.01`, and is **capped at** `5000.00`.                                        |
+| `time`     | The time taken for the run.                                       | `/t:`     | Must be in either `MM:SS` or `HH:MM:SS` format. <br> Must be **at least** `00:01`, and is capped at `99:59:59`.                                                       |
+| `date`     | The date of the run. <br>This is an **OPTIONAL** parameter.  | `/date:`  | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)   |
 
 > ❗ The `date` parameter is **OPTIONAL**. Not specifying one results in it being recorded as `NA` within PulsePilot, and it is okay!
 
@@ -627,39 +625,29 @@ The following example will cover how to add a run step-by-step.
 
 3. Putting it together, the full command is:
 
-   <code style="color: #D85D43;">workout /e:run /d:5.50 /t:25:12 /date:07-03-2024</code>
-  
-4. Entering it into PulsePilot results in this output:
+   <code style="color: green">workout /e:run /d:5.50 /t:25:12 /date:07-03-2024</code>
 
     ![Add first run](img_2101/pulsepilot_commands/run/add_run1.png)
 
-5. Now, let's put the **second** run's details into the flags required:
+4. Now, let's put the **second** run's details into the flags required:
 
     - A **20km** run is specified using the `distance` flag via `/d:20.00`.
     - **2 hours, 13 minutes and 37 seconds** is specified using the `time` flag via `/t:02:13:37`
     - **No date** is given, so we can leave the `date` blank.
 
-6. The full command for the second run is:
+5. The full command for the second run is:
 
-    <code style="color: #D85D43;">workout /e:run /d:20.00 /t:02:13:37</code>
-
-7. Entering it into PulsePilot shows the following:
+    <code style="color: green">workout /e:run /d:20.00 /t:02:13:37</code>
 
     ![Add second run](img_2101/pulsepilot_commands/run/add_run2.png)
-
-8. Congratulations! You have added your first 2 runs to PulsePilot!
 
 ##### Error Messages
 
 > ❗ This is just one example of invalid input. We will not cover the full list of errors here.
 
-Adding an incorrect flag will cause the command for adding a run to be **invalid** and PulsePilot will not add anything. 
-
-For example, if you used `/time:` instead of `/t:`
+**Using the wrong flag**:
 
 ![Error in Flag](img_2101/pulsepilot_commands/run/run_error.png)
-
-
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -674,28 +662,25 @@ To add a gym, there are 2 parts to the command:
 1. Adding a gym itself using `workout /e:gym`.
 2. Adding details for each individual gym station.
 
-To tell PulsePilot to add a gym, the following details are required:
+To add a gym, the following details and flags must be specified in your input:
 
-| Detail               | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
-|----------------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `number of stations` | The number of gym stations you have done in one gym session.      | `/n:`     | Must be a **positive number of at least 1**.                                                                                                                                  |
-| `date`               | The date of the run. <br>This is an **OPTIONAL** parameter. </br> | `/date:`  | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
+| Detail               | Description                                                  | Flag Used | Limitations                                                                                                                                                           |
+|----------------------|--------------------------------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `number of stations` | The number of gym stations you have done in one gym session. | `/n:`     | Must be a **positive number of at least 1**.                                                                                                                          |
+| `date`               | The date of the run. <br>This is an **OPTIONAL** parameter.  | `/date:`  | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!) |
 
 > ❗ The `date` parameter is **OPTIONAL**. Not specifying one results in it being recorded as `NA` within PulsePilot, and it is okay! This is similar to the command used for adding a run.
 
-> ❗ After using the `workout /e:gym` command, **ALL OTHER INPUTS WILL BE INVALID** as PulsePilot expects gym station parameters.
-
-After PulsePilot receives the command to enter a gym, it will prompt you further for additional details for **each station**. If you specified the `number of stations` as `4`, then PulsePilot requires 4 extra inputs from you!
-
+After PulsePilot receives the command to enter a gym, it will prompt you further for additional details for **each station**. If you specified the `number of stations` as `3`, then PulsePilot requires 3 extra lines of input from you!
 
 The following details are required for each station:
 
-| Detail               | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
-|----------------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `station name` | The name of the station done.    | **No flag required.**    | Can **only** have letters, and must be shorter than 25 characters.                                                                                                                                  |
-| `number of sets` | The number of sets done at each station.     | `/s:`     | Must be a **positive number of at least 1**                                                                                                                                  |
-| `number of repetitions` | The number of repetitions done at each station.     | `/r:`     | Must be a **positive number of at least 1**                                                                                                                                  |
-| `weights` | The weight done for each set in **kilograms**, separated by commas. <br> (i.e. If you have used 70kg and 75kg at one station, use `70,75` to specify that.)     | `/w:`     | Must **only contain numbers and commas**, as all other characters will trigger errors.  <br> Each number specified must be a multiple of `0.125`. <br>     Numbers specified **must be at least 0, and less than 2850**.                                                                                                                                  |
+| Detail                  | Description                                                                                                                                                 | Flag Used             | Limitations                                                                                                                                                                                                              |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `station name`          | The name of the station done.                                                                                                                               | **No flag required.** | Can **only** have letters, and must be shorter than 25 characters.                                                                                                                                                       |
+| `number of sets`        | The number of sets done at each station.                                                                                                                    | `/s:`                 | Must be a **positive number of at least 1**                                                                                                                                                                              |
+| `number of repetitions` | The number of repetitions done at each station.                                                                                                             | `/r:`                 | Must be a **positive number of at least 1**                                                                                                                                                                              |
+| `weights`               | The weight done for each set in **kilograms**, separated by commas. <br> (i.e. If you have used 70kg and 75kg at one station, use `70,75` to specify that.) | `/w:`                 | Must **only contain numbers and commas**, as all other characters will trigger errors.  <br> Each number specified must be a multiple of `0.125`. <br>     Numbers specified **must be at least 0, and less than 2850**. |
 
 The following example will cover how to add a gym session step-by-step.
 
@@ -710,25 +695,36 @@ The following example will cover how to add a gym session step-by-step.
     - **3 gym stations** is specified using the `number of stations` flag via `/n:3`.
     - **10 March 2024** is specified using the `date` flag via `/date:10-03-2024`.
 
-3. Putting it together, the full command is:
+3. Putting it together, the full command to use is:
 
-    <code style="color: #D85D43;">workout /e:gym /n:3 /date:10-03-2024</code>
-
-4. Entering it into PulsePilot results in the gym station prompt to be printed:
+    <code style="color: green">workout /e:gym /n:3 /date:10-03-2024</code>
 
     ![Workout Gym Command](img_2101/pulsepilot_commands/gym/initial_workout.png)
 
-5. Now, we can put the 3 gym stations into the flags required:
+4. Now, we can put the 3 gym stations into the flags required and enter them as input:
 
-    - Station 1: <code style="color: #D85D43;">Bench Press /s:4 /r:4 /w:100,105,110,112.5</code>
-    - Station 2: <code style="color: #D85D43;">Deadlift /s:5 /r:5 /w:150,150,160,160,170</code>
-    - Station 3: <code style="color: #D85D43;">Squat /s:3 /r:10 /w:100.5,115,110</code>
-
-6. Enter the inputs into PulsePilot. New prompts are printed for each station, and a success message is printed once added. If done correctly, the output should look like this:
+    - Station 1: <code style="color: green">Bench Press /s:4 /r:4 /w:100,105,110,112.5</code>
+    - Station 2: <code style="color: green">Deadlift /s:5 /r:5 /w:150,150,160,160,170</code>
+    - Station 3: <code style="color: green">Squat /s:3 /r:10 /w:100.5,115,110</code>
 
     ![Add Gym Stations](img_2101/pulsepilot_commands/gym/add_gym_stations.png)
 
-7. Congratulations! You have successfully added a gym session to PulsePilot!
+
+> ❗ Using `back` will delete the gym session, and bring you back to the main menu to use other commands.
+> 
+> ![Going Back](img_2101/pulsepilot_commands/gym/station_back.png)
+
+##### Error Messages
+
+> ❗ This is just one example of invalid input. We will not cover the full list of errors here.
+
+**An invalid station name was entered**:
+
+![Invalid Name](img_2101/pulsepilot_commands/gym/invalid_name.png)
+
+**Number of sets do not match number of weights**:
+
+![Invalid weight](img_2101/pulsepilot_commands/gym/setrep_nomatch.png)
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -883,6 +879,47 @@ The following example will illustrate how to make a prediction.
 
 ### View History
 
+Once items have been added, the `history` command can be used to view all the items added.
+
+To do so, the following details flags are required in your input:
+
+| Detail         | Description                                            | Flag Used | Limitations                                                                               |
+|----------------|--------------------------------------------------------|-----------|-------------------------------------------------------------------------------------------|
+| `history item` | The name of the item you want to view the history for. | `/item:`  | Can **only** be set to either `workouts`, `gym`, `run`, `period`, `bmi` or `appointment`. |
+
+
+The `history item` detail will print out the different histories of objects you have added. If specified to `workouts`, it prints **all runs and gyms** recorded.
+
+The following example shows how to view the history step-by-step:
+
+1. Suppose you have added **a run, gym and BMI entry**, and want to view all of them.
+
+2. You can choose to view the `run` history using the command:
+
+    <code style="color: green">history /item:run</code>
+
+    ![View Run History](img_2101/pulsepilot_commands/history/view_run.png)
+
+3. BMI history can be viewed using:
+
+    <code style="color: green">history /item:bmi</code>
+
+    ![View BMI History](img_2101/pulsepilot_commands/history/view_bmi.png)
+
+4. All the workouts can be viewed using:
+
+    <code style="color: green">history /item:workouts</code>
+
+    ![View Workouts](img_2101/pulsepilot_commands/history/view_workouts.png)
+
+#### Error Messages
+
+> ❗ This is just one example of invalid input. We will not cover the full list of errors here.
+
+**Using the wrong history item**:
+
+![Wrong Filter](img_2101/pulsepilot_commands/history/wrong_filter.png)
+
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
 ###### [Back to table of contents](#table-of-contents)
@@ -891,6 +928,26 @@ The following example will illustrate how to make a prediction.
 
 ### View Latest
 
+For viewing either the **last entry** for items using `latest`.
+
+To do so, the following details and flags must be specified in your input:
+
+| Detail        | Description                                            | Flag Used | Limitations                                                                   |
+|---------------|--------------------------------------------------------|-----------|-------------------------------------------------------------------------------|
+| `latest item` | The name of the item you want to view the history for. | `/item:`  | Can **only** be set to either `gym`, `run`, `period`, `bmi` or `appointment`. |
+
+The following example will cover how to use the `latest` command step-by-step:
+
+1. Suppose you have 2 appointments added, one on **20-05-2024** and the other on **20-06-2024**. This is viewable using the `history` command:
+
+    ![View Appt](img_2101/pulsepilot_commands/history/appt.png)
+  
+2. The `latest` command would print the **last appointment** added:
+
+    <code style="color: green">latest /item:appointment</code>
+
+    ![Latest appt](img_2101/pulsepilot_commands/latest/latest_appt.png)
+  
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
 ###### [Back to table of contents](#table-of-contents)
@@ -898,6 +955,50 @@ The following example will illustrate how to make a prediction.
 ---
 
 ### Delete Item
+
+For removing things PulsePilot has recorded using `delete`. 
+
+To do so, the following details and flags must be specified in your input:
+
+| Detail         | Description                                            | Flag Used | Limitations                                                                   |
+|----------------|--------------------------------------------------------|-----------|-------------------------------------------------------------------------------|
+| `delete item`  | The name of the item you want to view the history for. | `/item:`  | Can **only** be set to either `gym`, `run`, `period`, `bmi` or `appointment`. |
+| `delete index` | The index of the item you want to delete.              | `/item:`  | Must be a **number of at least 1**.                                           |
+
+The following example shows how the `delete` command can be used:
+
+1. Suppose you have **2 runs** added. This can be viewed using the `history` command:
+
+    ![2 runs](img_2101/pulsepilot_commands/delete/2runsadded.png)
+
+2. The runs have an `Index` column on the left, which is the number required for the `delete index` detail. The first run can be deleted using `delete`, then `history` is used to check whether it has been deleted:
+
+    <code style="color: green">delete /item:run /index:1</code>
+    
+    ![Deleted Run](img_2101/pulsepilot_commands/delete/delete_run.png)
+  
+
+#### Error Messages
+
+> ❗ This is just one example of invalid input. We will not cover the full list of errors here.
+
+**Deleting an item that does not exist**:
+
+![Deleting Error](img_2101/pulsepilot_commands/delete/delete_error.png)
+
+###### [Back to PulsePilot Commands](#pulsepilot-commands)
+
+###### [Back to table of contents](#table-of-contents)
+
+---
+
+### Exit
+
+For exiting the bot **and writing data** via `exit`.
+
+> ❗ Exiting the bot without using `exit` will **result in data not being saved!**
+
+![Exit](img_2101/pulsepilot_commands/exit/exitbot.png)
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -907,13 +1008,17 @@ The following example will illustrate how to make a prediction.
 
 ### Storage of Data
 
-###### [Back to PulsePilot Commands](#pulsepilot-commands)
+PulsePilot creates 2 files for storing your data, and making sure that the data has **not been tampered with**. These files contain your name, all health and all workout information you stored. 
 
-###### [Back to table of contents](#table-of-contents)
+Upon starting up again, PulsePilot will read the data file and restore all your data!
 
----
+Users should **not** tamper with these files in any way.
 
-### Exit
+> ❗ **Tampering with data files can result in permanent data loss!!**
+
+When a data file is read properly, PulsePilot will start accepting commands immediately:
+
+![Read Data File](img_2101/pulsepilot_commands/save_state.png)
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -925,18 +1030,19 @@ The following example will illustrate how to make a prediction.
 
 Here is a summary of all the commands and its functions. The table contains examples as well for you to try out!
 
-| Action            | Format, Examples                                                                                                                                                          |
-|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Print help        | `help`                                                                                                                                                                    |
-| Add new run       | `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]` <br> Example: `workout /e:run /d:5.24 /t:25:23 /date:19-03-2024`</br>                                                   |
-| Add gym           | `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]` <br> Example: `workout /e:gym /n:4`</br>                                                                              |
-| Track BMI         | `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE` <br> Example: `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`</br>                                   |
-| Track Period      | `health /h:period /start:START_DATE [/end:END_DATE]` <br> Example: `health /h:period /start:09-03-2022 /end:16-03-2022`</br>                                              |
-| Track Appointment | `health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION` <br> Example: `health /h:appointment /date:29-04-2025 /time:12:00 /description:knee surgery` </br> |
-| View history      | `history /item:TYPE` <br> Example: `history /item:run` </br>                                                                                                              |
-| View latest       | `latest /item:TYPE` <br> Example: `latest /item:bmi` </br>                                                                                                                |
-| Deleting item     | `delete /item:TYPE /index:INDEX` <br> Example: `delete /item:run /index:1`  </br>                                                                                         |
-| Exit bot          | `exit`                                                                                                                                                                    |
+| Action              | Format, Examples                                                                                                                                                    |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Print help          | `help`                                                                                                                                                              |
+| Add new run         | `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]` <br> Example: `workout /e:run /d:5.24 /t:25:23 /date:19-03-2024`                                                  |
+| Add gym             | `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]` <br> Example: `workout /e:gym /n:4`                                                                             |
+| Track BMI           | `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE` <br> Example: `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`                                  |
+| Track Period        | `health /h:period /start:START_DATE [/end:END_DATE]` <br> Example: `health /h:period /start:09-03-2022 /end:16-03-2022`                                             |
+| Track Appointment   | `health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION` <br> Example: `health /h:appointment /date:29-04-2025 /time:12:00 /description:knee surgery` 
+ |
+| View history        | `history /item:TYPE` <br> Example: `history /item:run`                                                                                                              |
+| View latest         | `latest /item:TYPE` <br> Example: `latest /item:bmi`                                                                                                                |
+| Deleting item       | `delete /item:TYPE /index:INDEX` <br> Example: `delete /item:run /index:1`                                                                                          |
+| Exit and write data | `exit`                                                                                                                                                              |
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -987,13 +1093,13 @@ You may experience 2 scenarios:
 
 - A data file content corruption:
 
-![Data Corruption](img/output/data_corruption.png)
+![Data Corruption](../img/output/data_corruption.png)
 
 Corruption of the `pulsepilot_data.txt` or `pulsepilot_hash.txt` files will result in **permanent and complete data loss**.
 
 - A missing file error:
 
-![Missing Files](img/output/missing_files.png)
+![Missing Files](../img/output/missing_files.png)
 
 A missing file error occurs when either `pulsepilot_data.txt` or `pulsepilot_hash.txt` is missing when PulsePilot is run. For safety and security reasons, PulsePilot will automatically delete any remaining data files before exiting the application.
 
@@ -1008,18 +1114,18 @@ Otherwise, if you have lost your data, you can reinitialize a new save file by r
 Yes, your data is secure and stored locally on your machine. PulsePilot does not have any features that would allow it to send your data elsewhere.
 
 **4.** What happens if I specify extra flags on accident?
-
+   
 Note that if you add duplicate or extra flags, the bot **will read the first instance only**.
 
 **All other parameters will be ignored.**
 
-For example:
+For example, if you entered:
 
 ```
 workout /e:run /d:5.25 /t:59:50 /d:10.55
 ```
 
-In the above output, the bot will read `5.25` as the distance. The second `/d:10.55` is ignored.
+In the above output, the bot will read `5.25` as the distance. The second `/d:10.55` is **ignored**.
 
 **5.** What if I keep receiving an error message even though my input seems to follow the instructions given in the user guide?
 
@@ -1027,16 +1133,16 @@ Please ensure that you follow the command syntax given **exactly** in the user g
 
 Example of the correct command:
 
-![correct_command.png](img/correct_command.png)
+![correct_command.png](../img/correct_command.png)
 
 - Error of adding extra space(s) in fixed parameters:
     - In this case, the altered fixed parameter is `/date:`, which was written as `/ date:` instead.
 
-![extra_space_error_command.png](img/extra_space_error_command.png)
+![extra_space_error_command.png](../img/extra_space_error_command.png)
 
 - Error of adding extra newline(s) after command:
 
-![extra_newline_error_command.png](img/extra_newline_error_command.png)
+![extra_newline_error_command.png](../img/extra_newline_error_command.png)
 
 Avoid using extra characters in the commands, such as blank space, newline, etc.
 
@@ -1046,19 +1152,19 @@ Avoid using extra characters in the commands, such as blank space, newline, etc.
 
 ## Glossary
 
-| Term                        | Definition                                                                                                                                                                                                                                                           |
-|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Object-Oriented Programming | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [*Go Back*](#glossary-usage) </br>                                                                                                    |
-| Hyperlinks                  | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[*Go Back*](#glossary-usage) </br>                                                                                                |
-| Java                        | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[*Go Back*](#glossary-usage) </br>                                                                          |
-| Command Line Interface      | A **text-based** interface where users can input commands that interact with a computer. <br>[*Go Back*](#command-line-interface) </br>                                                                                                                              |
-| Directory / Directories     | A folder within your computer that contains other files and files.<br>[*Go Back*](#launching-cmdexe) </br>                                                                                                                                                           |
-| Github                      | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot) </br>                                                                                          |
-| Alphanumeric                | Input that is made up of only **letters and numbers**. <br>[*Go Back*](#creating-your-profile) </br>                                                                                                                                                                 |
-| Flags                       | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[*Go Back*](#pulsepilot-commands) </br> |
-| File Explorer               | An application used to view the files and directories in a Windows computer.<br> The program has this icon: <img src=img_2101/windows/file_explorer.png alt="File Explorer" width="40"/> </br> <br> [*Go Back*](#windows-fix) </br>                                  |
-| Finder                      | An application used to view the files and directories in a MacOS computer.<br> The program has this icon: <img src=img_2101/macos/finder.png alt="Finder" width="40"/> </br> <br> [*Go Back*](#macos-fix) </br>                                                      |
-| String                      | A sequence of characters that can be used to represent text data.                                                                                                                                                                                                    |
+| Term                        | Definition                                                                                                                                                                                                                                                     |
+|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Object-Oriented Programming | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [*Go Back*](#glossary-usage)                                                                                                    |
+| Hyperlinks                  | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[*Go Back*](#glossary-usage)                                                                                                |
+| Java                        | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[*Go Back*](#glossary-usage)                                                                          |
+| Command Line Interface      | A **text-based** interface where users can input commands that interact with a computer. <br>[*Go Back*](#command-line-interface)                                                                                                                              |
+| Directory / Directories     | A folder within your computer that contains other files and files.<br>[*Go Back*](#launching-cmdexe)                                                                                                                                                           |
+| Github                      | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[*Go Back*](#installing-and-launching-pulsepilot)                                                                                          |
+| Alphanumeric                | Input that is made up of only **letters and numbers**. <br>[*Go Back*](#creating-your-profile)                                                                                                                                                                 |
+| Flags                       | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[*Go Back*](#pulsepilot-commands) |
+| File Explorer               | An application used to view the files and directories in a Windows computer.<br> The program has this icon: <img src=img_2101/windows/file_explorer.png alt="File Explorer" width="40"/>  <br> [*Go Back*](#windows-fix)                                       |
+| Finder                      | An application used to view the files and directories in a MacOS computer.<br> The program has this icon: <img src=img_2101/macos/finder.png alt="Finder" width="40"/>  <br> [*Go Back*](#macos-fix)                                                           |
+| String                      | A sequence of characters that can be used to represent text data.                                                                                                                                                                                              |
 
 
 ###### [Back to table of contents](#table-of-contents)
