@@ -18,7 +18,7 @@ Once again, we hope our application helps you, and thank you for choosing PulseP
 
 ## Contact Us
 
-If you have any queries with the guide, our application, or even life in general,  please feel free to reach out to our project director **Justin Soh** at [+65 91234567](https://www.youtube.com/watch?v=eBGIQ7ZuuiU)!
+If you have any queries with the guide, our application, or even **life in general**, please feel free to reach out to our project director **Justin Soh** at [+65 91234567](https://www.youtube.com/watch?v=eBGIQ7ZuuiU)!
 
 ---
 
@@ -512,8 +512,8 @@ Now that Java and PulsePilot is up and running on your computer, it is time to l
 * [View History](#view-history)
 * [View Latest](#view-latest)
 * [Delete Item](#delete-item)
-* [Storage of Data](#storage-of-data)
 * [Exit](#exit)
+* [Storage of Data](#storage-of-data)
 
 ### PulsePilot Text Style
 
@@ -627,39 +627,29 @@ The following example will cover how to add a run step-by-step.
 
 3. Putting it together, the full command is:
 
-   <code style="color: #D85D43;">workout /e:run /d:5.50 /t:25:12 /date:07-03-2024</code>
-  
-4. Entering it into PulsePilot results in this output:
+   <code style="color: green">workout /e:run /d:5.50 /t:25:12 /date:07-03-2024</code>
 
     ![Add first run](img_2101/pulsepilot_commands/run/add_run1.png)
 
-5. Now, let's put the **second** run's details into the flags required:
+4. Now, let's put the **second** run's details into the flags required:
 
     - A **20km** run is specified using the `distance` flag via `/d:20.00`.
     - **2 hours, 13 minutes and 37 seconds** is specified using the `time` flag via `/t:02:13:37`
     - **No date** is given, so we can leave the `date` blank.
 
-6. The full command for the second run is:
+5. The full command for the second run is:
 
-    <code style="color: #D85D43;">workout /e:run /d:20.00 /t:02:13:37</code>
-
-7. Entering it into PulsePilot shows the following:
+    <code style="color: green">workout /e:run /d:20.00 /t:02:13:37</code>
 
     ![Add second run](img_2101/pulsepilot_commands/run/add_run2.png)
-
-8. Congratulations! You have added your first 2 runs to PulsePilot!
 
 ##### Error Messages
 
 > ❗ This is just one example of invalid input. We will not cover the full list of errors here.
 
-Adding an incorrect flag will cause the command for adding a run to be **invalid** and PulsePilot will not add anything. 
-
-For example, if you used `/time:` instead of `/t:`
+**Using the wrong flag**:
 
 ![Error in Flag](img_2101/pulsepilot_commands/run/run_error.png)
-
-
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -674,7 +664,7 @@ To add a gym, there are 2 parts to the command:
 1. Adding a gym itself using `workout /e:gym`.
 2. Adding details for each individual gym station.
 
-To tell PulsePilot to add a gym, the following details are required:
+To add a gym, the following details and flags must be specified in your input:
 
 | Detail               | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
 |----------------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -683,10 +673,7 @@ To tell PulsePilot to add a gym, the following details are required:
 
 > ❗ The `date` parameter is **OPTIONAL**. Not specifying one results in it being recorded as `NA` within PulsePilot, and it is okay! This is similar to the command used for adding a run.
 
-> ❗ After using the `workout /e:gym` command, **ALL OTHER INPUTS WILL BE INVALID** as PulsePilot expects gym station parameters.
-
-After PulsePilot receives the command to enter a gym, it will prompt you further for additional details for **each station**. If you specified the `number of stations` as `4`, then PulsePilot requires 4 extra inputs from you!
-
+After PulsePilot receives the command to enter a gym, it will prompt you further for additional details for **each station**. If you specified the `number of stations` as `3`, then PulsePilot requires 3 extra lines of input from you!
 
 The following details are required for each station:
 
@@ -710,25 +697,36 @@ The following example will cover how to add a gym session step-by-step.
     - **3 gym stations** is specified using the `number of stations` flag via `/n:3`.
     - **10 March 2024** is specified using the `date` flag via `/date:10-03-2024`.
 
-3. Putting it together, the full command is:
+3. Putting it together, the full command to use is:
 
-    <code style="color: #D85D43;">workout /e:gym /n:3 /date:10-03-2024</code>
-
-4. Entering it into PulsePilot results in the gym station prompt to be printed:
+    <code style="color: green">workout /e:gym /n:3 /date:10-03-2024</code>
 
     ![Workout Gym Command](img_2101/pulsepilot_commands/gym/initial_workout.png)
 
-5. Now, we can put the 3 gym stations into the flags required:
+4. Now, we can put the 3 gym stations into the flags required and enter them as input:
 
-    - Station 1: <code style="color: #D85D43;">Bench Press /s:4 /r:4 /w:100,105,110,112.5</code>
-    - Station 2: <code style="color: #D85D43;">Deadlift /s:5 /r:5 /w:150,150,160,160,170</code>
-    - Station 3: <code style="color: #D85D43;">Squat /s:3 /r:10 /w:100.5,115,110</code>
-
-6. Enter the inputs into PulsePilot. New prompts are printed for each station, and a success message is printed once added. If done correctly, the output should look like this:
+    - Station 1: <code style="color: green">Bench Press /s:4 /r:4 /w:100,105,110,112.5</code>
+    - Station 2: <code style="color: green">Deadlift /s:5 /r:5 /w:150,150,160,160,170</code>
+    - Station 3: <code style="color: green">Squat /s:3 /r:10 /w:100.5,115,110</code>
 
     ![Add Gym Stations](img_2101/pulsepilot_commands/gym/add_gym_stations.png)
 
-7. Congratulations! You have successfully added a gym session to PulsePilot!
+
+> ❗ Using `back` will delete the gym session, and bring you back to the main menu to use other commands.
+> 
+> ![Going Back](img_2101/pulsepilot_commands/gym/station_back.png)
+
+##### Error Messages
+
+> ❗ This is just one example of invalid input. We will not cover the full list of errors here.
+
+**An invalid station name was entered**:
+
+![Invalid Name](img_2101/pulsepilot_commands/gym/invalid_name.png)
+
+**Number of sets do not match number of weights**:
+
+![Invalid weight](img_2101/pulsepilot_commands/gym/setrep_nomatch.png)
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -778,6 +776,47 @@ The following example will cover how to add a gym session step-by-step.
 
 ### View History
 
+Once items have been added, the `history` command can be used to view all of the items added.
+
+To do so, the following details flags are required in your input:
+
+| Detail               | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
+|----------------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `history item` | The name of the item you want to view the history for.   | `/item:`    | Can **only** be set to either `workouts`, `gym`, `run`, `period`, `bmi` or `appointment`.                                                                                                                                  |
+
+
+The `history item` detail will print out the different histories of objects you have added. If specified to `workouts`, it prints **all runs and gyms** recorded.
+
+The following example shows how to view the history step-by-step:
+
+1. Suppose you have added **a run, gym and BMI entry**, and want to view all of them.
+
+2. You can choose to view the `run` history using the command:
+
+    <code style="color: green">history /item:run</code>
+
+    ![View Run History](img_2101/pulsepilot_commands/history/view_run.png)
+
+3. BMI history can be viewed using:
+
+    <code style="color: green">history /item:bmi</code>
+
+    ![View BMI History](img_2101/pulsepilot_commands/history/view_bmi.png)
+
+4. All of the workouts can be viewed using:
+
+    <code style="color: green">history /item:workouts</code>
+
+    ![View Workouts](img_2101/pulsepilot_commands/history/view_workouts.png)
+
+#### Error Messages
+
+> ❗ This is just one example of invalid input. We will not cover the full list of errors here.
+
+**Using the wrong history item**:
+
+![Wrong Filter](img_2101/pulsepilot_commands/history/wrong_filter.png)
+
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
 ###### [Back to table of contents](#table-of-contents)
@@ -786,6 +825,26 @@ The following example will cover how to add a gym session step-by-step.
 
 ### View Latest
 
+For viewing either the **last entry** for items using `latest`.
+
+To do so, the following details and flags must be specified in your input:
+
+| Detail               | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
+|----------------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `latest item` | The name of the item you want to view the history for.   | `/item:`    | Can **only** be set to either `gym`, `run`, `period`, `bmi` or `appointment`.                                                                                                                                  |
+
+The following example will cover how to use the `latest` command step-by-step:
+
+1. Suppose you have 2 appointments added, one on **20-05-2024** and the other on **20-06-2024**. This is viewable using the `history` command:
+
+    ![View Appt](img_2101/pulsepilot_commands/history/appt.png)
+  
+2. The `latest` command would print the **last appointment** added:
+
+    <code style="color: green">latest /item:appointment</code>
+
+    ![Latest appt](img_2101/pulsepilot_commands/latest/latest_appt.png)
+  
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
 ###### [Back to table of contents](#table-of-contents)
@@ -793,6 +852,50 @@ The following example will cover how to add a gym session step-by-step.
 ---
 
 ### Delete Item
+
+For removing things PulsePilot has recorded using `delete`. 
+
+To do so, the following details and flags must be specified in your input:
+
+| Detail               | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
+|----------------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `delete item` | The name of the item you want to view the history for.   | `/item:`    | Can **only** be set to either `gym`, `run`, `period`, `bmi` or `appointment`.                                                                                                                                  |
+| `delete index` | The index of the item you want to delete.   | `/item:`    | Must be a **number of at least 1**.                                                                                                                                |
+
+The following example shows how the `delete` command can be used:
+
+1. Suppose you have **2 runs** added. This can be viewed using the `history` command:
+
+    ![2 runs](img_2101/pulsepilot_commands/delete/2runsadded.png)
+
+2. The runs have an `Index` column on the left, which is the number required for the `delete index` detail. The first run can be deleted using `delete`, then `history` is used to check whether it has been deleted:
+
+    <code style="color: green">delete /item:run /index:1</code>
+    
+    ![Deleted Run](img_2101/pulsepilot_commands/delete/delete_run.png)
+  
+
+#### Error Messages
+
+> ❗ This is just one example of invalid input. We will not cover the full list of errors here.
+
+**Deleting an item that does not exist**:
+
+![Deleting Error](img_2101/pulsepilot_commands/delete/delete_error.png)
+
+###### [Back to PulsePilot Commands](#pulsepilot-commands)
+
+###### [Back to table of contents](#table-of-contents)
+
+---
+
+### Exit
+
+For exiting the bot **and writing data** via `exit`.
+
+> ❗ Exiting the bot without using `exit` will **result in data not being saved!**
+
+![Exit](img_2101/pulsepilot_commands/exit/exitbot.png)
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -802,13 +905,17 @@ The following example will cover how to add a gym session step-by-step.
 
 ### Storage of Data
 
-###### [Back to PulsePilot Commands](#pulsepilot-commands)
+PulsePilot creates a 2 files for storing your data, and making sure that the data has **not been tampered with**. These files contain your name, all health and all workout information you stored. 
 
-###### [Back to table of contents](#table-of-contents)
+Upon starting up again, PulsePilot will read the data file and restore all your data!
 
----
+Users should **not** tamper with these files in any way.
 
-### Exit
+> ❗ **Tampering with data files can result in permanent data loss!!**
+
+When a data file is read properly, PulsePilot will start accepting commands immediately:
+
+![Read Data File](img_2101/pulsepilot_commands/save_state.png)
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -831,7 +938,7 @@ Here is a summary of all the commands and its functions. The table contains exam
 | View history      | `history /item:TYPE` <br> Example: `history /item:run` </br>                                                                                                              |
 | View latest       | `latest /item:TYPE` <br> Example: `latest /item:bmi` </br>                                                                                                                |
 | Deleting item     | `delete /item:TYPE /index:INDEX` <br> Example: `delete /item:run /index:1`  </br>                                                                                         |
-| Exit bot          | `exit`                                                                                                                                                                    |
+| Exit and write data          | `exit`                                                                                                                                                                    |
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -882,13 +989,13 @@ You may experience 2 scenarios:
 
 - A data file content corruption:
 
-![Data Corruption](img/output/data_corruption.png)
+![Data Corruption](../img/output/data_corruption.png)
 
 Corruption of the `pulsepilot_data.txt` or `pulsepilot_hash.txt` files will result in **permanent and complete data loss**.
 
 - A missing file error:
 
-![Missing Files](img/output/missing_files.png)
+![Missing Files](../img/output/missing_files.png)
 
 A missing file error occurs when either `pulsepilot_data.txt` or `pulsepilot_hash.txt` is missing when PulsePilot is run. For safety and security reasons, PulsePilot will automatically delete any remaining data files before exiting the application.
 
@@ -903,18 +1010,18 @@ Otherwise, if you have lost your data, you can reinitialize a new save file by r
 Yes, your data is secure and stored locally on your machine. PulsePilot does not have any features that would allow it to send your data elsewhere.
 
 **4.** What happens if I specify extra flags on accident?
-
+   
 Note that if you add duplicate or extra flags, the bot **will read the first instance only**.
 
 **All other parameters will be ignored.**
 
-For example:
+For example, if you entered:
 
 ```
 workout /e:run /d:5.25 /t:59:50 /d:10.55
 ```
 
-In the above output, the bot will read `5.25` as the distance. The second `/d:10.55` is ignored.
+In the above output, the bot will read `5.25` as the distance. The second `/d:10.55` is **ignored**.
 
 **5.** What if I keep receiving an error message even though my input seems to follow the instructions given in the user guide?
 
@@ -922,16 +1029,16 @@ Please ensure that you follow the command syntax given **exactly** in the user g
 
 Example of the correct command:
 
-![correct_command.png](img/correct_command.png)
+![correct_command.png](../img/correct_command.png)
 
 - Error of adding extra space(s) in fixed parameters:
     - In this case, the altered fixed parameter is `/date:`, which was written as `/ date:` instead.
 
-![extra_space_error_command.png](img/extra_space_error_command.png)
+![extra_space_error_command.png](../img/extra_space_error_command.png)
 
 - Error of adding extra newline(s) after command:
 
-![extra_newline_error_command.png](img/extra_newline_error_command.png)
+![extra_newline_error_command.png](../img/extra_newline_error_command.png)
 
 Avoid using extra characters in the commands, such as blank space, newline, etc.
 
