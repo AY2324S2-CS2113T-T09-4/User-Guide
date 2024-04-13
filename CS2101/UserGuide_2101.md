@@ -779,7 +779,7 @@ The following examples will cover how to add a period step-by-step, with the lat
 
 3. Entering it into PulsePilot results in this output:
 
-    ![Full Period Output](img_2101/pulsepilot_commands/health/full period.png)
+    ![Add both dates](img_2101/pulsepilot_commands/health/full_period.png)
 
 4. Congratulations! You have successfully added a period input to PulsePilot. 
 
@@ -794,11 +794,11 @@ The following examples will cover how to add a period step-by-step, with the lat
 
 3. Entering it into PulsePilot results in this output:
 
-    ![Add start date only](img_2101/pulsepilot_commands/health/add start date.png)
+    ![Add start date](img_2101/pulsepilot_commands/health/start_date_only.png)
 
-4. To add in the `end date`, simply enter the command <code style="color: green;">health /h:period /start:01-01-2024 /end:08-01-2024</code>.  
+4. To add in the `end date`, simply enter the command <code style="color: green;">health /h:period /start:01-01-2024 /end:08-01-2024</code>. You will see the same output as the previous example where both dates are added at once. 
 
-    ![After adding end date](img_2101/pulsepilot_commands/health/add end date.png)
+    ![After adding end date](img_2101/pulsepilot_commands/health/full_period.png)
 
 5. Congratulations! The end date of the period input has been successfully added. 
 
@@ -866,7 +866,7 @@ PulsePilot offers a predictive feature for you to predict your next period's sta
 
 The following example will illustrate how to make a prediction.
 
-1. Simply enter the command <code style="color: green;">health /h:prediction`</code>. 
+1. Simply enter the command <code style="color: green;">health /h:prediction</code>. 
 
 2. Entering it into PulsePilot prints the following:
 
