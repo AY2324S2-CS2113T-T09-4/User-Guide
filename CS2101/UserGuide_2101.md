@@ -108,7 +108,7 @@ On top of being NUS Computing students, our team members are all competitive ath
 
 We came together and realised that one common denominator was our unhappiness with the level of service received from the healthcare system when we were injured. We want to use our experience and knowledge about creating software learned from our university course to better the lives of all athletes in Singapore.
 
-We have done extensive research onto this problem, as well as received testimonials from both varsity and national-level athletes about their recovery experiences. In general, they too were unhappy with the level of service received.
+We have done extensive research on this problem, as well as received testimonials from both varsity and national-level athletes about their recovery experiences. In general, they too were unhappy with the level of service received.
 
 The 2 main problems identified from our study were:
 
@@ -384,7 +384,7 @@ A guide to install Java can be found [here](https://nus-cs2030.github.io/1920-s2
 
 To ensure that you have the correct version of Java installed, launch the CLI (either `cmd.exe` or `bash`) and run `java --version`.
 
-As long as the output shows `java 11` is installed, it is correct. The specific version
+As long as the output shows `java 11` is installed, it is correct.
 
 
 ###### [Back to Installation](#installation)
