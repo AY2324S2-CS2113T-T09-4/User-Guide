@@ -678,7 +678,7 @@ To tell PulsePilot to add a gym, the following details are required:
 
 | Detail               | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
 |----------------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `number of stations` | The number of gym stations you have done in one gym session.      | `/n:`     | Must be a **positive number of at least 1**.                                                                                                                                  |
+| `number of stations` | The number of gym stations you have done in one gym session.      | `/n:`     | Must be a **positive number of at least 1**.                                                                                                                                 |
 | `date`               | The date of the run. <br>This is an **OPTIONAL** parameter. </br> | `/date:`  | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!)  </br> |
 
 > ❗ The `date` parameter is **OPTIONAL**. Not specifying one results in it being recorded as `NA` within PulsePilot, and it is okay! This is similar to the command used for adding a run.
@@ -690,12 +690,12 @@ After PulsePilot receives the command to enter a gym, it will prompt you further
 
 The following details are required for each station:
 
-| Detail               | Description                                                       | Flag Used | Limitations                                                                                                                                                                  |
-|----------------------|-------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `station name` | The name of the station done.    | **No flag required.**    | Can **only** have letters, and must be shorter than 25 characters.                                                                                                                                  |
-| `number of sets` | The number of sets done at each station.     | `/s:`     | Must be a **positive number of at least 1**                                                                                                                                  |
-| `number of repetitions` | The number of repetitions done at each station.     | `/r:`     | Must be a **positive number of at least 1**                                                                                                                                  |
-| `weights` | The weight done for each set in **kilograms**, separated by commas. <br> (i.e. If you have used 70kg and 75kg at one station, use `70,75` to specify that.)     | `/w:`     | Must **only contain numbers and commas**, as all other characters will trigger errors.  <br> Each number specified must be a multiple of `0.125`. <br>     Numbers specified **must be at least 0, and less than 2850**.                                                                                                                                  |
+| Detail                  | Description                                                                                                                                                 | Flag Used             | Limitations                                                                                                                                                                                                              |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `station name`          | The name of the station done.                                                                                                                               | **No flag required.** | Can **only** have letters, and must be shorter than 25 characters.                                                                                                                                                       |
+| `number of sets`        | The number of sets done at each station.                                                                                                                    | `/s:`                 | Must be a **positive number of at least 1**                                                                                                                                                                              |
+| `number of repetitions` | The number of repetitions done at each station.                                                                                                             | `/r:`                 | Must be a **positive number of at least 1**                                                                                                                                                                              |
+| `weights`               | The weight done for each set in **kilograms**, separated by commas. <br> (i.e. If you have used 70kg and 75kg at one station, use `70,75` to specify that.) | `/w:`                 | Must **only contain numbers and commas**, as all other characters will trigger errors.  <br> Each number specified must be a multiple of `0.125`. <br>     Numbers specified **must be at least 0, and less than 2850**. |
 
 The following example will cover how to add a gym session step-by-step.
 
@@ -851,6 +851,28 @@ The following example will cover how to add a bmi step-by-step.
 ---
 
 #### Add Appointment
+
+To add an appointment, the following details and flags are required in your input:
+
+| Detail        | Description                                                | Flag Used       | Limitations                                                                                                                                                                   |
+|---------------|------------------------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `date`        | The date of the appointment.                               | `/date:`        | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be before today's date**. (i.e. If today is `10-04-2024`, specifying `09-04-2024` will trigger an error!)  </br> |
+| `time`        | The time of the appointment.                               | `/time:`        | Must be in `HH:MM` format. <br> Time ranges from **00:00 to 23:59**. </br>                                                                                                    |
+| `description` | The description represents the details of the appointment. | `/description:` | The description can only contain **alphanumeric characters, spaces, inverted commas and quotes**.                                                                             |
+
+The following example will cover how to add an Appointment step-by-step.
+
+1. Suppose you want to add an upcoming appointment with the following details. 
+   - The `date` is `01-01-2024`, the `time` is `14:15` and the `description` is `review checkup with surgeon`. 
+
+2. Let's put the necessary Appointment's details together with their respective flags into a complete command.
+    - <code style="color: green;">health /h:appointment /date:01-01-2024 /time:14:15 /description:review checkup with surgeon</code>
+
+3. Entering it into PulsePilot results in this output: 
+
+    ![Add appointment](img_2101/pulsepilot_commands/health/appointment.png)
+
+4. Congratulations! You have successfully added an appointment to PulsePilot.
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
