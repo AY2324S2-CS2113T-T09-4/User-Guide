@@ -766,6 +766,10 @@ To add a period, the following details and flags are required in your input:
 
 > ❗ Every period input needs to contain both start and end dates eventually. An error message will be printed if you attempt to record a new period input without specifying the end date of the outstanding period entry. Fret not! Simply complete the outstanding period before proceeding with the new period input.
 
+> ⚠️ The start date of a new period entry must be after the end date of the previous period entry. 
+> 
+> You can use the `history` command explained [here](#view-history) in the later part of the guide to view the periods recorded thus far. Or, you can use the `latest` command explained [here](#view-latest), also in the later part of the guide, to view the most recent period entry. From there, you can find out what is the end date of the previous period entry.
+
 The following examples will cover how to add a period step-by-step, with the latter example showcasing how to add start and end dates at different times. 
 
 1. Suppose you want to add **both start and end dates** at once. 
@@ -780,7 +784,9 @@ The following examples will cover how to add a period step-by-step, with the lat
 
 4. Congratulations! You have successfully added a period input to PulsePilot. 
 
-> ⚠️ PulsePilot automatically calculates your period length. You will see an error message printed to the screen if your period length is beyond the healthy range of **2-7 days**. Don't worry too much as menstrual cycles can vary greatly from person to person! Deviations from the healthy range set by PulsePilot are not uncommon and may be perfectly normal for you. However, if you are experiencing any unusual symptoms, it may be a good seek professional help.
+> ⚠️ PulsePilot automatically calculates your period length. You will see an error message printed to the screen if your period length is beyond the healthy range of **2-7 days**. 
+> 
+> Don't worry too much, your period will still be recorded in PulsePilot as per normal! And menstrual cycles can vary greatly from person to person! Deviations from the healthy range set by PulsePilot are not uncommon and may be perfectly normal for you. However, if you are experiencing any unusual symptoms, it may be good to seek professional help.
 
 
 1. Suppose you want to add the **start date only**.
@@ -798,6 +804,8 @@ The following examples will cover how to add a period step-by-step, with the lat
     ![After adding end date](img_2101/pulsepilot_commands/health/full_period.png)
 
 5. Congratulations! The end date of the period input has been successfully added. 
+
+> ❗ Remember: You **must** add an end date for the current period entry before you can add your next period entry! Once again, you can use `history` command [here](#view-history) or `latest` command [here](#view-latest) to see whether you have added the end date.
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
