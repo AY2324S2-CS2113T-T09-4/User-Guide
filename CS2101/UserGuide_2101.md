@@ -857,6 +857,28 @@ The following example will cover how to add a bmi step-by-step.
 
 #### Add Appointment
 
+To add an appointment, the following details and flags are required in your input:
+
+| Detail        | Description                                                | Flag Used       | Limitations                                                                                                                                                                   |
+|---------------|------------------------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `date`        | The date of the appointment.                               | `/date:`        | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be before today's date**. (i.e. If today is `10-04-2024`, specifying `09-04-2024` will trigger an error!)  </br> |
+| `time`        | The time of the appointment.                               | `/time:`        | Must be in `HH:MM` format. <br> Time ranges from **00:00 to 23:59**. </br>                                                                                                    |
+| `description` | The description represents the details of the appointment. | `/description:` | The description can only contain **alphanumeric characters, spaces, inverted commas and quotes**.                                                                             |
+
+The following example will cover how to add an Appointment step-by-step.
+
+1. Suppose you want to add an upcoming appointment with the following details. 
+   - The `date` is `01-01-2024`, the `time` is `14:15` and the `description` is `review checkup with surgeon`. 
+
+2. Let's put the necessary Appointment's details together with their respective flags into a complete command.
+    - <code style="color: green;">health /h:appointment /date:01-01-2024 /time:14:15 /description:review checkup with surgeon</code>
+
+3. Entering it into PulsePilot results in this output: 
+
+    ![Add appointment](img_2101/pulsepilot_commands/health/appointment.png)
+
+4. Congratulations! You have successfully added an appointment to PulsePilot.
+
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
 ###### [Back to table of contents](#table-of-contents)
