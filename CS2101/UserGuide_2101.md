@@ -243,22 +243,26 @@ That is all the commands you need to know to navigate through the Windows CLI an
 On macOS, the default command line interface is called the **Terminal**, which uses the `Bash shell`. 
 To launch the **Terminal**:
 
-1. To begin searching for **Terminal**:
-   - Open the Launchpad: The Launchpad is the grid of app icons on your Mac's Dock. You can usually find it in the bottom of your screen.
+1. To begin searching for **Terminal**, you may choose either of the methods listed below:
+   - **Launchpad**: The Launchpad appears as a grid of app icons on your Mac's [Dock](). You can usually find it in the bottom of your screen.
    
    ![Launchpad](img_2101/macos/launchpad.png)
 
-   - Open the Spotlight Search Bar: Hit <kbd>⌘ command</kbd> + <kbd>Spacebar</kbd> on your keyboard at the same time to bring up the Spotlight Search Bar.
+   - **Spotlight Search Bar**: Click on the search icon at the **top right** of your screen to bring up the Spotlight Search Bar.
+     ![Search Icon](img_2101/macos/search_icon.png)
+     ![Spotlight Search Bar](img_2101/macos/spotlight_search.png)
+    
+    > 💡 Pressing <kbd>⌘ command</kbd> + <kbd>Spacebar</kbd> on your keyboard at the same time should produce the same result.
 
-   ![Spotlight Search Bar](img_2101/macos/spotlight_search.png)
+   
 
 
 2. Search for `Terminal`: 
-   - In the Launchpad: In the Launchpad search bar, type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
+   - **Launchpad**: In the Launchpad search bar, type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
    
    ![Terminal in Launchpad](img_2101/macos/launchpad_terminal.png)
 
-   - In the Spotlight Search Bar: type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
+   - **Spotlight Search Bar**: type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
    
    ![Terminal in Spotlight Search Bar](img_2101/macos/spotlight_terminal.png)
 
@@ -297,7 +301,7 @@ Read the next section to learn some basic commands!
 
 #### MacOS Commands
 
-The macOS **Terminal** allows you to enter and execute **Bash** commands.
+The macOS **Terminal** allows you to enter and execute **Bash** commands. If you are on the latest MacOS (MacOS Sonoma 14 as of this writing), you may refer [here](https://support.apple.com/en-sg/guide/terminal/trmld4c92d55/mac) for detailed information.
 
 ##### Changing Directories (`cd`)
 
@@ -474,14 +478,22 @@ To fix this, do the following:
 1. Locate where `pulsepilot.jar` is within your computer with [*Finder*](#glossary).
    - You may use the [Dock]() at the bottom of your screen or search for `pulsepilot.jar` with [Spotlight Search]().
 
-2. Right click on it and click on **Properties**.
-   ![File Properties](img_2101/macos/file_properties.png)
+2. Right click on it and click on **Get Info**.
 
-3. A separate window will appear with additional data for `pulsepilot.jar`. Copy the value of the **Location** part of the Properties window using <kbd>Ctrl + C</kbd> or highlighting the text, right-clicking it and selecting **Copy**.
-   ![Finding Windows Path](img_2101/macos/property_path.png)
+   ![Get File Info](img_2101/macos/get_file_info.png)
+   > 💡 Press <kbd>⌘ command</kbd> + <kbd>I</kbd> on your keyboard at the same time after selecting the file should produce the same result.
 
-4. Once copied, open the CLI for your device, and type `cd` and hit the <kbd>Spacebar</kbd> **once**, then paste the **Location** value you just copied using <kbd>Ctrl + V</kbd>. Then, hit <kbd>Enter</kbd>. You should see that you are now in the right directory, and use `dir` to verify that `pulsepilot.jar` is within this current directory.
-   ![Right Directory](img_2101/macos/right_directory.png)
+3. A separate window will appear with additional data for `pulsepilot.jar`.
+
+   ![File Info](img_2101/macos/file_info.png)
+
+   Copy the value of the **Where** part of the Info window using <kbd>Ctrl</kbd> + <kbd>C</kbd> or highlighting the text, right-clicking it and selecting **Copy**.
+
+   ![Select File Info](img_2101/macos/file_info_selected.png)
+
+4. Once copied, open **Terminal**, type `cd` and press <kbd>Spacebar</kbd> **once**, then paste the **Where** value you just copied using <kbd>Ctrl</kbd> + <kbd>V</kbd>. Then, press <kbd>Enter</kbd>. You should see that you are now in the right directory, and use `ls` to verify that `pulsepilot.jar` is within this current directory.
+
+   ![Right Directory](img_2101/macos/correct_dir.png)
 
 5. Continue to launch PulsePilot using `java -jar pulsepilot.jar`.
 
@@ -525,9 +537,9 @@ There are 3 colours used in the guide: <u>White</u>, <span style="color:red;">re
 - An error indicates that PulsePilot has detected some invalid input from you. Read the error messages to find out what's wrong!
 - Your input represents the command **you** type and press 'Enter' for PulsePilot to use!
 
-> ❗If you are not seeing colours on your screen, and instead see **odd characters** like `[` or `<-`, please read our [*troubleshooting guide*](#odd-characters-on-screen) for this issue!
+> ❗ If you are not seeing colours on your screen, and instead see **odd characters** like `[` or `<-`, please read our [*troubleshooting guide*](#odd-characters-on-screen) for this issue!
 
-> ❗The colours on your own screen may be different, or it may not even be colour-coded at all. The colours are just visual cues for **this guide**!
+> ❗ The colours on your own screen may be different, or it may not even be colour-coded at all. The colours are just visual cues for **this guide**!
 
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
@@ -548,7 +560,7 @@ You can enter your real name or an alias. PulsePilot only checks that you enter 
 
 After setting your name, **you are ready to use PulsePilot**!
 
-> ❗Entering usernames that have non-alphanumeric characters, such as `;` or `|` will trigger an error!
+> ❗ Entering usernames that have non-alphanumeric characters, such as `;` or `|` will trigger an error!
 > 
 >  ![Invalid Name](img_2101/pulsepilot_commands/induction/invalid_name.png)
 > 
