@@ -121,7 +121,7 @@ The 2 main problems identified from our study were:
 
 The above problems gave rise to PulsePilot, the guide for which you are reading right now! PulsePilot was designed with both patients and healthcare professionals in mind to solve the 2 main problems identified above!
 
-We hope that PulsePilot can bridge the information gap between you and your doctor, and we wish you a speedy recovery. D
+We hope that PulsePilot can bridge the information gap between you and your doctor, and we wish you a speedy recovery. 
 
 > ❗ This application is still in [*beta phase*](#glossary). As such it is not complete and more features will be added in future versions. Stay tuned for updates!
 
