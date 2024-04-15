@@ -36,6 +36,7 @@ If you have any queries with the guide, our application, or even **life in gener
 * [Command Summary](#command-summary)
 * [Frequently Asked Questions](#frequently-asked-questions)
 * [Glossary](#glossary)
+* [Icon Dictionary](#icon-dictionary)
 
 ---
 
@@ -155,11 +156,13 @@ Here is a sub table of contents, so you can navigate through this section easily
 
 Let us first begin with launching the command line for Windows. The name of this program is `cmd.exe`!
 
-To do so, firstly, hit the <kbd>_**⊞**_ Windows</kbd> key on your keyboard to bring up the start menu:
+To do so, firstly, hit the <kbd>![icon](img_2101/windows/winlogo.png) Windows</kbd> key on your keyboard to bring up the **Start Menu**:
 
-![Windows Start](img_2101/windows/windows_start.png)
+![Start Menu](img_2101/windows/windows_start.png)
 
-Afterward, type `cmd` or `Command Prompt` into the search bar above, and there should be 1 program found called the '**Command Prompt**'.
+> 💡 If you are unable to see a search bar after bringing up the Start Menu, you should be able to type immediately after doing so to immediately start searching!
+
+Afterward, type `cmd` or `Command Prompt` into the search bar above or in the [Taskbar](#taskbar-windows), and there should be 1 program found called the '**Command Prompt**'.
 
 ![Finding cmd.exe](img_2101/windows/finding_cmd_exe.png)
 
@@ -244,7 +247,7 @@ On macOS, the default command line interface is called the **Terminal**, which u
 To launch the **Terminal**:
 
 1. To begin searching for **Terminal**, you may choose either of the methods listed below:
-   - **Launchpad**: The Launchpad appears as a grid of app icons on your Mac's [Dock](). You can usually find it in the bottom of your screen.
+   - **Launchpad**: The Launchpad appears as a grid of app icons on your Mac's [Dock](#icon-dictionary). You can usually find it in the bottom of your screen.
    
    ![Launchpad](img_2101/macos/launchpad.png)
 
@@ -254,9 +257,6 @@ To launch the **Terminal**:
     
     > 💡 Pressing <kbd>⌘ command</kbd> + <kbd>Spacebar</kbd> on your keyboard at the same time should produce the same result.
 
-   
-
-
 2. Search for `Terminal`: 
    - **Launchpad**: In the Launchpad search bar, type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
    
@@ -265,7 +265,6 @@ To launch the **Terminal**:
    - **Spotlight Search Bar**: type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
    
    ![Terminal in Spotlight Search Bar](img_2101/macos/spotlight_terminal.png)
-
 
 3. Open the **Terminal** App: After clicking on the **Terminal** app icon to launch the **Terminal** application, you should now see a _white_, _grey_ or _black_ window pop up on your screen looking similar to this:
 
@@ -301,7 +300,7 @@ Read the next section to learn some basic commands!
 
 #### MacOS Commands
 
-The macOS **Terminal** allows you to enter and execute **Bash** commands. If you are on the latest MacOS (MacOS Sonoma 14 as of this writing), you may refer [here](https://support.apple.com/en-sg/guide/terminal/trmld4c92d55/mac) for detailed information.
+The macOS **Terminal** allows you to enter and execute **Bash** commands. If you are on the latest macOS (macOS Sonoma 14 as of this writing), you may refer [here](https://support.apple.com/en-sg/guide/terminal/trmld4c92d55/mac) for detailed information.
 
 ##### Changing Directories (`cd`)
 
@@ -461,13 +460,16 @@ To fix this, do the following:
 1. Find where `pulsepilot.jar` is within your machine using the [*File Explorer*](#glossary).
 
 2. Right click on it and click on **Properties**.
-  ![Windows Properties](img_2101/windows/properties_windows.png)
+
+    ![Windows Properties](img_2101/windows/properties_windows.png)
 
 3. A separate window will appear with additional data for `pulsepilot.jar`. Copy the value of the **Location** part of the Properties window using <kbd>Ctrl + C</kbd> or highlighting the text, right-clicking it and selecting **Copy**.
-  ![Finding Windows Path](img_2101/windows/windows_property_path.png)
+  
+    ![Finding Windows Path](img_2101/windows/windows_property_path.png)
 
 4. Once copied, open the CLI for your device, and type `cd` and hit the <kbd>Spacebar</kbd> **once**, then paste the **Location** value you just copied using <kbd>Ctrl + V</kbd>. Then, hit <kbd>Enter</kbd>. You should see that you are now in the right directory, and use `dir` to verify that `pulsepilot.jar` is within this current directory.
-  ![Right Directory](img_2101/windows/right_directory.png)
+
+    ![Right Directory](img_2101/windows/right_directory.png)
 
 5. Continue to launch PulsePilot using `java -jar pulsepilot.jar`.
 
@@ -476,7 +478,7 @@ To fix this, do the following:
 To fix this, do the following:
 
 1. Locate where `pulsepilot.jar` is within your computer with [*Finder*](#glossary).
-   - You may use the [Dock]() at the bottom of your screen or search for `pulsepilot.jar` with [Spotlight Search]().
+   - You may use the Dock at the bottom of your screen or search for `pulsepilot.jar` with [Spotlight Search](#icon-dictionary).
 
 2. Right click on it and click on **Get Info**.
 
@@ -871,11 +873,11 @@ The following example will cover how to add a bmi step-by-step.
 
 To add an appointment, the following details and flags are required in your input:
 
-| Detail        | Description                                                | Flag Used       | Limitations                                                                                                                                                                   |
-|---------------|------------------------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `date`        | The date of the appointment.                               | `/date:`        | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be before today's date**. (i.e. If today is `10-04-2024`, specifying `09-04-2024` will trigger an error!)  </br> |
-| `time`        | The time of the appointment in 24-hour format.             | `/time:`        | Must be in `HH:MM` format. <br> Time ranges from **00:00 to 23:59**. </br>                                                                                                    |
-| `description` | The description represents the details of the appointment. | `/description:` | The description can only contain **alphanumeric characters, spaces, inverted commas and quotes**.                                                                             |
+| Detail        | Description                                                | Flag Used       | Limitations                                                                                                                                                            |
+|---------------|------------------------------------------------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `date`        | The date of the appointment.                               | `/date:`        | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be before today's date**. (i.e. If today is `10-04-2024`, specifying `09-04-2024` will trigger an error!) |
+| `time`        | The time of the appointment in 24-hour format.             | `/time:`        | Must be in `HH:MM` format. <br> Time ranges from **00:00 to 23:59**.                                                                                                   |
+| `description` | The description represents the details of the appointment. | `/description:` | The description can only contain **alphanumeric characters, spaces, inverted commas and quotes**.                                                                      |
 
 The following example will cover how to add an Appointment step-by-step.
 
@@ -982,13 +984,13 @@ The following example will cover how to use the `latest` command step-by-step:
 
 1. Suppose you have 2 appointments added, one on **20-05-2024** and the other on **20-06-2024**. This is viewable using the `history` command:
 
-    ![View Appt](img_2101/pulsepilot_commands/history/appt.png)
+    ![View Appointment](img_2101/pulsepilot_commands/history/appt.png)
   
 2. The `latest` command would print the **last appointment** added:
 
     <code style="color: green">latest /item:appointment</code>
 
-    ![Latest appt](img_2101/pulsepilot_commands/latest/latest_appt.png)
+    ![Latest Appointment](img_2101/pulsepilot_commands/latest/latest_appt.png)
   
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -1198,19 +1200,65 @@ Avoid using extra characters in the commands, such as blank space, newline, etc.
 
 ## Glossary
 
-| Term                        | Definition                                                                                                                                                                                                                                                     |
-|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Object-Oriented Programming | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [Go Back](#glossary-usage)                                                                                                    |
-| Hyperlinks                  | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[Go Back](#glossary-usage)                                                                                                |
-| Java                        | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[Go Back](#glossary-usage)                                                                          |
-| Command Line Interface      | A **text-based** interface where users can input commands that interact with a computer. <br>[Go Back](#command-line-interface)                                                                                                                              |
-| Directory / Directories     | A folder within your computer that contains other files and files.<br>[Go Back](#launching-cmdexe)                                                                                                                                                           |
-| Github                      | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[Go Back](#installing-and-launching-pulsepilot)                                                                                          |
-| Alphanumeric                | Input that is made up of only **letters and numbers**. <br>[Go Back](#creating-your-profile)                                                                                                                                                                 |
-| Flags                       | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[Go Back](#pulsepilot-commands) |
-| File Explorer               | An application used to view the files and directories in a Windows computer. <br> [Go Back](#windows-fix)                                                                                                                                                    |
-| Finder                      | An application used to view the files and directories in a macOS computer. <br> [Go Back](#macos-fix)                                                                                                                                                        |
-| String                      | A sequence of characters that can be used to represent text data.<br>[Go Back](#launching-terminal)                                                                                                                                                                                              |
+| Term                            | Definition                                                                                                                                                                                                                                                   |
+|---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Alphanumeric                    | Input that is made up of only **letters and numbers**. <br>[Go Back](#creating-your-profile)                                                                                                                                                                 |
+| Command Line Interface          | A **text-based** interface where users can input commands that interact with a computer. <br>[Go Back](#command-line-interface)                                                                                                                              |
+| Directory / Directories         | A folder within your computer that contains other files and files.<br>[Go Back](#launching-cmdexe)                                                                                                                                                           |
+| [File Explorer](#file-explorer) | An application used to view the files and directories in a Windows computer. <br> [Go Back](#windows-fix)                                                                                                                                                    |
+| [Finder](#finder)               | An application used to view the files and directories in a macOS computer. <br> [Go Back](#macos-fix)                                                                                                                                                        |
+| Flags                           | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[Go Back](#pulsepilot-commands) |
+| Github                          | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[Go Back](#installing-and-launching-pulsepilot)                                                                                          |
+| Hyperlinks                      | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[Go Back](#glossary-usage)                                                                                                |
+| Java                            | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[Go Back](#glossary-usage)                                                                          |
+| Object-Oriented Programming     | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [Go Back](#glossary-usage)                                                                                                    |
+| String                          | A sequence of characters that can be used to represent text data.<br>[Go Back](#launching-terminal)                                                                                                                                                          |
+
+###### [Back to table of contents](#table-of-contents)
+
+---
+
+## Icon Dictionary
+
+- ###### Dock (macOS)
+
+    Found at the **bottom** of the screen.
+
+    ![Dock](img_2101/macos/dock.png)
+
+    [Go Back](#macos)
+
+- ###### File Explorer
+
+    Found **to the right** of the Windows icon in **Taskbar**.
+
+    ![File Explorer](img_2101/windows/file_explorer.png)
+
+    [Go Back](#glossary)
+
+-  ###### Finder
+
+    Found **to the left** of the **Dock**.
+
+    ![Finder](img_2101/macos/finder.png)
+
+    [Go Back](#glossary)
+
+- ###### Spotlight Search
+
+    Found at the **top** of the screen.
+
+    ![Search Icon](img_2101/macos/search_icon.png)
+
+    [Go Back](#macos-fix)
+
+- ###### Taskbar (Windows)
+
+    Found at the **bottom** of the screen.
+
+    ![Taskbar](img_2101/windows/taskbar.png)
+
+    [Go Back](#windows)
 
 ###### [Back to table of contents](#table-of-contents)
 
