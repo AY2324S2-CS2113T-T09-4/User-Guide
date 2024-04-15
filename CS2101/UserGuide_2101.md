@@ -48,15 +48,9 @@ As such, our team has created a **Glossary** for you to refer to when reading th
 
 Technical terms are marked in **italicised blue** [*like this*](#glossary-usage)! When you click on it, it brings you to the glossary. Each term in the glossary also contains a 'Go back' button, and clicking on that returns you to where you originally were. This is to create a seamless reading experience for you! 
 
-Note that only **the first instance** of a term will be hyperlinked!
+Note that only **the first instance** of a term will be hyperlinked! Give it a try with the term: [*Object-Oriented Programming*](#glossary). The blue phrases known are also known as [*hyperlinks*](#glossary).
 
-Give it a try with the term: [*Object-Oriented Programming*](#glossary).
-
-The blue phrases known are also known as [*hyperlinks*](#glossary).
-
-Non-italicised hyperlinks [like this](#glossary-usage) are used to bring you to different parts of the document.
-
-For example, **the one below to bring you back to the table of contents on top!**
+Non-italicised hyperlinks [like this](#glossary-usage) are used to bring you to different parts of the document. For example, **the one below to bring you back to the table of contents on top!**
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -75,6 +69,8 @@ There are 3 different kinds of **blocks**, denoted using different **icons** to 
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## PulsePilot
 
@@ -124,6 +120,8 @@ We hope that PulsePilot can bridge the information gap between you and your doct
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## Command Line Interface
 
@@ -362,6 +360,8 @@ That is all the commands you need to know to navigate through the Windows CLI an
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## Installation
 
 Now that you are familiar with the CLI, it is time to install Java and PulsePilot!
@@ -494,6 +494,8 @@ To fix this, do the following:
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## PulsePilot Commands
 
@@ -1093,6 +1095,8 @@ When a data file is read properly, PulsePilot will start accepting commands imme
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## Command Summary
 
 Here is a summary of all the commands and its functions. The table contains examples as well for you to try out!
@@ -1138,6 +1142,8 @@ This merely a visual difference, and it does not mean PulsePilot is not working.
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## Frequently Asked Questions
 
@@ -1222,6 +1228,8 @@ Avoid using extra characters in the commands, such as blank space, newline, etc.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## Glossary
 
 | Term                            | Definition                                                                                                                                                                                                                                                   |
@@ -1243,6 +1251,8 @@ Avoid using extra characters in the commands, such as blank space, newline, etc.
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## Icon Dictionary
 
