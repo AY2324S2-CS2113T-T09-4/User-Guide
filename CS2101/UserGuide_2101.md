@@ -4,15 +4,15 @@
 
 ## Introduction
 
-Hello! Thank you for choosing to use PulsePilot!
+Welcome to PulsePilot! We're excited that you've chosen to use our application.
 
-Our team appreciates that you are giving our space-themed health application a try, and we hope that it helps you document your recovery journey better and bounce back from whatever injury you are facing.
+Our team hopes that while giving our space-themed health application a try, you could document your recovery journey better and bounce back from your injuries.
 
 This document serves as the **User Guide** of PulsePilot, designed to help you (an injured athlete) learn what PulsePilot is about, our motives, how to install it and how to use it.
 
-Learning to use software can be daunting. Thus, this guide was created for **non-technical users**, helping you unleash PulsePilot to its fullest potential! That being said, we assume that you know how to use the basic features on your computer, such as **downloading files or copying and pasting text from one program to another**.
+We understand that learning new software can be challenging at first. Thus, this guide was created for **non-technical users**, get the most out of PulsePilot! To use PulsePilot, you should be comfortable with basic computer tasks like **downloading files and copying/pasting text**.
 
-Once again, we hope our application helps you, and thank you for choosing PulsePilot, and we hope you recover as fast as possible!
+We hope PulsePilot remains an invaluable aide on your recovery journey, and we wish you a speedy recovery!
 
 > ❗ This is the **inexperienced user guide**. The **experienced** user guide for users familiar with installing PulsePilot, Java, using the terminal can be found [here](https://ay2324s2-cs2113t-t09-4.github.io/tp/UserGuide.html).
 
@@ -55,6 +55,8 @@ Non-italicised hyperlinks [like this](#glossary-usage) are used to bring you to 
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ### Blocks
 
@@ -148,25 +150,29 @@ Here is a sub table of contents, so you can navigate through this section easily
 
 #### Launching `cmd.exe`
 
-Let us first begin with launching the command line for Windows. The name of this program is `cmd.exe`!
+Let us first begin with launching the command line for Windows, called `cmd.exe`!
 
-To do so, firstly, hit the <kbd>Windows</kbd> key on your keyboard to bring up the **Start Menu**:
 
-![Start Menu](img_2101/windows/windows_start.png)
+To launch `cmd.exe`:
 
-> 💡 If you are unable to see a search bar after bringing up the Start Menu, you should be able to type immediately after doing so to immediately start searching!
+1. Press the <kbd>Windows</kbd> key on your keyboard to bring up the **Start Menu**:
 
-Afterward, type `cmd` or `Command Prompt` into the search bar above or in the [*Taskbar*](#taskbar-windows), and there should be 1 program found called the '**Command Prompt**'.
+    ![Start Menu](img_2101/windows/windows_start.png)
 
-![Finding cmd.exe](img_2101/windows/finding_cmd_exe.png)
+    > 💡 If you are unable to see a search bar after bringing up the Start Menu, typing immediately after doing so should allow you to start searching!
 
-Go ahead and click on that, and a _black_ window should pop up on your screen looking similar to this:
+2. Type `cmd` or `Command Prompt` into the search bar above or in the [*Taskbar*](#taskbar-windows). You should see a program found called the '**Command Prompt**'.
 
-![Launching cmd.exe](img_2101/windows/windows_cmd_exe.png)
+    ![Finding cmd.exe](img_2101/windows/finding_cmd_exe.png)
+
+3. Go ahead and click on '**Command Prompt**'!
+4. A _black_ window should appear on your screen looking similar to this:
+
+    ![Launching cmd.exe](img_2101/windows/windows_cmd_exe.png)
 
 Congratulations, you have successfully launched the CLI for Windows!
 
-The string `C:\Users\rouvi` is the current [*directory*](#glossary) that you are in! This means that currently, the **CLI** is within the `C:\Users\rouvi` folder of the computer.
+The [*string*](#glossary) `C:\Users\rouvi` is the current [*directory*](#glossary) that you are in! This means that currently, the **CLI** is within the `C:\Users\rouvi` folder of the computer.
 
 > ❗ The directory and CLI for you may look different from the one shown in the guide! This is **normal** as the guide was created using a different computer. As long as the top of the window shows '**Command Prompt**', you are good to go!
 
@@ -192,9 +198,9 @@ Read the next section to learn some basic commands!
 
 There are many commands in Windows, but this guide will cover the basic few you need to use PulsePilot.
 
-The first command is `cd`, short for **change directory**. It changes the **current** directory to the specified one. The format to use it is `cd <DIRECTORY>`, where `<DIRECTORY>` is something you pick!
+The first command is `cd`, short for **change directory**. It changes the **current** directory to the specified one. The format to use it is `cd <DIRECTORY>`, where `<DIRECTORY>` is the directory you would like to navigate to **within your current directory**!
 
-For example, suppose you want to go to the `cli_demo` folder from my current directory. You would use `cd cli_demo`:
+For example, suppose you want to go to the `cli_demo` folder from the current directory, `rouvi`. Since `cli_demo` is a directory within `rouvi` (as seen below), you can use `cd cli_demo`:
 
 ![cd](img_2101/windows/cd.png)
 
@@ -212,20 +218,25 @@ If you want to go 'back' one directory, use `cd ..`.
 
 ##### List Directory Contents (`dir`)
 
-Now, suppose you want to view files a directory has within it. You can use `dir` to do so.
+Now, suppose you want to view files contained within a directory.
 
-For example, if you want to view what files are within the `cli_demo` folder. You would first `cd` to the `cli_demo` folder, and then use `dir` to view the output:
+The `dir` command lists the files and folders in your current directory.
+To use it, simply type `dir` and press <kbd>Enter</kbd>.
+
+For instance, if you want to view what files are within the `cli_demo` folder, you would first `cd` to the `cli_demo` folder, and then use `dir` to view the contents:
 
 ![cd then dir](img_2101/windows/cd_dir.png)
 
 This would print out all the folders within the directory. In the `cli_demo` directory, you may have a `hello.txt` and a `pulsepilot.txt` file. 
-
-For example, if you also have another folder within `cli_demo` called `another_directory`. Your computer differentiates between files and directories using the `<DIR>` [*string*](#glossary) printed before the name of the file or folder.
+Going further, assuming you have another folder within `cli_demo` called `another_directory`, the `<DIR>` string printed before the name of the item differentiates files and directories.
 
 That is all the commands you need to know to navigate through the Windows CLI and use PulsePilot! To summarise:
 
-* `dir` - Lists the files and directories in the current directory.
-* `cd <DIRECTORY>` - Changes the current directory to the specified one.
+- **List Directory Contents (`dir`)**: The `dir` command lists the files and folders in your current directory.
+    - Simply type `dir` and press <kbd>Enter</kbd>.
+- **Change Directory (`cd <DIRECTORY>`)**: The `cd` command changes the current directory to the specified one in `<DIRECTORY>`
+    - Type `cd`, followed by <kbd>Spacebar</kbd> and enter the name of the directory you would like to navigate to. Finally, press <kbd>Enter</kbd>.
+    - _Example_: `cd Desktop`
 
 ###### [Back to Command Line Interface](#command-line-interface)
 
@@ -239,7 +250,7 @@ That is all the commands you need to know to navigate through the Windows CLI an
 
 On macOS, the default command line interface is called the **Terminal**. 
 
-To launch the **Terminal**:
+Let's start by launching the macOS **Terminal** application:
 
 1. To begin searching for **Terminal**, you may choose either of the methods listed below:
    - **Launchpad**: The Launchpad appears as a grid of app icons on your Mac's [*Dock*](#icon-dictionary). You can usually find it in the bottom of your screen.
@@ -262,7 +273,7 @@ To launch the **Terminal**:
    
         ![Terminal in Spotlight Search Bar](img_2101/macos/spotlight_terminal.png)
 
-3. Open the **Terminal** App: After clicking on the **Terminal** app icon to launch the **Terminal** application, you should now see a _white_, _grey_ or _black_ window pop up on your screen looking similar to this:
+3. Open the **Terminal** App: After clicking on the **Terminal** app icon to launch the **Terminal** application, you should now see a _white_, _grey_ or _black_ window appear on your screen looking similar to this:
 
     ![Terminal](img_2101/macos/terminal.png)
 
@@ -309,7 +320,7 @@ For example, suppose you want to go to the `cli_demo` folder from the current di
 
 ![cd_desktop](img_2101/macos/cd_desktop.png)
 
-Since `cli_demo` is a directory within `Desktop` (as seen below), you can use `cd <DIRECTORY>`:
+Since `cli_demo` is a directory within `Desktop` (as seen below), you can use `cd cli_demo`:
 
 ![cd](img_2101/macos/cd.png)
 
@@ -332,19 +343,16 @@ Now, suppose you want to view files contained within a directory.
 The `ls` command lists the files and folders in your current directory.
 To use it, simply type `ls` and press <kbd>Enter</kbd>.
 
-Suppose you want to view what files are within the `cli_demo` folder. You would first `cd` to the `cli_demo` folder, and then use `ls` to view the present:
+Suppose you want to view what files are within the `cli_demo` folder. You would first `cd` to the `cli_demo` folder, and then use `ls` to view the contents:
 
 ![cd then ls](img_2101/macos/cd_ls.png)
 
-This would print out all the files and folders within the directory.
-
-In the `cli_demo` directory, there is a `hello.txt` and a `pulsepilot.txt` file contained within the `cli_demo` directory.
-There is another folder within `cli_demo` called `another_directory`.
+This would print out all the files and folders within the directory. In the `cli_demo` directory, you may have a `hello.txt` and a `pulsepilot.txt` file. You may also have another folder within `cli_demo` called `another_directory`.
 
 > 💡 **Generally**, you can differentiate between files and directories by the name. If it has a period('.') in the name, it is likely to be a file.
 > Should you encounter any issues, you may refer [here](#macos-fix) for additional details. 
 
-That is all the commands you need to know to navigate through the Windows CLI and use PulsePilot! To summarise:
+That is all the commands you need to know to navigate through the macOS CLI and use PulsePilot! To summarise:
 
 
 - **List Directory Contents (`ls`)**: The `ls` command lists the files and folders in your current directory.
@@ -455,7 +463,7 @@ To fix this, do the following:
   
     ![Finding Windows Path](img_2101/windows/windows_property_path.png)
 
-4. Once copied, open the CLI for your device, and type `cd` and hit the <kbd>Spacebar</kbd> **once**, then paste the **Location** value you just copied using <kbd>Ctrl + V</kbd>. Then, hit <kbd>Enter</kbd>. You should see that you are now in the right directory, and use `dir` to verify that `pulsepilot.jar` is within this current directory.
+4. Once copied, open the CLI for your device, and type `cd` and press the <kbd>Spacebar</kbd> **once**, then paste the **Location** value you just copied using <kbd>Ctrl + V</kbd>. Then, hit <kbd>Enter</kbd>. You should see that you are now in the right directory, and use `dir` to verify that `pulsepilot.jar` is within this current directory.
 
     ![Right Directory](img_2101/windows/right_directory.png)
 
