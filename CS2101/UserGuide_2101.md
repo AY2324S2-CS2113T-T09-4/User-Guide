@@ -250,6 +250,8 @@ That is all the commands you need to know to navigate through the Windows CLI an
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ### macOS
 
 #### Launching `Terminal`
