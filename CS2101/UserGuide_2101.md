@@ -393,7 +393,7 @@ The installation for Java is different for Windows and macOS computers. However,
 
 Java 11 will be required for PulsePilot. A guide to install Java can be found [here](https://nus-cs2030.github.io/1920-s2/contents/guides/settingUpJava.html), as many other NUS modules use a similar version of Java for their projects.
 
->❗Although the website says it is for CS2030 from a previous semester, the steps are the same.
+>❗ Although the website says it is for CS2030 from a previous semester, the steps are the same.
 
 ###### [Back to Installation](#installation)
 
@@ -529,12 +529,14 @@ Now that Java and PulsePilot is up and running on your computer, it is time to l
   * [Add Period](#add-period)
   * [Add BMI](#add-bmi)
   * [Add Appointment](#add-appointment)
-  * [Make Period Prediction](#make-period-prediction)
+  * [Show Period Prediction](#show-period-prediction)
 * [View History](#view-history)
 * [View Latest](#view-latest)
 * [Delete Item](#delete-item)
 * [Exit](#exit)
 * [Storage of Data](#storage-of-data)
+
+<div style="page-break-after: always;"></div>
 
 ### PulsePilot Text Style
 
@@ -560,6 +562,8 @@ There are 3 colours used in the guide: <u>White</u>, <span style="color:red;">re
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ### Creating Your Profile
 
@@ -587,6 +591,8 @@ After setting your name, **you are ready to use PulsePilot**!
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ### Viewing Help
 
 This command displays the help message, which has information about all the other commands in PulsePilot.
@@ -607,6 +613,8 @@ This command displays the help message, which has information about all the othe
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ### Workout
 
 Being a health-tracking application, PulsePilot can record Run and Gym sessions. This is implemented via the `workout` command.
@@ -619,6 +627,8 @@ There are 2 types of exercises that can be recorded, denoted using the `/e:` fla
 There are details and flags required from you, which will be covered below.
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 #### Add Run
 
@@ -680,6 +690,8 @@ The following example will cover how to add a run step-by-step.
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 #### Add Gym
 
@@ -758,6 +770,8 @@ The following example will cover how to add a gym session step-by-step.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ### Health
 
 Besides tracking your workout sessions, PulsePilot can also record Period, Bmi and medical appointment entries, as well as make period predictions. This is implemented via the `health` command.
@@ -777,6 +791,8 @@ There are 4 types of health features, denoted using the `/h:` flag.
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 #### Add Period
 
@@ -846,6 +862,8 @@ The following examples will cover how to add a period step-by-step, with the lat
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 #### Add BMI
 
 To add a BMI entry, the following details and flags are required in your input:
@@ -896,6 +914,8 @@ The following example will cover how to add a bmi step-by-step.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 #### Add Appointment
 
 To add an appointment, the following details and flags are required in your input:
@@ -934,11 +954,13 @@ The following example will cover how to add an Appointment step-by-step.
 
 ---
 
-#### Make Period Prediction
+<div style="page-break-after: always;"></div>
+
+#### Show Period Prediction
 
 PulsePilot offers a predictive feature for you to predict your next period's start date.
 
-> ❗Please ensure that PulsePilot contains a minimum of **4** period inputs before using this feature.
+> ❗ Please ensure that PulsePilot contains a minimum of **4** period inputs before using this feature.
 
 The following example will illustrate how to make a prediction.
 
@@ -964,6 +986,8 @@ The following example will illustrate how to make a prediction.
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ### View History
 
@@ -1013,6 +1037,8 @@ The following example shows how to view the history step-by-step:
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ### View Latest
 
 For viewing either the **last entry** for items using `latest`.
@@ -1040,6 +1066,8 @@ The following example will cover how to use the `latest` command step-by-step:
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ### Delete Item
 
@@ -1078,6 +1106,8 @@ The following example shows how the `delete` command can be used:
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ### Exit
 
