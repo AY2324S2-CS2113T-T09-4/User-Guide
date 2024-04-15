@@ -50,7 +50,7 @@ This guide may have difficult to understand technical jargon or terms used. Fret
 
 As such, our team has created a **Glossary** for you to refer to when reading this guide! It serves as a mini-dictionary, for you to read a definition and quickly go back to wherever you were.
 
-Technical terms are marked in **italicised blue** [*like this*]()! When you click on it, it brings you to the glossary. Each term in the glossary also contains a 'Go back' button, and clicking on that returns you to where you originally were. This is to create a seamless reading experience for you! 
+Technical terms are marked in **italicised blue** [*like this*](#glossary-usage)! When you click on it, it brings you to the glossary. Each term in the glossary also contains a 'Go back' button, and clicking on that returns you to where you originally were. This is to create a seamless reading experience for you! 
 
 Note that only **the first instance** of a term will be hyperlinked!
 
@@ -58,7 +58,7 @@ Give it a try with the term: [*Object-Oriented Programming*](#glossary).
 
 The blue phrases known are also known as [*hyperlinks*](#glossary).
 
-Non-italicised hyperlinks [like this]() are used to bring you to different parts of the document.
+Non-italicised hyperlinks [like this](#glossary-usage) are used to bring you to different parts of the document.
 
 For example, **the one below to bring you back to the table of contents on top!**
 
@@ -84,7 +84,7 @@ There are 3 different kinds of **blocks**, denoted using different **icons** to 
 
 ### What is it?
 
-PulsePilot is an application made by 6 computing students from the National University of Singapore (NUS) that helps you (the user) document each stage of your recovery journey better! More specifically, it was coded in [*Java*](#glossary).
+PulsePilot is an application made by computing students from the National University of Singapore (NUS) that helps you (the user) document each stage of your recovery journey better! More specifically, it was coded in [*Java*](#glossary).
 
 The application is built for **both** healthcare professionals and patients. Using PulsePilot, patients can better record their recovery progress from an injury, as well as general well-being. 
 
@@ -121,7 +121,7 @@ The 2 main problems identified from our study were:
 
 The above problems gave rise to PulsePilot, the guide for which you are reading right now! PulsePilot was designed with both patients and healthcare professionals in mind to solve the 2 main problems identified above!
 
-We hope that PulsePilot can bridge the information gap between you and your doctor, and we wish you a speedy recovery. D
+We hope that PulsePilot can bridge the information gap between you and your doctor, and we wish you a speedy recovery.
 
 > ❗ This application is still in [*beta phase*](#glossary). As such it is not complete and more features will be added in future versions. Stay tuned for updates!
 
@@ -156,13 +156,13 @@ Here is a sub table of contents, so you can navigate through this section easily
 
 Let us first begin with launching the command line for Windows. The name of this program is `cmd.exe`!
 
-To do so, firstly, hit the <kbd>![icon](img_2101/windows/winlogo.png) Windows</kbd> key on your keyboard to bring up the **Start Menu**:
+To do so, firstly, hit the <kbd>Windows</kbd> key on your keyboard to bring up the **Start Menu**:
 
 ![Start Menu](img_2101/windows/windows_start.png)
 
 > 💡 If you are unable to see a search bar after bringing up the Start Menu, you should be able to type immediately after doing so to immediately start searching!
 
-Afterward, type `cmd` or `Command Prompt` into the search bar above or in the [Taskbar](#taskbar-windows), and there should be 1 program found called the '**Command Prompt**'.
+Afterward, type `cmd` or `Command Prompt` into the search bar above or in the [*Taskbar*](#taskbar-windows), and there should be 1 program found called the '**Command Prompt**'.
 
 ![Finding cmd.exe](img_2101/windows/finding_cmd_exe.png)
 
@@ -172,7 +172,7 @@ Go ahead and click on that, and a _black_ window should pop up on your screen lo
 
 Congratulations, you have successfully launched the CLI for Windows!
 
-The string `C:\Users\rouvi` is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `C:\Users\rouvi` folder of the computer.
+The string `C:\Users\rouvi` is the current [*directory*](#glossary) that you are in! This means that currently, the **CLI** is within the `C:\Users\rouvi` folder of the computer.
 
 > ❗ The directory and CLI for you may look different from the one shown in the guide! This is **normal** as the guide was created using a different computer. As long as the top of the window shows '**Command Prompt**', you are good to go!
 
@@ -220,13 +220,13 @@ If you want to go 'back' one directory, use `cd ..`.
 
 Now, suppose you want to view files a directory has within it. You can use `dir` to do so. 
 
-For example, I want to view what files are within the `cli_demo` folder. I would first `cd` to the `cli_demo` folder, and then use `dir` to view the output:
+For example, if you want to view what files are within the `cli_demo` folder. You would first `cd` to the `cli_demo` folder, and then use `dir` to view the output:
 
 ![cd then dir](img_2101/windows/cd_dir.png)
 
-This would print out all the folders within the directory. In the `cli_demo` directory, I have a `hello.txt` and a `pulsepilot.txt` file. 
+This would print out all the folders within the directory. In the `cli_demo` directory, you may have a `hello.txt` and a `pulsepilot.txt` file. 
 
-I also have another folder within `cli_demo` called `another_directory`. Your computer differentiates between files and directories using the `<DIR>` string printed before the name of the file or folder.
+For example, if you also have another folder within `cli_demo` called `another_directory`. Your computer differentiates between files and directories using the `<DIR>` [*string*](#glossary) printed before the name of the file or folder.
 
 That is all the commands you need to know to navigate through the Windows CLI and use PulsePilot! To summarise:
 
@@ -243,11 +243,11 @@ That is all the commands you need to know to navigate through the Windows CLI an
 
 #### Launching `Terminal`
 
-On macOS, the default command line interface is called the **Terminal**, which uses the `Bash shell`. 
+On macOS, the default command line interface is called the **Terminal**. 
 To launch the **Terminal**:
 
 1. To begin searching for **Terminal**, you may choose either of the methods listed below:
-   - **Launchpad**: The Launchpad appears as a grid of app icons on your Mac's [Dock](#icon-dictionary). You can usually find it in the bottom of your screen.
+   - **Launchpad**: The Launchpad appears as a grid of app icons on your Mac's [*Dock*](#icon-dictionary). You can usually find it in the bottom of your screen.
    
    ![Launchpad](img_2101/macos/launchpad.png)
 
@@ -272,7 +272,7 @@ To launch the **Terminal**:
 
 Congratulations, you have successfully launched the CLI for macOS!
 
-The [*string*](#glossary) `~` in `l5z@L5Z-MacBook-Air ~ %` is the current [*directory*](#glossary) that you are in! This means that currently, the [*CLI*](#command-line-interface) is within the `~` directory (or folder) of the computer.
+The string `~` in `l5z@L5Z-MacBook-Air ~ %` is the current directory that you are in! This means that currently, the **CLI** is within the `~` directory (or folder) of the computer.
 This string will be **updated** to always reflect the directory you are currently in while navigating. 
 
 In the example below, I am currently in the `Desktop` directory.
@@ -1203,6 +1203,8 @@ Avoid using extra characters in the commands, such as blank space, newline, etc.
 | Term                            | Definition                                                                                                                                                                                                                                                   |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Alphanumeric                    | Input that is made up of only **letters and numbers**. <br>[Go Back](#creating-your-profile)                                                                                                                                                                 |
+| Beta Phase                      | The stage in software development, where a nearly complete version is released to users for testing and feedback before the final product launch.                                                                                                            |
+| Commands                        | Instructions or actions that users input to interact with and control a software application or system.                                                                                                                                                      |
 | Command Line Interface          | A **text-based** interface where users can input commands that interact with a computer. <br>[Go Back](#command-line-interface)                                                                                                                              |
 | Directory / Directories         | A folder within your computer that contains other files and files.<br>[Go Back](#launching-cmdexe)                                                                                                                                                           |
 | [File Explorer](#file-explorer) | An application used to view the files and directories in a Windows computer. <br> [Go Back](#windows-fix)                                                                                                                                                    |
@@ -1210,7 +1212,7 @@ Avoid using extra characters in the commands, such as blank space, newline, etc.
 | Flags                           | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[Go Back](#pulsepilot-commands) |
 | Github                          | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[Go Back](#installing-and-launching-pulsepilot)                                                                                          |
 | Hyperlinks                      | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[Go Back](#glossary-usage)                                                                                                |
-| Java                            | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[Go Back](#glossary-usage)                                                                          |
+| Java                            | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[Go Back](#what-is-it)                                                                              |
 | Object-Oriented Programming     | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [Go Back](#glossary-usage)                                                                                                    |
 | String                          | A sequence of characters that can be used to represent text data.<br>[Go Back](#launching-terminal)                                                                                                                                                          |
 
