@@ -25,11 +25,7 @@ If you have any queries with the guide, our application, or even **life in gener
 ## Table of Contents
 
 * [How to use this guide](#how-to-use-this-guide)
-  * [Glossary Usage](#glossary-usage)
-  * [Blocks](#blocks)
 * [About PulsePilot](#pulsepilot)
-  * [What is it?](#what-is-it)
-  * [Origins](#origins)
 * [Command Line Interface](#command-line-interface)
 * [Installation](#installation)
 * [PulsePilot Commands](#pulsepilot-commands)
@@ -142,9 +138,9 @@ Here is a sub table of contents, so you can navigate through this section easily
 * [Windows](#windows)
   * [Launching `cmd.exe`](#launching-cmdexe)
   * [Windows Commands](#windows-commands)
-* [MacOS](#macos)
+* [macOS](#macos)
   * [Launching `Terminal`](#launching-terminal)
-  * [MacOS Commands](#macos-commands)
+  * [macOS Commands](#macos-commands)
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -178,7 +174,7 @@ The string `C:\Users\rouvi` is the current [*directory*](#glossary) that you are
 
 You can type different things into the CLI, and press <kbd>Enter</kbd> to make your computer read the input and process it as a command.
 
-For the example below, I typed a `hello` and hit <kbd>Enter</kbd> to make the compute read it.
+For example, entering `hello` results in this output: 
 
 ![Typing Commands](img_2101/windows/sample_windows_type.png)
 
@@ -194,13 +190,13 @@ Read the next section to learn some basic commands!
 
 #### Windows Commands
 
-##### Changing Directories
+##### Changing Directories (`cd`)
 
 There are many commands in Windows, but this guide will cover the basic few you need to use PulsePilot.
 
 The first command is `cd`, short for **change directory**. It changes the **current** directory to the specified one. The format to use it is `cd <DIRECTORY>`, where `<DIRECTORY>` is something you pick!
 
-For example, suppose I want to go to the `cli_demo` folder from my current directory. I would type the following:
+For example, suppose you want to go to the `cli_demo` folder from my current directory. You would use `cd cli_demo`:
 
 ![cd](img_2101/windows/cd.png)
 
@@ -216,7 +212,7 @@ If you want to go 'back' one directory, use `cd ..`.
 
 ![cd ..](img_2101/windows/cd_back.png)
 
-##### List Directory Contents
+##### List Directory Contents (`dir`)
 
 Now, suppose you want to view files a directory has within it. You can use `dir` to do so. 
 
@@ -239,43 +235,45 @@ That is all the commands you need to know to navigate through the Windows CLI an
 
 ---
 
-### MacOS
+### macOS
 
 #### Launching `Terminal`
 
 On macOS, the default command line interface is called the **Terminal**. 
+
 To launch the **Terminal**:
 
 1. To begin searching for **Terminal**, you may choose either of the methods listed below:
    - **Launchpad**: The Launchpad appears as a grid of app icons on your Mac's [*Dock*](#icon-dictionary). You can usually find it in the bottom of your screen.
    
-   ![Launchpad](img_2101/macos/launchpad.png)
+        ![Launchpad](img_2101/macos/launchpad.png)
 
    - **Spotlight Search Bar**: Click on the search icon at the **top right** of your screen to bring up the Spotlight Search Bar.
+
      ![Search Icon](img_2101/macos/search_icon.png)
      ![Spotlight Search Bar](img_2101/macos/spotlight_search.png)
     
-    > 💡 Pressing <kbd>⌘ command</kbd> + <kbd>Spacebar</kbd> on your keyboard at the same time should produce the same result.
+        > 💡 Pressing <kbd>⌘ command</kbd> + <kbd>Spacebar</kbd> on your keyboard at the same time should produce the same result.
 
 2. Search for `Terminal`: 
    - **Launchpad**: In the Launchpad search bar, type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
    
-   ![Terminal in Launchpad](img_2101/macos/launchpad_terminal.png)
+        ![Terminal in Launchpad](img_2101/macos/launchpad_terminal.png)
 
    - **Spotlight Search Bar**: type `Terminal` and you should see 1 program found called the '**Terminal**'. Click on it to launch **Terminal**.
    
-   ![Terminal in Spotlight Search Bar](img_2101/macos/spotlight_terminal.png)
+        ![Terminal in Spotlight Search Bar](img_2101/macos/spotlight_terminal.png)
 
 3. Open the **Terminal** App: After clicking on the **Terminal** app icon to launch the **Terminal** application, you should now see a _white_, _grey_ or _black_ window pop up on your screen looking similar to this:
 
-![Terminal](img_2101/macos/terminal.png)
+    ![Terminal](img_2101/macos/terminal.png)
 
 Congratulations, you have successfully launched the CLI for macOS!
 
 The string `~` in `l5z@L5Z-MacBook-Air ~ %` is the current directory that you are in! This means that currently, the **CLI** is within the `~` directory (or folder) of the computer.
 This string will be **updated** to always reflect the directory you are currently in while navigating. 
 
-In the example below, I am currently in the `Desktop` directory.
+The image below shows that you are currently in the `Desktop` directory:
 
 ![Terminal Directory String](img_2101/macos/cd_desktop.png)
 
@@ -284,7 +282,7 @@ In the example below, I am currently in the `Desktop` directory.
 
 You can type different things into the CLI, and press <kbd>Enter</kbd> to make your computer read the input and process it as a command.
 
-For the example below, I typed a `hello` and hit <kbd>Enter</kbd> to make the compute read it.
+For example, entering `hello` results in this output: 
 
 ![Typing Commands](img_2101/macos/sample_mac_type.png)
 
@@ -298,9 +296,9 @@ Read the next section to learn some basic commands!
 
 ---
 
-#### MacOS Commands
+#### macOS Commands
 
-The macOS **Terminal** allows you to enter and execute **Bash** commands. If you are on the latest macOS (macOS Sonoma 14 as of this writing), you may refer [here](https://support.apple.com/en-sg/guide/terminal/trmld4c92d55/mac) for detailed information.
+The macOS **Terminal** allows you to enter and execute commands. If you are on the latest macOS (macOS Sonoma 14 as of this writing), you may refer [here](https://support.apple.com/en-sg/guide/terminal/trmld4c92d55/mac) for detailed information.
 
 ##### Changing Directories (`cd`)
 
@@ -309,13 +307,11 @@ There are many commands in macOS, but this guide will cover the basic few you ne
 The first command is `cd`, short for **change directory**. It changes the **current** directory to the specified one. 
 The format to use it is `cd <DIRECTORY>`, where `<DIRECTORY>` is the directory you would like to navigate to **within your current directory**!
 
-For example, suppose I want to go to the `cli_demo` folder from my current directory, `Desktop`. 
-
-Since `cli_demo` is a directory within `Desktop` (as seen below), we can use `cd <DIRECTORY>`.
+For example, suppose you want to go to the `cli_demo` folder from the current directory, `Desktop`.
 
 ![cd_desktop](img_2101/macos/cd_desktop.png)
 
-I would type the following:
+Since `cli_demo` is a directory within `Desktop` (as seen below), you can use `cd <DIRECTORY>`:
 
 ![cd](img_2101/macos/cd.png)
 
@@ -338,14 +334,14 @@ Now, suppose you want to view files contained within a directory.
 The `ls` command lists the files and folders in your current directory.
 To use it, simply type `ls` and press <kbd>Enter</kbd>.
 
-For example, I want to view what files are within the `cli_demo` folder. I would first `cd` to the `cli_demo` folder, and then use `ls` to view the contained files:
+Suppose you want to view what files are within the `cli_demo` folder. You would first `cd` to the `cli_demo` folder, and then use `ls` to view the present:
 
 ![cd then ls](img_2101/macos/cd_ls.png)
 
 This would print out all the files and folders within the directory.
 
-In the `cli_demo` directory, we can see a `hello.txt` and a `pulsepilot.txt` file contained within the `cli_demo` directory.
-We also have another folder within `cli_demo` called `another_directory`.
+In the `cli_demo` directory, there is a `hello.txt` and a `pulsepilot.txt` file contained within the `cli_demo` directory.
+There is another folder within `cli_demo` called `another_directory`.
 
 > 💡 **Generally**, you can differentiate between files and directories by the name. If it has a period('.') in the name, it is likely to be a file.
 > Should you encounter any issues, you may refer [here](#macos-fix) for additional details. 
@@ -379,16 +375,9 @@ The installation for Java is different for Windows and macOS computers. However,
 
 > 💡 If you already have Java 11 installed, feel free to skip to the [next section](#pulsepilot-commands) to learn about the commands for PulsePilot.
 
-A specific version of Java will be required for PulsePilot, thus this part of the guide will bring you through the installation of Java 11.
-
-A guide to install Java can be found [here](https://nus-cs2030.github.io/1920-s2/contents/guides/settingUpJava.html), as many other NUS modules use a similar version of Java for their projects.
+Java 11 will be required for PulsePilot. A guide to install Java can be found [here](https://nus-cs2030.github.io/1920-s2/contents/guides/settingUpJava.html), as many other NUS modules use a similar version of Java for their projects.
 
 >❗Although the website says it is for CS2030 from a previous semester, the steps are the same.
-
-To ensure that you have the correct version of Java installed, launch the CLI (either `cmd.exe` or `bash`) and run `java --version`.
-
-As long as the output shows `java 11` is installed, it is correct.
-
 
 ###### [Back to Installation](#installation)
 
@@ -396,14 +385,13 @@ As long as the output shows `java 11` is installed, it is correct.
 
 ---
 
-
 ### Installing and Launching PulsePilot
 
 > 💡 If you already have PulsePilot installed, feel free to skip to the [next section](#pulsepilot-commands) to learn about the commands for PulsePilot.
 
 PulsePilot can be installed from our team's [*GitHub*](#glossary) repository [here](https://github.com/AY2324S2-CS2113T-T09-4/tp/releases/tag/v2.1).
 
-The screen should have the following hyperlinks as shown below, and clicking on `pulsepilot.jar` will download the application to your Downloads folder.
+The screen should have the following hyperlinks as shown below, and clicking on `pulsepilot.jar` will download the application to your `Downloads` folder.
 
 ![Downloading PulsePilot](img_2101/installation/download_pulsepilot.png)
 
@@ -427,7 +415,7 @@ Your terminal should look like this below, with PulsePilot asking for your name.
 
 > 💡 If you do not face any issues with launching PulsePilot, feel free to skip to the [next section](#pulsepilot-commands) to learn about the commands for PulsePilot.
 
-This section will address some common problems users will face.
+This section will address some common problems you might face.
 
 #### Wrong Directory
 
@@ -437,9 +425,9 @@ Windows:
 
 ![Wrong Directory Windows](img_2101/windows/wrong_dir.png)
 
-MacOS:
+macOS:
 
-![Wrong Directory MacOS](img_2101/macos/wrong_dir.png)
+![Wrong Directory macOS](img_2101/macos/wrong_dir.png)
 
 This means that `pulsepilot.jar` is **not within your current directory**. To remediate this, use `dir` for Windows or `ls` for macOS to check for the files present within your current directory.
 
@@ -449,9 +437,9 @@ Windows:
 
 ![Correct Directory Windows](img_2101/windows/correct_dir.png)
 
-MacOS:
+macOS:
 
-![Correct Directory MacOS](img_2101/macos/correct_dir.png)
+![Correct Directory macOS](img_2101/macos/correct_dir.png)
 
 ##### Windows Fix
 
@@ -542,6 +530,8 @@ There are 3 colours used in the guide: <u>White</u>, <span style="color:red;">re
 > ❗ If you are not seeing colours on your screen, and instead see **odd characters** like `[` or `<-`, please read our [*troubleshooting guide*](#odd-characters-on-screen) for this issue!
 
 > ❗ The colours on your own screen may be different, or it may not even be colour-coded at all. The colours are just visual cues for **this guide**!
+
+> ❗ PulsePilot **prints** dates in YYYY-MM-DD format, but your  date input must be in DD-MM-YYYY format.
 
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
@@ -658,7 +648,7 @@ The following example will cover how to add a run step-by-step.
 
 ##### Error Messages
 
-> ❗ This is just one example of invalid input. We will not cover the full list of errors here.
+> ❗ This is just one example of invalid input. The full list of errors is not covered here.
 
 **Using the wrong flag**:
 
@@ -731,7 +721,7 @@ The following example will cover how to add a gym session step-by-step.
 
 ##### Error Messages
 
-> ❗ This is just one example of invalid input. We will not cover the full list of errors here.
+> ❗ This is just one example of invalid input. The full list of errors is not covered here.
 
 **An invalid station name was entered**:
 
@@ -749,7 +739,7 @@ The following example will cover how to add a gym session step-by-step.
 
 ### Health
 
-Besides tracking your workout sessions, PulsePilot can also record Period, Bmi and Appointment inputs, as well as making period prediction. This is implemented via the `health` command. 
+Besides tracking your workout sessions, PulsePilot can also record Period, Bmi and medical appointment entries, as well as make period predictions. This is implemented via the `health` command.
 
 There are 4 types of health features, denoted using the `/h:` flag.
 
@@ -813,13 +803,21 @@ The following examples will cover how to add a period step-by-step, with the lat
 
     ![Add start date](img_2101/pulsepilot_commands/health/start_date_only.png)
 
-4. To add in the `end date`, simply enter the command <code style="color: green;">health /h:period /start:01-01-2024 /end:08-01-2024</code>. You will see the same output as the previous example where both dates are added at once. 
+4. To add in the `end date`, simply enter the command <code style="color: green;">health /h:period /start:01-01-2024 /end:08-01-2024</code>. You will see the same output as the previous example where both dates are added at once.
 
     ![After adding end date](img_2101/pulsepilot_commands/health/full_period.png)
 
-5. Congratulations! The end date of the period input has been successfully added. 
+5. Congratulations! The end date of the period input has been successfully added.
 
 > ⚠️ Remember: You **must** add an end date for the current period entry before you can add your next period entry! Once again, you can use `history` command [here](#view-history) or `latest` command [here](#view-latest) to see whether you have added the end date.
+
+##### Error Messages
+
+> ❗ This is just one example of invalid input. The full list of errors is not covered here.
+
+**Adding a new period before updating the previous period's end date:**
+
+![Period Error](img_2101/pulsepilot_commands/period_error.png)
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -829,7 +827,7 @@ The following examples will cover how to add a period step-by-step, with the lat
 
 #### Add BMI
 
-To add a Bmi, the following details and flags are required in your input:
+To add a BMI entry, the following details and flags are required in your input:
 
 | Detail   | Description                               | Flag Used  | Limitations                                                                                                                                                           |
 |----------|-------------------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -837,21 +835,21 @@ To add a Bmi, the following details and flags are required in your input:
 | `weight` | Your weight in **kilograms**.             | `/weight:` | Must be a `2 decimal point positive number` such as `60.00`. <br> Acceptable weight range is from **0.01kg to 640.00kg**.                                             |
 | `date`   | The date of taking your height and weight | `/date:`   | Must be in `DD-MM-YYYY` format. <br> Date specified **cannot be after today's date**. (i.e. If today is `10-04-2024`, specifying `11-04-2024` will trigger an error!) |
 
-> ❗ The `date` parameter must be **unique** for each Bmi input in PulsePilot. An error message is printed if you attempt to add a new Bmi input with a date that matches an existing entry. 
+> ❗ The `date` parameter must be **unique** for each BMI input in PulsePilot. An error message is printed if you attempt to add a new BMI input with a date that matches an existing entry.
 
 The following example will cover how to add a bmi step-by-step.
 
-1. Suppose you have just taken your height and weight and want to add a new Bmi.
-   - Your `height` is 1.75m, `weight` is 60.00kg and the `date` of measurement is `01-01-2024`. 
+1. Suppose you have just taken your height and weight and want to add a new BMI.
+   - Your `height` is 1.75m, `weight` is 60.00kg and the `date` of measurement is `01-01-2024`.
 
-2. Let's put the necessary Bmi's details together with their respective flags into a complete command. 
+2. Let's put the necessary details together with their respective flags into the command required.
    - <code style="color: green;">health /h:bmi /height:1.75 /weight:60.00 /date:01-01-2024</code>
 
 3. Entering it into PulsePilot results in this output:
 
     ![Bmi Output](img_2101/pulsepilot_commands/health/bmi.png)
 
-4. Congratulations! You have successfully added a Bmi input to PulsePilot.
+4. Congratulations! You have successfully added a BMI entry to PulsePilot.
 
 > 💡 The table below illustrates how PulsePilot categorizes BMI values. This may help you to better understand where your BMI falls within these categories, providing greater insights into your overall health status!
 
@@ -862,6 +860,14 @@ The following example will cover how to add a bmi step-by-step.
 | `BMI` is more than or equal to 25.0 and less than 30.0. | Overweight     |
 | `BMI` is more than or equal to 30.0 and less than 40.0. | Obese          |
 | `BMI` is more than 40.0.                                | Severely Obese |
+
+##### Error Messages
+
+> ❗ This is just one example of invalid input. The full list of errors is not covered here.
+
+**Using a height that is not 2 decimal place**:
+
+![BMI Error](img_2101/pulsepilot_commands/bmi_error.png)
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -893,6 +899,14 @@ The following example will cover how to add an Appointment step-by-step.
 
 4. Congratulations! You have successfully added an appointment to PulsePilot.
 
+##### Error Messages
+
+> ❗ This is just one example of invalid input. The full list of errors is not covered here.
+
+**Missing time in command**:
+
+![Appt Error](img_2101/pulsepilot_commands/appt_error.png)
+
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
 ###### [Back to table of contents](#table-of-contents)
@@ -901,7 +915,7 @@ The following example will cover how to add an Appointment step-by-step.
 
 #### Make Period Prediction
 
-PulsePilot offers a predictive feature for you to predict your next period's start date, 
+PulsePilot offers a predictive feature for you to predict your next period's start date.
 
 > ❗Please ensure that PulsePilot contains a minimum of **4** period inputs before using this feature.
 
@@ -914,7 +928,15 @@ The following example will illustrate how to make a prediction.
     ![Period Prediction Output](img_2101/pulsepilot_commands/health/prediction.png)
 
 
-> 💡 Do remember to regularly update PulsePilot with your period inputs for more accurate and recent prediction. 
+> 💡 Do remember to regularly update PulsePilot with your period inputs for more accurate and recent prediction.
+
+##### Error Messages
+
+> ❗ This is just one example of invalid input. The full list of errors is not covered here.
+
+**Not enough period entries added**:
+
+![Prediction Error](img_2101/pulsepilot_commands/prediction_error.png)
 
 ###### [Back to PulsePilot Commands](#pulsepilot-commands)
 
@@ -958,7 +980,7 @@ The following example shows how to view the history step-by-step:
 
 #### Error Messages
 
-> ❗ This is just one example of invalid input. We will not cover the full list of errors here.
+> ❗ This is just one example of invalid input. The full list of errors is not covered here.
 
 **Using the wrong history item**:
 
@@ -1000,7 +1022,7 @@ The following example will cover how to use the `latest` command step-by-step:
 
 ### Delete Item
 
-For removing things PulsePilot has recorded using `delete`. 
+For removing things PulsePilot has recorded using `delete`.
 
 To do so, the following details and flags must be specified in your input:
 
@@ -1024,7 +1046,7 @@ The following example shows how the `delete` command can be used:
 
 #### Error Messages
 
-> ❗ This is just one example of invalid input. We will not cover the full list of errors here.
+> ❗ This is just one example of invalid input. The full list of errors is not covered here.
 
 **Deleting an item that does not exist**:
 
@@ -1074,18 +1096,19 @@ When a data file is read properly, PulsePilot will start accepting commands imme
 
 Here is a summary of all the commands and its functions. The table contains examples as well for you to try out!
 
-| Action              | Format, Examples                                                                                                                                                     |
-|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Print help          | `help`                                                                                                                                                               |
-| Add new run         | `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]` <br> Example: `workout /e:run /d:5.24 /t:25:23 /date:19-03-2024`                                                   |
-| Add gym             | `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]` <br> Example: `workout /e:gym /n:4`                                                                              |
-| Track BMI           | `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE` <br> Example: `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`                                   |
-| Track Period        | `health /h:period /start:START_DATE [/end:END_DATE]` <br> Example: `health /h:period /start:09-03-2022 /end:16-03-2022`                                              |
-| Track Appointment   | `health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION` <br> Example: `health /h:appointment /date:29-04-2025 /time:12:00 /description:knee surgery`  |
-| View history        | `history /item:TYPE` <br> Example: `history /item:run`                                                                                                               |
-| View latest         | `latest /item:TYPE` <br> Example: `latest /item:bmi`                                                                                                                 |
-| Deleting item       | `delete /item:TYPE /index:INDEX` <br> Example: `delete /item:run /index:1`                                                                                           |
-| Exit and write data | `exit`                                                                                                                                                               |
+| Action                 | Format, Examples                                                                                                                                                    |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Print help             | `help`                                                                                                                                                              |
+| Add Run                | `workout /e:run /d:DISTANCE /t:TIME [/date:DATE]` <br> Example: `workout /e:run /d:5.24 /t:25:23 /date:19-03-2024`                                                  |
+| Add Gym                | `workout /e:gym /n:NUMBER_OF_STATIONS [/date:DATE]` <br> Example: `workout /e:gym /n:4`                                                                             |
+| Add BMI                | `health /h:bmi /height:HEIGHT /weight:WEIGHT /date:DATE` <br> Example: `health /h:bmi /height:1.70 /weight:75.42 /date:19-03-2024`                                  |
+| Add Period             | `health /h:period /start:START_DATE [/end:END_DATE]` <br> Example: `health /h:period /start:09-03-2024 /end:16-03-2024`                                             |
+| Show Period Prediction | `health /h:prediction`                                                                                                                                              |
+| Add Appointment        | `health /h:appointment /date:DATE /time:TIME /description:DESCRIPTION` <br> Example: `health /h:appointment /date:29-04-2025 /time:12:00 /description:knee surgery` |
+| View history           | `history /item:TYPE` <br> Example: `history /item:run`                                                                                                              |
+| View latest            | `latest /item:TYPE` <br> Example: `latest /item:bmi`                                                                                                                |
+| Deleting item          | `delete /item:TYPE /index:INDEX` <br> Example: `delete /item:run /index:1`                                                                                          |
+| Exit bot               | `exit`                                                                                                                                                              |
 
 ###### [Back to table of contents](#table-of-contents)
 
@@ -1107,7 +1130,7 @@ This is what the output is supposed to look like when the same command is used o
 
 This merely a visual difference, and it does not mean PulsePilot is not working. **You can safely ignore this and continue using PulsePilot.**
 
-> 💡 These 'special characters' are actually called [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code). If you want to view PulsePilot in colour, please enable them for your Windows computer using [this guide](#https://www.youtube.com/watch?v=HeJOyEw3RtM). **MacOS and Linux users are unaffected!**
+> 💡 These 'special characters' are actually called [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code). If you want to view PulsePilot in colour, please enable them for your Windows computer using [this guide](#https://www.youtube.com/watch?v=HeJOyEw3RtM). **macOS and Linux users are unaffected!**
 
 ###### [Back to PulsePilot Text Style](#pulsepilot-text-style)
 
@@ -1172,7 +1195,7 @@ In the above output, the bot will read `5.25` as the distance. The second `/d:10
 
 **5.** What if I keep receiving an error message even though my input seems to follow the instructions given in the user guide?
 
->❗ Please ensure that you follow the command syntax given **exactly** in the user guide. 
+>❗ Please ensure that you follow the command syntax given **exactly** in the user guide.
  
 Here are some mistakes that could be easily overlooked:
 
@@ -1203,14 +1226,14 @@ Avoid using extra characters in the commands, such as blank space, newline, etc.
 | Term                            | Definition                                                                                                                                                                                                                                                   |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Alphanumeric                    | Input that is made up of only **letters and numbers**. <br>[Go Back](#creating-your-profile)                                                                                                                                                                 |
-| Beta Phase                      | The stage in software development, where a nearly complete version is released to users for testing and feedback before the final product launch.                                                                                                            |
-| Commands                        | Instructions or actions that users input to interact with and control a software application or system.                                                                                                                                                      |
+| Beta Phase                      | The stage in software development, where a nearly complete version is released to users for testing and feedback before the final product launch.<br>[Go Back](#origins)                                                                                     |
+| Commands                        | Instructions or actions that users input to interact with and control a software application or system.<br>[Go Back](#command-line-interface)                                                                                                                |
 | Command Line Interface          | A **text-based** interface where users can input commands that interact with a computer. <br>[Go Back](#command-line-interface)                                                                                                                              |
 | Directory / Directories         | A folder within your computer that contains other files and files.<br>[Go Back](#launching-cmdexe)                                                                                                                                                           |
 | [File Explorer](#file-explorer) | An application used to view the files and directories in a Windows computer. <br> [Go Back](#windows-fix)                                                                                                                                                    |
 | [Finder](#finder)               | An application used to view the files and directories in a macOS computer. <br> [Go Back](#macos-fix)                                                                                                                                                        |
 | Flags                           | Flags in PulsePilot, like `/date:` or `/t:` are special signs used to tell it what information the user is giving. For example, the input `/date:20-04-2023` is used to tell PulsePilot that the date is 20 April 2023.  <br>[Go Back](#pulsepilot-commands) |
-| Github                          | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[Go Back](#installing-and-launching-pulsepilot)                                                                                          |
+| GitHub                          | A platform that allows developers to create, store, manage , collaborate and share their code and applications. <br>[Go Back](#installing-and-launching-pulsepilot)                                                                                          |
 | Hyperlinks                      | A reference to data that a user can follow by clicking on, which can point to an entire document or specific part of document. <br>[Go Back](#glossary-usage)                                                                                                |
 | Java                            | A programming language that was created to run programs **any operating system**. It was created based on the 'write once, run anywhere' philosophy. <br>[Go Back](#what-is-it)                                                                              |
 | Object-Oriented Programming     | A programming paradigm aiming used to guide the the analysis and structure of solutions by programmers in a specific way. <br> [Go Back](#glossary-usage)                                                                                                    |
@@ -1222,45 +1245,45 @@ Avoid using extra characters in the commands, such as blank space, newline, etc.
 
 ## Icon Dictionary
 
-- ###### Dock (macOS)
+### Dock (macOS)
 
-    Found at the **bottom** of the screen.
+Found at the **bottom** of the screen.
 
-    ![Dock](img_2101/macos/dock.png)
+![Dock](img_2101/macos/dock.png)
 
-    [Go Back](#macos)
+[Go Back](#macos)
 
-- ###### File Explorer
+### File Explorer
 
-    Found **to the right** of the Windows icon in **Taskbar**.
+Found **to the right** of the Windows icon in **Taskbar**.
 
-    ![File Explorer](img_2101/windows/file_explorer.png)
+![File Explorer](img_2101/windows/file_explorer.png)
 
-    [Go Back](#glossary)
+[Go Back](#glossary)
 
--  ###### Finder
+### Finder
 
-    Found **to the left** of the **Dock**.
+Found **to the left** of the **Dock**.
 
-    ![Finder](img_2101/macos/finder.png)
+![Finder](img_2101/macos/finder.png)
 
-    [Go Back](#glossary)
+[Go Back](#glossary)
 
-- ###### Spotlight Search
+### Spotlight Search
 
-    Found at the **top** of the screen.
+Found at the **top** of the screen.
 
-    ![Search Icon](img_2101/macos/search_icon.png)
+![Search Icon](img_2101/macos/search_icon.png)
 
-    [Go Back](#macos-fix)
+[Go Back](#macos-fix)
 
-- ###### Taskbar (Windows)
+### Taskbar (Windows)
 
-    Found at the **bottom** of the screen.
+Found at the **bottom** of the screen.
 
-    ![Taskbar](img_2101/windows/taskbar.png)
+![Taskbar](img_2101/windows/taskbar.png)
 
-    [Go Back](#windows)
+[Go Back](#windows)
 
 ###### [Back to table of contents](#table-of-contents)
 
