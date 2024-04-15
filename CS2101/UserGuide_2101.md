@@ -22,6 +22,8 @@ If you have any queries with the guide, our application, or even **life in gener
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## Table of Contents
 
 * [How to use this guide](#how-to-use-this-guide)
@@ -96,6 +98,8 @@ More details about how to [install](#installation) and use [PulsePilot](#pulsepi
 ###### [Back to table of contents](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ### Origins
 
