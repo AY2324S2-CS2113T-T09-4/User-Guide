@@ -478,7 +478,7 @@ To fix this, do the following:
 To fix this, do the following:
 
 1. Locate where `pulsepilot.jar` is within your computer with [*Finder*](#glossary).
-   - You may use the Dock at the bottom of your screen or search for `pulsepilot.jar` with [Spotlight Search](#icon-dictionary).
+   - You may use the Dock at the bottom of your screen or search for `pulsepilot.jar` with [*Spotlight Search*](#icon-dictionary).
 
 2. Right click on it and click on **Get Info**.
 
