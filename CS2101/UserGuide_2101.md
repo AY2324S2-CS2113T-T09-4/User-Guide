@@ -471,6 +471,7 @@ To fix this, do the following:
 2. Right click on it and click on **Get Info**.
 
    ![Get File Info](img_2101/macos/get_file_info.png)
+   
    > 💡 Press <kbd>⌘ command</kbd> + <kbd>I</kbd> on your keyboard at the same time after selecting the file should produce the same result.
 
 3. A separate window will appear with additional data for `pulsepilot.jar`.
