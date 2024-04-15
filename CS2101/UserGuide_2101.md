@@ -214,7 +214,7 @@ If you want to go 'back' one directory, use `cd ..`.
 
 ##### List Directory Contents (`dir`)
 
-Now, suppose you want to view files a directory has within it. You can use `dir` to do so. 
+Now, suppose you want to view files a directory has within it. You can use `dir` to do so.
 
 For example, if you want to view what files are within the `cli_demo` folder. You would first `cd` to the `cli_demo` folder, and then use `dir` to view the output:
 
