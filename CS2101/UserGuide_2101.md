@@ -190,7 +190,6 @@ For example, entering `hello` results in this output:
 
 `hello` is not a valid command to use with `cmd.exe`, and your computer will let you know it is not a recognised command as shown in the image above.
 
-Read the next section to learn some basic commands!
 
 ###### [Back to Command Line Interface](#command-line-interface)
 
