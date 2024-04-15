@@ -150,6 +150,8 @@ Here is a sub table of contents, so you can navigate through this section easily
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ### Windows
 
 #### Launching `cmd.exe`
